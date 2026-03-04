@@ -23,7 +23,7 @@ Alternatiba (une centaine de groupes locaux en France, connu pour ses villages d
 
 Grâce au mécénat de compétences de la coopérative Télescope, Alternatiba a déployé un système d'information fondé sur deux logiciels libres : **Baserow** (base de données no-code, hébergée en propre) et **N8N** (automatisation de workflows). Ce système permet désormais des formulaires, des envois de mails automatiques, des statistiques et des cartographies, le tout maîtrisé en interne.
 
-Pour les services qu'ils n'hébergent pas eux-mêmes, Alternatiba s'appuie sur des « hébergeurs éthiques » — définis avec humour par le critère de la « distance d'une bière » : peut-on aller boire un coup avec son hébergeur ? Framasoft passe le test, Google non. Les mails ont été migrés d'OVH vers Grésil. La prochaine étape est la migration de Google Drive vers Nextcloud.
+Pour les services qu'ils n'hébergent pas eux-mêmes, Alternatiba s'appuie sur des « hébergeurs éthiques » — définis avec humour par le critère de la « distance d'une bière » : peut-on aller boire un coup avec son hébergeur ? Framasoft passe le test, Google non. Les mails ont été migrés d'OVH vers Grésille. La prochaine étape est la migration de Google Drive vers Nextcloud.
 
 Gauthier conclut en présentant une campagne en cours de lancement : une mobilisation large contre l'obsolescence programmée imposée par Microsoft avec la fin du support de Windows 10, visant à transformer l'indignation des utilisateurs en levier pour la promotion du logiciel libre. Il appelle associations, collectivités, entreprises et particuliers à rejoindre cette campagne.
 
@@ -35,7 +35,7 @@ Gauthier conclut en présentant une campagne en cours de lancement : une mobilis
 - **N8N** — Outil d'automatisation de workflows (ETL léger, intégrations API). Concurrent open source de Zapier/Make, auto-hébergeable. Très pertinent pour des missions d'intégration ou de RPA chez des clients souhaitant sortir des outils SaaS propriétaires.
 - **Nextcloud** — Suite collaborative open source (Drive, Agenda, Documents). Standard de fait pour la souveraineté des données en entreprise et collectivités. Forte demande en déploiement et MCO.
 - **Framasoft / les Chatons** — Réseau d'hébergeurs éthiques proposant des alternatives libres aux GAFAM. Cadre de référence pour identifier des partenaires d'hébergement conformes RGPD.
-- **Grésil** — Hébergeur de messagerie éthique francophone. Exemple d'alternative à OVH ou Gmail pour des structures sensibles à la souveraineté des données.
+- **Grésille** — Hébergeur de messagerie éthique francophone. Exemple d'alternative à OVH ou Gmail pour des structures sensibles à la souveraineté des données.
 
 ## Points marquants
 
@@ -44,11 +44,6 @@ Gauthier conclut en présentant une campagne en cours de lancement : une mobilis
 - La campagne contre la fin du support Windows 10 est présentée comme un levier d'entrée pour le grand public vers le logiciel libre, en capitalisant sur l'indignation liée à l'obsolescence forcée de millions d'ordinateurs encore fonctionnels.
 - Le mécénat de compétences (ici par la coopérative Télescope) est présenté comme un modèle viable pour financer la transition numérique des associations, à l'heure où les subventions publiques diminuent.
 - Les subventions pour les associations sont en baisse : un contexte qui renforce l'attrait des solutions libres auto-hébergées, moins coûteuses à long terme.
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

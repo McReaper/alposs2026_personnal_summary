@@ -61,11 +61,6 @@ Lors des questions, un participant belge demande si l'infrastructure pourrait mo
 - **Scalabilité en question** : la DINUM ne se juge pas encore prête pour un déploiement à l'échelle de millions d'utilisateurs (ex : système éducatif belge), cible intermédiaire à ~100 000 comptes.
 - **"Never on Friday"** : la migration a été délibérément planifiée un mercredi pour limiter les impacts, principe partagé par toute l'équipe projet.
 - **Contribution reversée à la DINUM** : le SITPI et Alma ont pu contribuer au dépôt public DINUM, illustrant le cycle vertueux du logiciel libre dans la sphère publique.
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

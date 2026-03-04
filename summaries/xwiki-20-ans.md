@@ -51,11 +51,6 @@ Le talk porte un message d'espoir : faire vivre un logiciel libre durablement es
 - XWiki est l'un des rares logiciels libres à avoir franchi la barre des 20 ans d'existence en restant techniquement vivant et communautairement actif
 - Le projet est impliqué dans **openDesk**, la suite collaborative portée par l'Allemagne pour sa souveraineté numérique — un signal fort de crédibilité institutionnelle
 - Le modèle "pas de VC, pas de pivot, logiciel libre" est de plus en plus cité comme alternative à la trajectoire classique SaaS/exit
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

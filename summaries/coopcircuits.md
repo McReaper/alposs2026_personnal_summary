@@ -40,11 +40,6 @@ CoopCircuits adhère à la PTILL (Pour un Hébergement Libre et Localisé) et re
 - CoopCircuits porte un projet de **sécurité sociale de l'alimentation** : une caisse commune pour financer l'accès à une alimentation saine, inspirée du modèle de la Sécurité sociale — concept en cours d'expérimentation en France
 - L'interopérabilité entre plateformes concurrentes est un chantier actif : CoopCircuits travaille avec ses concurrents directs pour que les producteurs n'aient à gérer leurs stocks **qu'une seule fois** pour plusieurs plateformes
 - CoopCircuits insiste sur le rôle des **collectivités locales** comme actrices de l'infrastructure numérique alimentaire de leur territoire
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

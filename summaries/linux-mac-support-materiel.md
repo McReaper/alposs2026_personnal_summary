@@ -48,11 +48,6 @@ Ce talk vise probablement à faire le point sur l'état réel du support en 2026
 - Asahi Linux est l'un des rares projets à reverse-engineer du matériel propriétaire aussi complexe et à contribuer ses drivers directement dans le noyau Linux mainline
 - En janvier 2026, Asahi Linux annonçait un portage fonctionnel (mais encore limité) sur M3 — la progression est rapide mais le support GPU reste absent
 - Le sujet intéresse directement les DSI et responsables IT qui cherchent à prolonger la vie de parcs de Mac en fin de support Apple
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

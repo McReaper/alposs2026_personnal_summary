@@ -55,11 +55,6 @@ Il conclut sur les actualités 2026 : Wikimania (congrès mondial Wikimédia) et
 - L'identifiant Wikidata d'Échirolles (ville hôte d'AlpOSS) est **Q211134** — tout lieu, concept ou personne notable possède un identifiant unique et pérenne dans cette base mondiale
 - La complexité de gestion des liens interlangues entre N langues générait un coût en O(N²) avant la création de Wikidata en 2013 — un problème d'ingénierie massif résolu par la centralisation sémantique
 - Les données OpenStreetMap sont **licenciées ODbL** : même un logiciel propriétaire peut les consommer, mais toute redistribution des données dérivées doit rester libre — un modèle de licence copyleft adapté aux données
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

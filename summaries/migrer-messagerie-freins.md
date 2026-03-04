@@ -45,11 +45,6 @@ Pierre Baudracco présente ensuite les clés qui permettent de franchir ces obst
 - BlueMind a été sacré "Champion" du pôle Systematic Paris-Region en 2025, récompense attribuée par un jury qui a salué une solution "mature et résiliente" avec "une rare capacité à réconcilier souveraineté numérique et continuité d'usage sur un service critique"
 - La thèse centrale de la présentation est que les freins à la migration sont avant tout humains et politiques, pas techniques — un retournement de perspective important pour les DSI et les élus qui attendent une solution technique parfaite avant de décider
 - Pierre Baudracco co-préside le CNLL et préside le Hub Open Source Systematic : il parle de souveraineté numérique depuis une position d'acteur engagé dans la structuration collective de l'écosystème, pas uniquement depuis l'intérêt commercial de son éditeur
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

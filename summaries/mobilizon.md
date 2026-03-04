@@ -56,11 +56,6 @@ Alexandra Cadet commence par sonder l'audience : plusieurs personnes connaissent
 - Mobilizon est soutenu par un fonds européen (NGI), ce qui lui confère une légitimité institutionnelle et une pérennité financière au-delà du bénévolat.
 - Une université (BDE) a déployé sa propre instance — signal que l'outil trouve des usages institutionnels, au-delà du monde associatif et militant.
 - Mobilizon peut ingérer des événements issus de l'open data, ouvrant des cas d'usage pour des portails d'agenda territorial mutualisés.
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

@@ -53,11 +53,6 @@ Cette conférence propose un panorama structuré de la jurisprudence française 
 - **Les tribunaux comme "outil de promotion du libre"** : formule finale de l'intervenant, qui inverse l'intuition commune selon laquelle l'open source serait moins bien protégé juridiquement que le propriétaire.
 - **Orange était parfaitement conscient du problème** : l'éditeur avait contacté Entre Ouverts en amont pour négocier une licence propriétaire, discussions qui n'avaient pas abouti. Cet élément a aggravé sa responsabilité.
 - **La clause de non-garantie questionnable en droit français** : les licences open source comportent généralement une exclusion totale de garantie, ce qui pourrait être contesté devant les tribunaux français, notamment pour des consommateurs.
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

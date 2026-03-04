@@ -179,6 +179,8 @@ DETAIL_CSS = """
 .dv-meta { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
 .dv-att { font-size:13px; color:var(--t2); }
 .dv-dur { font-size:12px; color:var(--t3); font-family:'JetBrains Mono',monospace; background:var(--bg2); padding:2px 8px; border-radius:4px; }
+.dv-src { font-size:12px; color:var(--link); text-decoration:none; }
+.dv-src:hover { text-decoration:underline; }
 .dv-spk { font-size:14px; color:var(--t3); line-height:1.55; margin-top:10px; }
 .dv-section { margin-bottom:24px; }
 .dv-sh { font-size:10px; text-transform:uppercase; letter-spacing:1.2px; color:var(--t5); font-weight:700; margin-bottom:10px; padding-bottom:5px; border-bottom:1px solid var(--brd2); }
@@ -217,6 +219,15 @@ DETAIL_CSS = """
 .dv-credits p, .dv-credits li { font-size:12px; color:var(--t5); line-height:1.7; }
 .dv-credits a { color:var(--link); text-decoration:none; }
 .dv-credits ul { list-style:none; padding:0; }
+
+/* ── Bulle note perso ─────────────────────────────────────────────────────── */
+.note-pin { display:none; width:240px;
+            font-family:'Caveat',cursive; font-size:1.05rem; font-weight:500; line-height:1.55;
+            background:var(--bg3); border:1px solid var(--brd); border-radius:12px;
+            padding:14px 16px; color:var(--t2); box-shadow:0 4px 20px rgba(0,0,0,.35); }
+.note-pin.visible { display:block; }
+.note-pin-lbl { font-family:'Inter',system-ui,sans-serif; font-size:9px; text-transform:uppercase;
+                letter-spacing:1.2px; color:var(--t5); margin-bottom:6px; }
 
 /* ── Search bar ─────────────────────────────────────────────────────────── */
 .search-wrap { padding:8px 14px 6px; }
@@ -261,6 +272,7 @@ function renderDetail(talk) {
   h +=   '<div class="dv-meta">';
   if (talk.attended) h += '<span class="dv-att">✅ Présent</span>';
   h +=     `<span class="dv-dur">${talk.duration}</span>`;
+  if (talk.official_link) h += `<a class="dv-src" href="${talk.official_link}" target="_blank" rel="noopener">↗ Programme officiel</a>`;
   h +=   '</div>';
   if (talk.speakers) h += `<div class="dv-spk">${talk.speakers}</div>`;
   h += '</div>';
@@ -401,6 +413,7 @@ def _make_item(slug, entry, summary_md):
         "title":         title,
         "speakers":      entry.get("description", ""),
         "duration":      DURATIONS.get(slug, "?"),
+        "date_fr":       entry.get("date_fr", ""),
         "attended":      entry.get("attended", False),
         "official_link": entry.get("official_link", ""),
         "theme":         theme,
@@ -444,6 +457,14 @@ def load_talks():
 
     if missing:
         print(f"  ⚠️  Résumés manquants (ignorés) : {', '.join(missing)}")
+
+    def _sort_key(t):
+        # Parse "17/02/2026 14:20–14:25" → sortable string "2026-02-17 14:20"
+        d = t.get("date_fr", "")
+        m = re.match(r"(\d{2})/(\d{2})/(\d{4})\s+(\d{2}:\d{2})", d)
+        return f"{m.group(3)}-{m.group(2)}-{m.group(1)} {m.group(4)}" if m else "9999"
+
+    talks.sort(key=_sort_key)
     return talks
 
 
@@ -498,6 +519,7 @@ def load_slides():
             "theme":           theme,
             "theme_color":     color,
             "duration":        DURATIONS.get(slug, "?"),
+            "date_fr":         entry.get("date_fr", ""),
         })
 
     if missing:
@@ -569,9 +591,13 @@ body { font-family:'Inter',system-ui,sans-serif; display:flex; height:100vh; ove
 .mini-av-ph { width:18px; height:18px; }
 .dur { color:var(--t4); font-size:11px; font-family:'JetBrains Mono',monospace; }
 
-.ct { flex:1; overflow-y:auto; background:var(--bg1); }
-.ct-inner { max-width:780px; margin:0 auto; padding:40px 48px 80px; }
+.ct { flex:1; display:flex; flex-direction:column; overflow:hidden; background:var(--bg1); }
+.ct-inner { flex:1; overflow-y:auto; min-height:0; }
+.ct-inner-wrap { max-width:780px; margin:0 auto; padding:40px 48px 80px; }
 .esn-star { color:#f1c40f; font-size:11px; flex-shrink:0; }
+.ct .note-pin { width:100%; max-width:780px; margin:0 auto; border-radius:0;
+                border:none; border-top:1px solid var(--brd); box-shadow:none;
+                padding:12px 48px 40px; background:var(--bg2); }
 """
 
     js = """
@@ -582,7 +608,14 @@ function selectTalk(id) {
   const talk = TALKS.find(t => t.id === id);
   if (!talk) return;
   document.getElementById('detail').innerHTML = renderDetail(talk);
-  document.querySelector('.ct').scrollTop = 0;
+  document.querySelector('.ct-inner').scrollTop = 0;
+  const pin = document.getElementById('note-pin');
+  if (talk.personal_notes) {
+    pin.querySelector('.note-pin-txt').textContent = talk.personal_notes;
+    pin.classList.add('visible');
+  } else {
+    pin.classList.remove('visible');
+  }
 }
 
 function applyFiltersA() {
@@ -605,8 +638,8 @@ marked.setOptions({ breaks: true });
 selectTalk(TALKS[0].id);
 """ + TOGGLE_JS
 
-    total    = len(talks)
-    attended = sum(1 for t in talks if t["attended"])
+    total    = sum(1 for t in talks if t["kind"] != "atelier")
+    attended = sum(1 for t in talks if t["attended"] and t["kind"] != "atelier")
 
     return f"""<!DOCTYPE html>
 <html lang="fr">
@@ -616,7 +649,7 @@ selectTalk(TALKS[0].id);
   {THEME_HEAD}
   <title>AlpOSS 2026 — Rapport de mission</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>{css}{DISCLAIMER_CSS}</style>
 </head>
@@ -645,8 +678,11 @@ selectTalk(TALKS[0].id);
 </aside>
 <main class="ct">
   <div class="ct-inner">
-    <div id="detail"></div>
+    <div class="ct-inner-wrap">
+      <div id="detail"></div>
+    </div>
   </div>
+  <div id="note-pin" class="note-pin"><div class="note-pin-lbl">Mes notes</div><div class="note-pin-txt"></div></div>
 </main>
 <script>
 {data_js(talks)}
@@ -669,8 +705,8 @@ def version_b(talks):
         c = theme_color_map[th]
         filter_btns += f'<button class="fbtn" data-theme="{th}" onclick="filterB(this,\'{th}\')" style="--tc:{c}">{th}</button>\n'
 
-    total    = len(talks)
-    attended = sum(1 for t in talks if t["attended"])
+    total    = sum(1 for t in talks if t["kind"] != "atelier")
+    attended = sum(1 for t in talks if t["attended"] and t["kind"] != "atelier")
 
     css = THEME_VARS + DETAIL_CSS + """
 * { box-sizing:border-box; margin:0; padding:0; }
@@ -702,6 +738,10 @@ header .stats { display:flex; gap:32px; margin-top:16px; }
 .badge { font-size:10px; font-weight:600; color:var(--tc,var(--link)); text-transform:uppercase; letter-spacing:.5px; }
 .mini-av { width:20px; height:20px; border-radius:50%; }
 .dur { font-size:12px; color:var(--t6); font-family:'JetBrains Mono',monospace; }
+.card-src { font-size:11px; color:var(--link); text-decoration:none; margin-left:auto;
+            border:1px solid var(--link); border-radius:20px; padding:2px 9px;
+            opacity:.7; transition:opacity .15s; }
+.card-src:hover { opacity:1; }
 .card-foot { display:flex; align-items:center; justify-content:flex-end; gap:6px; margin-top:auto; padding-top:10px; }
 
 .card h3 { font-size:15px; font-weight:600; color:var(--t1); line-height:1.45; margin-bottom:8px; }
@@ -709,8 +749,11 @@ header .stats { display:flex; gap:32px; margin-top:16px; }
 
 .modal-bg { display:none; position:fixed; inset:0; background:rgba(0,0,0,.6); z-index:100; align-items:center; justify-content:center; }
 .modal-bg.open { display:flex; }
-.modal { background:var(--bg2); border:1px solid var(--brd); border-radius:12px; width:min(760px,92vw); max-height:85vh; overflow-y:auto; padding:36px 40px; position:relative; }
-.modal::-webkit-scrollbar { width:5px; }
+.modal { background:var(--bg2); border:1px solid var(--brd); border-radius:12px; width:min(760px,92vw); max-height:85vh; display:flex; flex-direction:column; padding:0; position:relative; }
+#modal-content { flex:1; overflow-y:auto; min-height:0; padding:36px 40px 24px; }
+.modal .note-pin { width:100%; border-radius:0 0 12px 12px; border:none; border-top:1px solid var(--brd);
+                   box-shadow:none; padding:12px 40px; background:var(--bg3); margin:0; }
+#modal-content::-webkit-scrollbar { width:5px; }
 .modal::-webkit-scrollbar-thumb { background:var(--brd); border-radius:3px; }
 .modal-close { position:absolute; top:16px; right:20px; background:none; border:none; font-size:22px; cursor:pointer; color:var(--t3); }
 .modal-close:hover { color:var(--t1); }
@@ -743,10 +786,18 @@ function openCard(id) {
   document.getElementById('modal-content').innerHTML = renderDetail(talk);
   document.getElementById('modal-bg').classList.add('open');
   document.querySelector('.modal').scrollTop = 0;
+  const pin = document.getElementById('note-pin');
+  if (talk.personal_notes) {
+    pin.querySelector('.note-pin-txt').textContent = talk.personal_notes;
+    pin.classList.add('visible');
+  } else {
+    pin.classList.remove('visible');
+  }
 }
 
 function closeModal() {
   document.getElementById('modal-bg').classList.remove('open');
+  document.getElementById('note-pin').classList.remove('visible');
 }
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
@@ -764,7 +815,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
   </div>
   <h3>{t['title']}</h3>
   <div class="speakers">{t['speakers']}</div>
-  <div class="card-foot">{av}<span class="dur">{t['duration']}</span></div>
+  <div class="card-foot">{av}<span class="dur">{t['duration']}</span>{f'<a class="card-src" href="{t["official_link"]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">↗</a>' if t.get('official_link') else ''}</div>
 </div>\n"""
 
     return f"""<!DOCTYPE html>
@@ -775,7 +826,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
   {THEME_HEAD}
   <title>AlpOSS 2026 — La Journée en Cartes</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Caveat:wght@500&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>{css}{DISCLAIMER_CSS}</style>
 </head>
@@ -819,6 +870,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕</button>
     <div id="modal-content"></div>
+    <div id="note-pin" class="note-pin"><div class="note-pin-lbl">Mes notes</div><div class="note-pin-txt"></div></div>
   </div>
 </div>
 
@@ -836,8 +888,13 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
 
 def version_c(slides, all_talks=None):
     # Partition into attended (main) and non-attended with notes (extra)
-    main_slides  = [s for s in slides if s["attended"]]
-    extra_slides = [s for s in slides if not s["attended"]]
+    def _slide_sort_key(s):
+        d = s.get("date_fr", "")
+        m = re.match(r"(\d{2})/(\d{2})/(\d{4})\s+(\d{2}:\d{2})", d)
+        return f"{m.group(3)}-{m.group(2)}-{m.group(1)} {m.group(4)}" if m else "9999"
+
+    main_slides  = sorted([s for s in slides if s["attended"]],  key=_slide_sort_key)
+    extra_slides = sorted([s for s in slides if not s["attended"]], key=_slide_sort_key)
 
     # Part 3: attended but deliberately not in diapo
     slide_ids = {s["id"] for s in slides}
@@ -885,6 +942,7 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
 .slide { position:absolute; inset:0; display:flex; flex-direction:column;
          padding:44px 72px 88px; opacity:0; transition:opacity .3s; pointer-events:none; }
 .slide.active { opacity:1; pointer-events:all; }
+.slide { zoom:0.85; }
 
 .slide-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; }
 .theme-badge { display:inline-block; padding:4px 14px; border-radius:20px; font-size:11px;
@@ -913,11 +971,11 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
                              font-size:12px; top:10px; transition:top .15s; }
 .slide-bullets li:hover { background:var(--bg2); padding-top:12px; padding-bottom:12px; }
 .slide-bullets li:hover::before { top:16px; }
-.hl-wrap { display:grid; }
-.hl-wrap > span { grid-area:1/1; transition:opacity .25s; }
-.hl-full { opacity:0; pointer-events:none; }
-.slide-bullets li:hover .hl-short { opacity:0; }
-.slide-bullets li:hover .hl-full { opacity:1; pointer-events:auto; }
+.hl-short { display:block; }
+.hl-full { display:block; max-height:0; overflow:hidden; opacity:0;
+           transition:max-height .35s ease, opacity .25s;
+           font-size:.87em; color:var(--t5); margin-top:5px; line-height:1.55; }
+.slide-bullets li:hover .hl-full { max-height:10em; opacity:1; }
 .slide-chips { display:flex; flex-wrap:wrap; gap:7px; margin-top:auto; padding-top:14px; }
 .chip { background:var(--bg2); border:1px solid var(--brd); border-radius:20px; padding:4px 12px;
         font-size:12px; color:var(--t3); cursor:pointer; transition:all .15s; font-family:inherit; }

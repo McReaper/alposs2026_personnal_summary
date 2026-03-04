@@ -41,11 +41,6 @@ Le discours positionne la souveraineté numérique non comme un argument marketi
 - Le rachat de VMware par Broadcom (2023-2024) et les augmentations tarifaires massives qui ont suivi ont déclenché une vague de migrations vers XCP-ng, transformant Vates en bénéficiaire direct de la fin du modèle open core VMware
 - Vates participe à la chaire de recherche industrielle HELIOS (MIAI Cluster) avec EasyVirt, centrée sur les technologies de cloud et d'IA souverains, sécurisés et durables
 - La "souveraineté numérique" est explicitement revendiquée comme objectif technique concret et non comme argument commercial — une posture défendue jusqu'au nom de l'entreprise (Vates = "prophète" en latin)
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

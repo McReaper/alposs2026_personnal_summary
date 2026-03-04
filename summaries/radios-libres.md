@@ -65,11 +65,6 @@ Il conclut avec une note d'espoir : face à l'"enshittification" d'Internet, la 
 - Les récepteurs FM ont **disparu des smartphones** — une régression technologique qui pousse les radios à se battre pour exister sur Internet, où elles n'ont aucun avantage comparatif face aux géants du streaming
 - L'ARCOM impose des **contraintes absurdes en DAB+** : couvrir jusqu'à Voiron depuis Grenoble, partager une fréquence avec des radios commerciales nationales aux intérêts divergents — un exemple de politique réglementaire mal adaptée aux réalités du terrain associatif
 - Martin a développé seul l'automate de Radio Campus Grenoble et l'a rendu open source **"digne de ce nom"** après bientôt cinq ans d'usage interne — un exemple authentique de contribution communautaire issue de la pratique
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

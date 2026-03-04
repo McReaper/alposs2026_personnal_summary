@@ -57,11 +57,6 @@ Laurent annonce des ambitions de déploiement européen et ouvre à des partenar
 - Laurent cite **Trump et l'instabilité tarifaire américaine** comme argument concret pour l'indépendance économique vis-à-vis des fournisseurs cloud américains
 - Le sommet **France-Allemagne sur la souveraineté digitale** à Berlin a mis l'open source au cœur des recommandations pour les administrations — signe d'une montée en puissance politique du sujet en 2024-2025
 - Un cas d'usage est en cours avec **Pôle emploi** — preuve que ces bibliothèques commencent à être intégrées dans des services publics à grande échelle
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

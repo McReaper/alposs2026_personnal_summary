@@ -47,11 +47,6 @@ Cédric conclut par un appel à la cartographie des GUL actifs en Rhône-Alpes :
 - **Philosophie anti-geek assumée** : Alpinux a délibérément choisi de ne pas s'adresser aux experts (qui « savent trouver l'information dans les manuels ») mais aux débutants, à rebours de beaucoup d'associations techniques.
 - **"Never ask what distro they want"** : l'anecdote sur le choix forcé de Linux Mint en install party résume une sagesse pratique réutilisable dans tout contexte d'onboarding technique.
 - **Les GUL comme alternative humaine à Discord** : Cédric souligne que les rencontres en présentiel (autour d'une bière) ont une valeur sociale que les communautés en ligne ne remplacent pas.
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

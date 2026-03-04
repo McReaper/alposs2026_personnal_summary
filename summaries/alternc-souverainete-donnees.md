@@ -43,11 +43,6 @@ L'angle souveraineté est central : AlternC permet à des structures (associatio
 - La version 3.5, sortie début 2025, témoigne de la vitalité du projet malgré sa discrétion médiatique
 - Webelys est l'un des seuls hébergeurs professionnels (non associatifs) à utiliser et cofinancer AlternC, illustrant qu'un modèle économique viable est possible autour du logiciel libre d'hébergement
 - L'approche "interface non technique en premier" d'AlternC est une décision de conception délibérée, souvent oubliée dans les projets d'infrastructure : la souveraineté n'est réelle que si l'outil est utilisable sans compétence spécialisée
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

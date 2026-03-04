@@ -62,11 +62,6 @@ LDAP (Lightweight Directory Access Protocol), normalisé par l'IETF dans des diz
 - Il est possible de **rendre Active Directory totalement dépendant d'OpenLDAP** : OpenLDAP devient la source de vérité et LSC pousse les changements vers l'AD — sans jamais toucher directement l'AD
 - Clément Oudot a **chanté une chanson** pour introduire son talk sur LDAP — moment d'humour rare dans une conférence technique pointue
 - LemonLDAP::NG implémente la **récursivité des groupes AD** avec gestion des cycles (groupe A membre de groupe B, groupe B membre de groupe A) — un bug classique qui plantait les serveurs en production avant la correction
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

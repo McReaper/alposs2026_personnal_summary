@@ -86,11 +86,6 @@ Le rôle de la fédération Déclic : accompagner les collectivités pour la sé
 - "Chat Control" — le projet européen de surveillance des messageries chiffrées — est directement évoqué comme menace à contrer. L'ADULLACT s'y oppose frontalement.
 - Le réseau sera **fermé** (uniquement les collectivités membres) mais avec des passerelles envisagées vers Tchap (État) — un équilibre délicat entre confiance fermée et interopérabilité ouverte.
 - Stéphane Vangheluwe signale le risque des forks trop divergents : "quand on a un peu trop de forks, j'en parle par expérience, on a du mal à parler avec les autres."
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

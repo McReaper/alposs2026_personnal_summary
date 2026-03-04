@@ -50,11 +50,6 @@ Régis Perdreau rappelle que La Mouette est joignable en ligne à tout moment, e
 - **Manque de templates** : un frein récurrent à l'adoption de LibreOffice en entreprise reste le manque de modèles de documents de qualité, problème que la communauté peine à résoudre depuis des années.
 - **Distribution LibreOffice francophone** : un projet innovant qui vise à apporter une identité et un ancrage français à LibreOffice, gouverné depuis Berlin (The Document Foundation est une fondation de droit allemand).
 - **Intégration de l'IA avec prudence** : La Mouette aborde le sujet IA de façon exploratoire, signe que même les associations du libre ne peuvent plus l'ignorer mais souhaitent conserver une approche critique.
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

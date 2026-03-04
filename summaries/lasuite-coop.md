@@ -44,11 +44,6 @@ La conférence présente ce modèle public-coopératif comme une réponse concr�
 - IndieHosters a présenté ce projet au FOSDEM 2026 (Bruxelles), signe de la visibilité internationale du modèle
 - Le financement est entièrement fondé sur la mutualisation, sans venture capital ni logique d'extraction de données
 - LaSuite.coop réserve une part de ses revenus aux communs logiciels qu'elle exploite — modèle de contribution pérenne au libre
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

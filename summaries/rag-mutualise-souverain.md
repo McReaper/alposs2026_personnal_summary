@@ -68,11 +68,6 @@ La démo montre concrètement des partitions étanches dédiées à des communes
 - La solution est déjà **intégrée à LibreOffice et Thunderbird** via l'API compatible OpenAI — preuve d'une interopérabilité concrète avec la suite bureautique libre la plus répandue
 - Le **RAG leakage** (fuite de données entre partitions) est identifié comme un risque majeur des solutions RAG mal architecturées ; Linagora revendique un partitionnement étanche comme différenciateur
 - Un POC RAG peut se faire en **demi-journée**, mais une solution industrielle scalable est un tout autre défi — mise en garde pertinente face aux promesses marketing des intégrateurs
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

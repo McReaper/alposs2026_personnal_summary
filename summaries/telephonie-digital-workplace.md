@@ -58,11 +58,6 @@ En Q&A, Jehan Monnier confirme que Linphone couvre téléphonie SIP, messagerie 
 - L'appel à manifestation d'intérêt **France 2030** sur les suites souveraines collaboratives a structuré un écosystème de partenariats entre éditeurs open source français qui ne se connaissaient pas tous auparavant
 - La téléphonie open source (Linphone) peut remplacer Microsoft Teams Phone **en drop-in**, en se connectant à un Active Directory existant via un proxy OpenID Connect — aucune migration brutale requise
 - Il n'existe pas d'acteur européen capable de proposer une **intégration verticale complète** d'une Digital Workplace (comme Microsoft le fait) — d'où la nécessité de consortiums d'éditeurs open source complémentaires
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

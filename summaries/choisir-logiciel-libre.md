@@ -61,11 +61,6 @@ Il termine sur les CLA (Contributor License Agreements) : distinction entre le b
 - La Mandriva Mandrake 7 qui effaçait les disques durs : une cicatrice collective de la communauté Linux encore évoquée 20 ans après, preuve de la longue mémoire de l'écosystème.
 - En 2026, la question de savoir si une pull request a été rédigée par un humain ou générée par IA est déjà posée dans le monde de l'open source — avec des impacts réels sur la charge de review des mainteneurs.
 - BookWire est mentionné comme un logiciel perçu comme libre par la communauté mais qui ne l'est en réalité pas — un piège fréquent pour les structures qui s'y fient sans vérification juridique.
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

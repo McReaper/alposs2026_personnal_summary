@@ -56,11 +56,6 @@ Les services sont proposés gratuitement aux petites communes et intercommunalit
 - L'intégration prévue de la **Cyber Suite ANSSI** dans la Suite Territoriale est notable dans un contexte d'augmentation des cyberattaques contre les collectivités (Albi, Caen, Angers, etc.)
 - Le modèle "Startup d'État" appliqué aux outils des collectivités est une approche agile atypique dans le secteur public, avec des itérations courtes et un contact terrain fort
 - La Suite Territoriale représente une alternative souveraine directe aux offres Microsoft 365 ou Google Workspace pour les collectivités, avec un portage institutionnel fort
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

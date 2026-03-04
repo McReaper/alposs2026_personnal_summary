@@ -53,11 +53,6 @@ Les collectivités territoriales utilisent fréquemment Pastell (édité par Lib
 - Pastell (Libriciel) est un acteur méconnu hors secteur public mais très largement déployé dans les collectivités françaises pour la dématérialisation réglementaire — un marché de niche mais stratégique
 - L'approche "connecteur" (vs intégration native) est un modèle architectural pragmatique : elle permet de faire coexister des outils déjà déployés sans les remplacer
 - Philippe Scoffoni préside PlossRA, ce qui positionne ce talk aussi comme un témoignage de l'écosystème local des prestataires open source en Auvergne-Rhône-Alpes
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

@@ -53,11 +53,6 @@ L'analyse des risques est au cœur du dispositif : c'est elle — et elle seule 
 - La loi inclut une **définition officielle de "système d'exploitation"** dans son règlement d'exécution — pour ceux qui se poseraient la question, la réponse est désormais dans un texte juridique européen.
 - Les **mises à jour automatiques** doivent être présentes dans les produits concernés, mais avec une **option de désactivation obligatoire** laissée à l'utilisateur.
 - L'**analyse des risques est l'unique fondement juridique des mesures de sécurité** — et la seule défense des fabricants en cas de litige : certains fournisseurs prétendent à tort qu'une fonctionnalité X est obligatoire, alors que seule l'analyse des risques propre au produit le détermine.
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

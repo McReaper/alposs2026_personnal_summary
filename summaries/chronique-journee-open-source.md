@@ -62,11 +62,6 @@ Il conclut : certains mainteneurs sont payés (son cas), beaucoup ne le sont pas
 - Des attaques de supply chain récentes ont compromis des paquets NPM connus et populaires, affectant de nombreux projets en cascade. La sécurité de la chaîne d'approvisionnement logicielle est désormais un enjeu opérationnel pour tous les mainteneurs.
 - JupyterLite (Jupyter dans le navigateur via WebAssembly) représente une rupture architecturale : plus besoin de serveur Python pour exécuter du code — un changement de paradigme pour la distribution d'environnements de calcul.
 - Un mainteneur principal sur un projet utilisé par des millions de personnes peut très bien travailler le soir sur son temps libre sur des fonctionnalités faute de financement dédié : la fragilité structurelle de l'open source en un seul exemple.
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

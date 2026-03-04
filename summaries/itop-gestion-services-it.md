@@ -44,11 +44,6 @@ L'angle "entités publiques" est central : iTop est cité pour sa capacité à s
 - La solution est entièrement open source et auto-hébergeable, ce qui répond aux exigences de souveraineté numérique des entités publiques (pas de cloud imposé)
 - Combodo est une ESN grenobloise — proximité géographique et industrielle forte avec l'écosystème AlpOSS
 - La montée des cyberattaques contre les collectivités (hôpitaux, mairies) rend la structuration ITSM/CMDB particulièrement urgente pour les acteurs publics
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

@@ -43,11 +43,6 @@ Le message central est pédagogique : adopter CloudNativePG ne dispense pas de c
 - Dalibo a publié depuis janvier 2025 une série de 10+ articles de fond sur CloudNativePG, faisant de Pierrick Chovelon l'une des voix françaises les plus documentées sur ce sujet
 - Le failover basé sur quorum de CloudNativePG (passé stable en 2025) permet des décisions de promotion de réplica plus sûres dans les environnements multi-AZ — une évolution critique pour les déploiements à haute disponibilité
 - PGSession 18, la conférence PostgreSQL annuelle organisée par Dalibo, s'est tenue fin février 2026 et a mis CloudNativePG au coeur de plusieurs sessions
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

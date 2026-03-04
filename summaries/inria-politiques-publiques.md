@@ -47,11 +47,6 @@ Albin Petit et Roger Pissard-Gibollet présentent trois exemples concrets de pro
 - L'INRIA développe des outils open source **directement utiles aux politiques publiques territoriales** (gestion des risques naturels, planification alimentaire et énergétique) — un argument fort pour les collectivités qui commandent des prestations d'ingénierie logicielle
 - La modélisation des dates dans Active Directory (intervalles de 100 nanosecondes depuis 1601) est à l'opposé de la rigueur formelle mathématique des systèmes dynamiques non lisses — anecdote de contraste dans l'écosystème numérique
 - L'INRIA affirme clairement que son activité ne se réduit pas à l'IA — un positionnement notable alors que l'institution est souvent médiatisée sous l'angle de l'intelligence artificielle
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

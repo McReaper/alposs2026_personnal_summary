@@ -47,11 +47,6 @@ La conférence aborde probablement : les choix d'outillage open source (Helm, Fl
 - Utiliser Kubernetes comme fondation d'un hébergeur (et non juste pour orchestrer des apps) est une approche architecturale avancée et encore peu répandue chez les hébergeurs européens
 - Le titre humoristique ("un peu d'espoir") reflète honnêtement la complexité et la charge opérationnelle de l'écosystème Kubernetes en production
 - Agora Calycé a participé à KubeCon North America 2025 — présence dans les événements majeurs de la communauté CNCF mondiale
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

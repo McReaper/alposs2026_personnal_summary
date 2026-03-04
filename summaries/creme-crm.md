@@ -43,11 +43,6 @@ Crème 2.7 (version récente) introduit notamment des types d'enregistrements pe
 - Le CRM modélise non seulement les clients, mais aussi les clients des clients, les partenaires et les concurrents — une granularité sémantique inhabituelle
 - Hybird a refusé de se faire racheter pour rester indépendant et "ne pas vendre son âme" — sujet de conférence récurrent de Jean-Michel Armand
 - Crème CRM gère en une seule plateforme : devis, facturation, campagnes email/SMS, agenda partagé, suivi commercial — sans module payant additionnel
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

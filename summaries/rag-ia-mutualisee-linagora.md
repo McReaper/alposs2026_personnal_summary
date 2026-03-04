@@ -53,11 +53,6 @@ Le positionnement est clairement orienté souveraineté numérique : une alterna
 - Linagora positionne OpenRAG comme une alternative souveraine aux solutions propriétaires (Azure OpenAI, Google Vertex AI...) déployable en environnement maîtrisé
 - L'isolation des données par Milvus permet une segmentation fine par utilisateur, équipe ou organisation — un argument fort pour les marchés publics et les données sensibles
 - LUCIE, le LLM francophone cité en contexte, est issu d'une démarche communautaire (OpenLLM France/Europe) — l'un des rares LLM open source ciblant la langue française
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

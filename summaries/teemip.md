@@ -45,11 +45,6 @@ Christophe Naud rappelle qu'il était déjà venu présenter TeemIP deux ans aup
 - Le modèle économique choisi est sobre et éprouvé : services autour d'un logiciel qui reste "complètement libre et gratuit". Aucun fork, aucune version "enterprise" fermée.
 - Le partenariat croisé avec Combodo (iTop) donne immédiatement à la nouvelle société une légitimité et un canal de distribution existant, sans partir de zéro commercialement.
 - La brièveté de la présentation (2:36, format lightning talk) contraste avec la densité du chemin parcouru : 16 ans de projet open source résumés en moins de 3 minutes.
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

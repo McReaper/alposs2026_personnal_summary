@@ -45,11 +45,6 @@ Sur le plan de l'audience touchée : le cours a démarré il y a cinq ans avec u
 - La non-rivalité de la connaissance — partager ne diminue pas ce que l'on sait — est présentée comme le fondement philosophique du logiciel libre, applicable bien au-delà de l'informatique.
 - L'intervenant plaide pour que la sensibilisation aux licences libres sorte du périmètre des seules formations informatiques : la culture libre est un enjeu de société transversal.
 - Des élections imminentes (mentionnées dans la transcription) sont citées comme argument concret pour l'utilité de l'open data dans la formation d'une opinion citoyenne éclairée.
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

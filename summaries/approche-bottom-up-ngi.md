@@ -49,11 +49,6 @@ Il appelle à renforcer la coordination du lobbying européen open source, notam
 - Le successeur Open Internet Stack n'a que 7 millions redistribuables, soit environ trois fois moins que NGI Zero Commons : une régression notable du soutien européen aux communs numériques.
 - Le financement en cascade (cascade funding) impose que les bénéficiaires d'Open Internet Stack collaborent avec l'infrastructure telco du projet voisin — une contrainte qui risque de créer une dépendance indirecte aux acteurs industriels.
 - OW2 vend sa paroisse avec une franchise désarmante : « on est sans but lucratif, mais je la vends quand même ».
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

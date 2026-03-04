@@ -65,11 +65,6 @@ La **distribution NIRD** est évoquée comme projet collectif national : initié
 - **Dizaines de demandes par jour** après une vidéo de présentation : le collectif NIRD croule sous les demandes de contribution depuis la mise en ligne d'une vidéo explicative, signe d'un intérêt massif mais d'une capacité d'accueil limitée.
 - **Le fossé programme/réalité** : une maman en salle témoigne que sa fille en terminale n'a jamais eu de cours sur le logiciel libre, malgré les référentiels officiels — situation comparée à l'éducation à la sexualité, théoriquement au programme mais rarement appliquée.
 - **Atos comme opérateur Linux régional** : le fait que le prestataire régional des lycées (Atos) soit désormais un acteur du déploiement Linux à grande échelle est un signal fort de la maturité de cet écosystème.
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

@@ -49,11 +49,6 @@ Elle conclut en présentant le **Pacte du logiciel libre** (nouvelle version 202
 - La vassalisation vis-à-vis des États-Unis est présentée comme un déclencheur d'accélération depuis janvier 2025 (sous-entendu : retour de Trump), créant une fenêtre d'opportunité politique inédite pour le logiciel libre.
 - L'obsolescence programmée des Google Pixel 4 : une mise à jour a réduit l'autonomie de la batterie à 2 heures, rendant l'appareil inutilisable. Un cas emblématique documenté lors de la conférence.
 - L'APRIL a produit un document de contribution de 5-6 pages en réponse à l'appel de la Commission européenne sur l'accélération de sa démarche logiciel libre — 20 heures de travail bénévole.
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

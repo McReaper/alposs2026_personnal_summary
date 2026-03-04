@@ -52,11 +52,6 @@ La session se termine par des questions : le service est ouvert aux particuliers
 - Le plugin Certbot pour le bureau d'enregistrement en question a été développé **par une seule bénévole**, deux ans après la disponibilité du standard dans Certbot — soulignant la fragilité des écosystèmes propriétaires face aux standards ouverts
 - **Absence de standard ouvert** côté titulaire/bureau d'enregistrement pour l'approvisionnement de noms de domaine : c'est un angle mort réglementaire que la communauté open source n'a pas encore comblé
 - LeBureau.coop est une **coopérative** qui ambitionne de devenir bureau d'enregistrement accrédité — un modèle alternatif rare dans un secteur dominé par des acteurs commerciaux
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)

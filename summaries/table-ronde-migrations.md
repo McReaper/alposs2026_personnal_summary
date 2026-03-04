@@ -93,11 +93,6 @@ Pierre Miriot, adjoint numérique à Grenoble, témoigne : la ville a basculé 1
 - La première direction à désinstaller Microsoft Office au Département de l'Aude est... les Finances. "On passe à LibreOffice point."
 - Pierre Miriot (adjoint numérique Grenoble) évoque la "rapacité des GAFAM" comme argument politique permettant désormais de convaincre les élus. Il cite le cas du procureur de la Cour Pénale Internationale dont le mail a été bloqué comme symptôme du monde dans lequel on vit.
 - La durée de la table ronde (44 minutes) reflète la densité du sujet — et l'intérêt croissant pour des retours d'expérience concrets, avec des noms, des chiffres et des durées de projets réels.
-
-## Mes notes
-
-*(à compléter)*
-
 ## Crédits
 
 - Conférence : [AlpOSS 2026](https://alposs.fr/)
