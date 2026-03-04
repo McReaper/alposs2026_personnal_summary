@@ -609,6 +609,7 @@ function selectTalk(id) {
   if (!talk) return;
   document.getElementById('detail').innerHTML = renderDetail(talk);
   document.querySelector('.ct-inner').scrollTop = 0;
+  history.replaceState(null, '', '#' + id);
   const pin = document.getElementById('note-pin');
   if (talk.personal_notes) {
     pin.querySelector('.note-pin-txt').textContent = talk.personal_notes;
@@ -635,7 +636,8 @@ function filterTheme(btn, theme) {
 }
 
 marked.setOptions({ breaks: true });
-selectTalk(TALKS[0].id);
+const _initHash = location.hash.slice(1);
+selectTalk(_initHash && TALKS.find(t => t.id === _initHash) ? _initHash : TALKS[0].id);
 """ + TOGGLE_JS
 
     total    = sum(1 for t in talks if t["kind"] != "atelier")
@@ -976,7 +978,10 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
            transition:max-height .35s ease, opacity .25s;
            font-size:.87em; color:var(--t5); margin-top:5px; line-height:1.55; }
 .slide-bullets li:hover .hl-full { max-height:10em; opacity:1; }
-.slide-chips { display:flex; flex-wrap:wrap; gap:7px; margin-top:auto; padding-top:14px; }
+.slide-chips { display:flex; flex-wrap:wrap; gap:7px; padding-top:14px; }
+.slide-link { display:inline-block; margin-top:auto; padding-top:10px; font-size:11px; color:var(--t5);
+              text-decoration:none; opacity:.7; transition:opacity .15s; }
+.slide-link:hover { opacity:1; color:var(--link); }
 .chip { background:var(--bg2); border:1px solid var(--brd); border-radius:20px; padding:4px 12px;
         font-size:12px; color:var(--t3); cursor:pointer; transition:all .15s; font-family:inherit; }
 .chip:hover { border-color:var(--tc,var(--acc)); color:var(--tc,var(--acc)); }
@@ -1045,6 +1050,9 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
 .slide-rate .rate-body { display:flex; flex-direction:column; gap:20px; flex:1; }
 .rate-title { font-size:clamp(1.6rem,3vw,2.4rem); font-weight:700; color:var(--t1); }
 .rate-intro { font-size:15px; color:var(--t3); line-height:1.7; max-width:700px; }
+.rate-site-link { display:inline-block; margin-top:auto; font-size:13px; color:var(--link);
+                  text-decoration:none; opacity:.8; transition:opacity .15s; }
+.rate-site-link:hover { opacity:1; text-decoration:underline; }
 .rate-grid  { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:10px; }
 .rate-item  { background:var(--bg2); border-radius:8px; padding:12px 16px; border-left:3px solid var(--t6); }
 .rate-name  { font-size:14px; font-weight:600; color:var(--t2h); line-height:1.4; }
@@ -1194,6 +1202,7 @@ showSlide(0);
     <div class="rate-title">Le reste du programme</div>
     <div class="rate-intro">Talks que je n'ai ni assisté, ni retenus — présentés ici pour avoir une vue complète de la journée.</div>
     {grid}
+    <a class="rate-site-link" href="https://mcreaper.github.io/alposs2026_personnal_summary/" target="_blank" rel="noopener">Rapport de mission complet → mcreaper.github.io/alposs2026_personnal_summary</a>
   </div>
 </div>"""
 
@@ -1262,6 +1271,7 @@ showSlide(0);
       <div class="slide-resume">{resume}</div>
       <div class="slide-bullets"><ul>{bullets_html}</ul></div>
       <div class="slide-chips">{chips_html}</div>
+      <a class="slide-link" href="../a/#{s['id']}" target="_blank" rel="noopener">↗ Rapport complet</a>
     </div>
     {right_html}
   </div>
