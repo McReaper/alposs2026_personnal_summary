@@ -1273,6 +1273,52 @@ def main():
         size = os.path.getsize(out_path)
         print(f"  site/{version}/index.html  ({size // 1024} KB)")
 
+    # Root index
+    root_index = os.path.join(BASE, "site", "index.html")
+    with open(root_index, "w", encoding="utf-8") as f:
+        f.write("""<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="utf-8">
+<title>AlpOSS 2026 — Résumé personnel</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  body { font-family: system-ui, sans-serif; background:#0d1117; color:#e6edf3;
+         display:flex; flex-direction:column; align-items:center; justify-content:center;
+         min-height:100vh; margin:0; gap:32px; }
+  h1 { font-size:1.6rem; font-weight:700; margin:0; }
+  p  { color:#8b949e; margin:0; font-size:.95rem; }
+  .cards { display:flex; gap:16px; flex-wrap:wrap; justify-content:center; }
+  a.card { display:block; background:#161b22; border:1px solid #30363d; border-radius:12px;
+           padding:24px 32px; text-decoration:none; color:inherit; transition:border-color .2s;
+           min-width:160px; text-align:center; }
+  a.card:hover { border-color:#58a6ff; }
+  .card-label { font-size:1.1rem; font-weight:600; margin-bottom:6px; }
+  .card-desc  { font-size:.8rem; color:#8b949e; }
+</style>
+</head>
+<body>
+  <div style="text-align:center">
+    <h1>AlpOSS 2026</h1>
+    <p>Alpine Open Source Summit · Grenoble · 17 février 2026</p>
+  </div>
+  <div class="cards">
+    <a class="card" href="a/">
+      <div class="card-label">Site A</div>
+      <div class="card-desc">Liste &amp; détail</div>
+    </a>
+    <a class="card" href="b/">
+      <div class="card-label">Site B</div>
+      <div class="card-desc">Grille de cartes</div>
+    </a>
+    <a class="card" href="c/">
+      <div class="card-label">Site C</div>
+      <div class="card-desc">Diaporama</div>
+    </a>
+  </div>
+</body>
+</html>
+""")
+    print("  site/index.html")
     print("Done.")
 
 if __name__ == "__main__":
