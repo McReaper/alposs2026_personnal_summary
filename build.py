@@ -561,7 +561,13 @@ def version_a(talks):
 * { box-sizing:border-box; margin:0; padding:0; }
 body { font-family:'Inter',system-ui,sans-serif; display:flex; height:100vh; overflow:hidden; background:var(--bg1); }
 
-.sb { width:300px; min-width:300px; background:var(--sb); display:flex; flex-direction:column; height:100vh; }
+.sb { width:300px; min-width:300px; background:var(--sb); display:flex; flex-direction:column; height:100vh;
+      transition:width .25s, min-width .25s; overflow:hidden; }
+.sb.collapsed { width:0; min-width:0; }
+.sb-toggle { width:14px; flex-shrink:0; background:var(--sb); border:none; border-left:1px solid var(--sb-brd);
+             border-right:1px solid var(--sb-brd); cursor:pointer; color:var(--t5); font-size:9px;
+             height:100vh; transition:background .15s; padding:0; }
+.sb-toggle:hover { background:var(--sb-hov); color:var(--t2); }
 .sbh { padding:20px; border-bottom:1px solid var(--sb-brd); }
 .sbh img { width:44px; height:44px; border-radius:50%; border:2px solid var(--acc); margin-bottom:10px; display:block; }
 .sbh h1 { color:var(--t1); font-size:16px; font-weight:700; }
@@ -628,6 +634,11 @@ function applyFiltersA() {
   });
 }
 
+function toggleSb() {
+  const collapsed = document.getElementById('sb').classList.toggle('collapsed');
+  document.getElementById('sb-btn').textContent = collapsed ? '▶' : '◀';
+}
+
 function filterTheme(btn, theme) {
   document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
@@ -657,7 +668,7 @@ selectTalk(_initHash && TALKS.find(t => t.id === _initHash) ? _initHash : TALKS[
 </head>
 <body>
 {TOGGLE_BTN}
-<aside class="sb">
+<aside class="sb" id="sb">
   <div class="sbh">
     <img src="{AVATAR}" alt="Victor" />
     <h1>AlpOSS 2026</h1>
@@ -678,6 +689,7 @@ selectTalk(_initHash && TALKS.find(t => t.id === _initHash) ? _initHash : TALKS[
   <div class="filters">{filter_btns}</div>
   <ul class="tl">{items}</ul>
 </aside>
+<button class="sb-toggle" id="sb-btn" onclick="toggleSb()" title="Masquer/afficher le panneau">◀</button>
 <main class="ct">
   <div class="ct-inner">
     <div class="ct-inner-wrap">
@@ -943,7 +955,8 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
 
 /* ── Slides ─────────────────────────────────────────────────────────────── */
 .slide { position:absolute; inset:0; display:flex; flex-direction:column;
-         padding:44px 72px 88px; opacity:0; transition:opacity .3s; pointer-events:none; }
+         padding:44px 72px 88px; opacity:0; transition:opacity .3s; pointer-events:none;
+         overflow-y:auto; }
 .slide.active { opacity:1; pointer-events:all; }
 .slide { zoom:0.85; }
 
