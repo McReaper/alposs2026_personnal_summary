@@ -2,6 +2,8 @@
 
 Personal summary, notes, and opinions about the [AlpOSS 2026](https://alposs.fr/) conference, which took place in Échirolles on February 17th, 2026.
 
+**Live site → [mcreaper.github.io/alposs2026_personnal_summary](https://mcreaper.github.io/alposs2026_personnal_summary/)**
+
 > ⚠️ All content in `summaries/` and `slides/` was generated automatically by AI from audio transcriptions. It may contain errors or inaccuracies — always verify important information against the [official replays](https://video.echirolles.fr/w/p/7CPFbyKwNmwZBVbnMo2rmk).
 
 ## What's in this repo
