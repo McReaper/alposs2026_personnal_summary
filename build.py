@@ -564,9 +564,12 @@ body { font-family:'Inter',system-ui,sans-serif; display:flex; height:100vh; ove
 .sb { width:300px; min-width:300px; background:var(--sb); display:flex; flex-direction:column; height:100vh;
       transition:width .25s, min-width .25s; overflow:hidden; }
 .sb.collapsed { width:0; min-width:0; }
-.sb-toggle { width:14px; flex-shrink:0; background:var(--sb); border:none; border-left:1px solid var(--sb-brd);
-             border-right:1px solid var(--sb-brd); cursor:pointer; color:var(--t5); font-size:9px;
-             height:100vh; transition:background .15s; padding:0; }
+.sb-toggle { position:fixed; left:300px; top:50%; transform:translateY(-50%);
+             width:22px; height:64px; border-radius:0 10px 10px 0;
+             background:var(--sb); border:1px solid var(--sb-brd); border-left:none;
+             cursor:pointer; color:var(--t4); font-size:13px; z-index:50;
+             display:flex; align-items:center; justify-content:center;
+             transition:left .25s, background .15s; padding:0; box-shadow:3px 0 8px rgba(0,0,0,.15); }
 .sb-toggle:hover { background:var(--sb-hov); color:var(--t2); }
 .sbh { padding:20px; border-bottom:1px solid var(--sb-brd); }
 .sbh img { width:44px; height:44px; border-radius:50%; border:2px solid var(--acc); margin-bottom:10px; display:block; }
@@ -636,7 +639,9 @@ function applyFiltersA() {
 
 function toggleSb() {
   const collapsed = document.getElementById('sb').classList.toggle('collapsed');
-  document.getElementById('sb-btn').textContent = collapsed ? '▶' : '◀';
+  const btn = document.getElementById('sb-btn');
+  btn.textContent = collapsed ? '›' : '‹';
+  btn.style.left = collapsed ? '0px' : '300px';
 }
 
 function filterTheme(btn, theme) {
@@ -689,7 +694,7 @@ selectTalk(_initHash && TALKS.find(t => t.id === _initHash) ? _initHash : TALKS[
   <div class="filters">{filter_btns}</div>
   <ul class="tl">{items}</ul>
 </aside>
-<button class="sb-toggle" id="sb-btn" onclick="toggleSb()" title="Masquer/afficher le panneau">◀</button>
+<button class="sb-toggle" id="sb-btn" onclick="toggleSb()" title="Masquer/afficher le panneau">‹</button>
 <main class="ct">
   <div class="ct-inner">
     <div class="ct-inner-wrap">
