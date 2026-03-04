@@ -928,8 +928,9 @@ def version_c(slides, all_talks=None):
                   "items": excluded}
     rate       = {"type": "rate",     "id": "_rate",      "theme_color": "#e67e22",
                   "missed": missed}
+    end        = {"type": "end",      "id": "_end",       "theme_color": "#3d7fff"}
 
-    all_items = [intro, sec_main] + main_slides + [sec_ext] + extra_slides + [sec_excl, excl_slide, rate]
+    all_items = [intro, sec_main] + main_slides + [sec_ext] + extra_slides + [sec_excl, excl_slide, rate, end]
     total = len(all_items)
 
     css = THEME_VARS + """
@@ -1053,6 +1054,17 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
 .rate-site-link { display:inline-block; margin-top:auto; font-size:13px; color:var(--link);
                   text-decoration:none; opacity:.8; transition:opacity .15s; }
 .rate-site-link:hover { opacity:1; text-decoration:underline; }
+
+/* ── Slide de fin ─────────────────────────────────────────────────────────── */
+.slide-end .end-body { display:flex; flex-direction:column; justify-content:center; align-items:center;
+                        flex:1; gap:18px; text-align:center; }
+.end-title { font-size:clamp(3rem,6vw,5rem); font-weight:700; color:var(--t1); }
+.end-sub { font-size:15px; color:var(--t4); letter-spacing:.4px; }
+.end-note { font-size:14px; color:var(--t3); margin-top:12px; }
+.end-link { font-size:clamp(13px,1.6vw,17px); color:var(--link); text-decoration:none;
+            border:1px solid var(--link); border-radius:8px; padding:10px 22px;
+            opacity:.85; transition:opacity .15s, background .15s; }
+.end-link:hover { opacity:1; background:rgba(61,127,255,.08); }
 .rate-grid  { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:10px; }
 .rate-item  { background:var(--bg2); border-radius:8px; padding:12px 16px; border-left:3px solid var(--t6); }
 .rate-name  { font-size:14px; font-weight:600; color:var(--t2h); line-height:1.4; }
@@ -1202,7 +1214,6 @@ showSlide(0);
     <div class="rate-title">Le reste du programme</div>
     <div class="rate-intro">Talks que je n'ai ni assisté, ni retenus — présentés ici pour avoir une vue complète de la journée.</div>
     {grid}
-    <a class="rate-site-link" href="https://mcreaper.github.io/alposs2026_personnal_summary/" target="_blank" rel="noopener">Rapport de mission complet → mcreaper.github.io/alposs2026_personnal_summary</a>
   </div>
 </div>"""
 
@@ -1277,12 +1288,27 @@ showSlide(0);
   </div>
 </div>"""
 
+    def make_end_html(i):
+        return f"""<div class="slide slide-end" style="--tc:#3d7fff">
+  <div class="slide-top">
+    <span class="theme-badge" style="background:#3d7fff">Fin</span>
+    <span class="slide-counter">{i+1} / {total}</span>
+  </div>
+  <div class="end-body">
+    <div class="end-title">Merci !</div>
+    <div class="end-sub">AlpOSS 2026 · 17 février 2026 · Grenoble</div>
+    <div class="end-note">Le rapport de mission complet est disponible en ligne :</div>
+    <a class="end-link" href="https://mcreaper.github.io/alposs2026_personnal_summary/" target="_blank" rel="noopener">mcreaper.github.io/alposs2026_personnal_summary</a>
+  </div>
+</div>"""
+
     def make_slide_html(i, item):
         t = item.get("type", "talk")
         if t == "intro":    return make_intro_html(i)
         if t == "section":  return make_section_html(i, item)
         if t == "excluded": return make_excluded_html(i, item)
         if t == "rate":     return make_rate_html(i, item)
+        if t == "end":      return make_end_html(i)
         return make_talk_html(i, item)
 
     slides_html = "\n".join(make_slide_html(i, it) for i, it in enumerate(all_items))
