@@ -10,10 +10,16 @@ Vates est une société grenobloise fondée en 2012, spécialisée dans la virtu
 Marc Ungeschikts défend une thèse directe : la souveraineté numérique se construit décision par décision dans les choix d'infrastructure, pas dans les discours. XCP-ng et Xen Orchestra, développés à Grenoble, constituent une alternative open source mature à VMware/Broadcom et Microsoft Hyper-V, déployée en production dans des environnements critiques. Le rachat de VMware par Broadcom et les hausses tarifaires massives qui ont suivi ont déclenché une vague de migrations vers XCP-ng. Vates s'implique dans les instances de gouvernance du Xen Project (Linux Foundation) et dans des consortiums européens pour ancrer cette souveraineté dans la durée.
 
 ## Points marquants
-- Le rachat VMware/Broadcom a déclenché des migrations massives vers XCP-ng.
-- XCP-ng tourne en production dans des environnements critiques mondiaux.
-- Vates : croissance sans levée de fonds, par la satisfaction client.
-- Participation active à la gouvernance Xen Project (Linux Foundation).
+- Le rachat de VMware par Broadcom a déclenché une vague de migrations vers XCP-ng.
+  Les hausses tarifaires massives imposées par Broadcom après le rachat (2023-2024) ont mis fin au modèle open core de VMware et poussé de nombreuses organisations à chercher des alternatives souveraines. Vates a bénéficié directement de ce basculement de marché.
+- XCP-ng est déployé en production dans des datacenters critiques à travers le monde.
+  Développé à Grenoble et incubé au sein du Xen Project (Linux Foundation), XCP-ng constitue une alternative mature à VMware ESXi et Microsoft Hyper-V, y compris pour des environnements exigeants sur les plans de la disponibilité et de la sécurité.
+- Vates a choisi de croître sans levée de fonds, par la satisfaction client.
+  Ce modèle économique rare dans l'écosystème tech est présenté comme une condition de la souveraineté : l'absence d'investisseurs externes préserve les choix stratégiques et l'engagement open source de l'entreprise. Le nom Vates, qui signifie "prophète" en latin, reflète cette posture délibérée.
+- Vates contribue activement à la gouvernance du Xen Project au sein de la Linux Foundation.
+  Marc Ungeschikts siège au Xen Project Management Working Group et pilote les roadmaps de XCP-ng et Xen Orchestra. Vates participe également à la chaire de recherche industrielle HELIOS (MIAI Cluster) sur le cloud souverain et l'IA, avec EasyVirt comme partenaire.
+- La souveraineté numérique se construit décision par décision dans les choix d'infrastructure.
+  Vates est membre d'Hexatrust pour la confiance numérique souveraine en Europe et a rejoint la Fondation Eclipse pour le cloud native. L'interopérabilité et l'absence de lock-in sont présentées comme des conditions non négociables d'une souveraineté réelle, au-delà du discours marketing.
 
 ## Technologies
 - **XCP-ng** — Plateforme de virtualisation open source (GPL) basée sur Xen, développée par Vates (Grenoble) et incubée au sein du Xen Project (Linux Foundation). Alternative souveraine directe à VMware ESXi et Microsoft Hyper-V pour les infrastructures on-premise et hybrides.

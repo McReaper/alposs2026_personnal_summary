@@ -10,10 +10,16 @@ Le SITPI (Syndicat Intercommunal des Technologies et des Plateformes d'Informati
 Le SITPI présente le retour d'expérience de la migration de la ville de Claix (200 comptes) depuis Microsoft Exchange vers OpenXchange. La démarche a impliqué les utilisateurs finaux dès le benchmark, ce qui a été présenté comme le facteur clé de succès. La migration mobile a mobilisé un écosystème 100 % libre (F-Droid, DAVx5, K-9 Mail). La DINUM publie l'outillage DevOps sous GPLv3 pour que d'autres collectivités puissent répliquer le déploiement.
 
 ## Points marquants
-- Les utilisateurs finaux ont choisi OpenXchange, pas les DSI.
-- Migration planifiée un mercredi : "Never on Friday".
-- Pile mobile 100 % libre : F-Droid, DAVx5, K-9 Mail.
-- DINUM pas encore prête pour des millions d'utilisateurs.
+- Les utilisateurs finaux ont plébiscité OpenXchange, pas les DSI.
+  Six solutions ont été benchmarkées sur une heure de démo chacune ; 90 à 95 % du temps était consacré à l'ergonomie utilisateur, pas au back-office. OpenXchange a été choisi en premier par les agents d'une vingtaine représentant cinq à six communes du SITPI.
+- Microsoft a involontairement déclenché la migration vers le libre.
+  La fin annoncée du mode de licence perpétuelle Microsoft Exchange a contraint le SITPI à se réinterroger dès 2024. Baptiste Danielewicz remercie explicitement Microsoft pour sa "stratégie marketing un peu boiteuse" comme déclencheur de la démarche.
+- La migration mobile a été traitée comme un sous-projet indépendant.
+  Environ quarante smartphones ont été migrés vers un écosystème 100 % libre : F-Droid (magasin d'applications), DAVx5 (synchronisation CalDAV/CardDAV), Fossify Calendar et K-9 Mail. La bascule a eu lieu un mardi soir pour une mise en production le mercredi — stratégie délibérée ("Never on Friday").
+- L'outillage DevOps de la DINUM est publié en GPLv3 et réutilisable.
+  OpenTofu (fork libre de Terraform) et Ansible permettent de déployer et maintenir une instance OpenXchange. Le SITPI et Alma ont pu contribuer au dépôt public, illustrant le cycle vertueux du logiciel libre dans la sphère publique.
+- La DINUM cible 100 000 comptes mais n'est pas prête pour des millions.
+  Interrogée sur un déploiement à l'échelle du système éducatif belge (150 000 enseignants, 1,5 million d'élèves), la DINUM indique qu'elle n'est pas encore assez mature pour des infrastructures à plusieurs millions d'utilisateurs.
 
 ## Technologies
 - **OpenXchange** — Suite de messagerie et collaboration open source d'origine allemande ; alternative souveraine on-premise à Microsoft Exchange/Outlook ; interface webmail sans client lourd ; pertinent pour les ESN travaillant avec les collectivités ou le secteur public.

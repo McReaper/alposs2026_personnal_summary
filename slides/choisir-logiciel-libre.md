@@ -10,10 +10,16 @@ Red Hat est l'un des principaux éditeurs mondiaux de logiciels open source, éd
 Choisir un logiciel libre ne se limite pas à vérifier sa licence : il faut analyser qui le développe (une seule entreprise, un consortium, un individu), comment il est financé, et sa robustesse opérationnelle à long terme. Minio, très populaire comme stockage objet compatible S3, a archivé sa version libre la semaine même de la conférence — illustration directe du risque de bascule propriétaire. Les CLA méritent une attention particulière : certains captent les droits des contributeurs sans contrepartie, d'autres (FSF) les redistribuent équitablement. En 2026, la question de savoir si une pull request est générée par IA pèse déjà sur la charge de review des mainteneurs.
 
 ## Points marquants
-- Minio a archivé sa version libre la semaine de la conférence.
-- Un CLA peut capter vos droits sans aucune contrepartie.
-- Les PRs générées par IA déplacent le bottleneck vers la review humaine.
-- BookWire perçu comme libre ne l'est en réalité pas.
+- Minio, stockage objet compatible S3, a archivé sa version libre.
+  L'archivage est survenu la semaine même de la conférence. Minio avait d'abord laissé la version libre "vivoter" tout en développant une version propriétaire ; le fork devient désormais la seule issue pour les équipes qui l'utilisent sans plan de contingence.
+- Un développeur parti chez Apple ne pouvait plus contribuer à son propre projet.
+  Cas documenté avec Abbey World : en signant chez Apple, le développeur principal n'avait plus le droit de contribuer au logiciel qu'il avait créé. Les clauses de non-concurrence d'Apple couvrent explicitement l'open source.
+- Un mauvais CLA capture tous vos droits sans aucune contrepartie.
+  Le Contributor License Agreement de la FSF redistribue les droits aux contributeurs ; celui pratiqué par certains éditeurs commerciaux les capte sans retour. La distinction est critique avant toute contribution à un projet porté par une entreprise.
+- Les PRs générées par IA déplacent le goulot d'étranglement vers la review humaine.
+  En 2026, la production de code est facilitée par les LLM, mais la qualité des contributions est très inégale selon les modèles. La question "parle-t-on à un humain ou à un proxy LLM ?" est désormais posée sérieusement lors de la review.
+- BookWire est perçu comme un logiciel libre, mais ne l'est pas juridiquement.
+  Ce cas illustre le risque de se fier à la réputation communautaire sans vérification de la licence. Une structure qui déploie BookWire en croyant respecter une obligation de recours au libre s'expose à un risque juridique réel.
 
 ## Technologies
 - **OpenShift** — Distribution Kubernetes entreprise de Red Hat. Solution d'industrialisation des déploiements conteneurisés, avec support long terme et outillage DevOps intégré. Forte demande en intégration et Platform Engineering.

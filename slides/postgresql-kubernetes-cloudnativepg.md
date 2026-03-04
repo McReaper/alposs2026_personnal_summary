@@ -10,10 +10,16 @@ Dalibo est une société française de services exclusivement dédiée à Postgr
 CloudNativePG (CNPG) est l'opérateur Kubernetes de référence pour PostgreSQL : il couvre déploiement, réplication streaming, haute disponibilité, failover automatique et sauvegardes PITR sur object storage. Le message central du talk est que l'opérateur automatise des tâches complexes mais ne remplace pas l'expertise DBA — les choix de configuration (synchrone vs asynchrone, politique WAL, stratégie de failover) restent critiques. Comprendre ce que fait CNPG "sous le capot" est indispensable pour éviter les incidents en production.
 
 ## Points marquants
-- CNPG : seul opérateur PostgreSQL "graduated" à la CNCF
-- Failover basé sur quorum, stable depuis 2025
-- L'opérateur automatise, mais ne remplace pas le DBA
-- PITR natif via archivage WAL sur S3/Azure Blob/GCS
+- CloudNativePG est le seul opérateur PostgreSQL certifié "graduated" à la CNCF.
+  Ce statut, atteint en 2025, atteste d'une maturité industrielle reconnue par la communauté cloud-native mondiale et distingue CNPG de tous les autres opérateurs PostgreSQL pour Kubernetes.
+- Un opérateur automatise l'exploitation PostgreSQL, mais pas les décisions DBA.
+  Les choix de configuration — réplication synchrone ou asynchrone, politique de rétention des WAL, stratégie de failover — requièrent une expertise PostgreSQL que l'opérateur ne peut pas remplacer. Une adoption naïve génère des incidents graves en production.
+- Le failover basé sur quorum, passé stable en 2025, réduit les risques de split-brain.
+  Ce mécanisme permet de promouvoir le réplica le plus à jour dans les environnements multi-AZ, en évitant les promotions incorrectes qui causent des pertes de données.
+- CNPG intègre nativement le PITR via archivage continu des WAL sur object storage.
+  Les sauvegardes sont envoyées en continu sur S3, Azure Blob ou GCS (compatible MinIO on-premise), permettant une restauration à n'importe quel point dans le temps sans outil tiers.
+- Dalibo publie depuis janvier 2025 une série d'articles de référence sur CloudNativePG.
+  Cette documentation technique en français, rédigée par Pierrick Chovelon, est l'une des sources les plus complètes disponibles sur le fonctionnement interne de l'opérateur.
 
 ## Technologies
 - **CloudNativePG (CNPG)** — Opérateur Kubernetes open source pour PostgreSQL (Apache 2.0), projet "graduated" à la CNCF. Gère l'intégralité du cycle de vie d'un cluster PostgreSQL : déploiement, réplication streaming, HA, failover automatique basé sur quorum, sauvegardes continues et PITR. Référence de facto pour opérer PostgreSQL en environnement cloud native.

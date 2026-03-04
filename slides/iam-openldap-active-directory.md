@@ -10,10 +10,16 @@ Worteks est une société de services spécialisée dans l'intégration et le su
 Clément Oudot présente un tour d'horizon pragmatique des outils IAM open source pour gérer des annuaires OpenLDAP et Active Directory. La suite LDAP Toolbox couvre tous les besoins : SSO, synchronisation d'identités, gestion autonome des mots de passe, support niveau 1. Une stratégie de migration progressive permet de rendre Active Directory dépendant d'OpenLDAP comme source de vérité, sans big bang. La ville d'Échirolles, hôte de l'événement, utilise elle-même ces outils et en a cofinancé le développement.
 
 ## Points marquants
-- Active Directory encode ses dates depuis le 1er janvier 1601.
-- OpenLDAP peut devenir la source de vérité sur l'AD.
-- 2000 comptes expirés découverts via Service Desk chez un client.
-- Les tribunaux reconnaissent l'open source : Orange condamné à 1 M€.
+- Active Directory encode ses dates en intervalles de 100 nanosecondes depuis 1601.
+  L'epoch de référence est le 1er janvier 1601, héritage des systèmes Microsoft historiques. Tout outil s'interfaçant avec l'AD doit implémenter cette conversion, source fréquente de bugs lors de l'intégration.
+- OpenLDAP peut devenir la source de vérité d'un Active Directory, sans big bang.
+  Via LSC (LDAP Synchronization Connector), les changements sont poussés de OpenLDAP vers l'AD automatiquement. L'AD reste en place pour les outils Microsoft, mais n'est plus la source primaire des identités pour les applications tierces.
+- Un client a découvert 2 000 comptes expirés dans son AD grâce à Service Desk.
+  L'outil LDAP Toolbox Service Desk affiche un tableau de bord des comptes expirés, bloqués ou orphelins, sans accès direct au serveur Windows. Cette hygiène de gestion des identités est directement liée à la surface d'attaque SSI.
+- Les tribunaux font respecter les licences open source : Orange condamné à 1 M€.
+  Ce cas de jurisprudence illustre que les licences open source sont juridiquement opposables et que leur non-respect expose à des condamnations significatives. L'open source n'est pas du domaine public.
+- La ville d'Échirolles utilise LDAP Service Desk et a cofinancé son développement.
+  La collectivité hôte d'AlpOSS est elle-même cliente et contributrice financière de la suite LDAP Toolbox de Worteks — un exemple concret de collectivité locale qui finance l'open source qu'elle utilise.
 
 ## Technologies
 - **OpenLDAP** — Implémentation LDAP open source de référence (licence OpenLDAP Public License) ; haute disponibilité, multi-maître, extensible via modules (politique de mots de passe, groupes dynamiques, réplication syncprov) ; base de toute architecture IAM souveraine.

@@ -10,10 +10,16 @@ QuantStack est un studio open source parisien spécialisé dans l'écosystème s
 Jérémy Tuloup retrace une journée type de mainteneur open source : CI cassée sans raison apparente, dépilage de notifications GitHub, réunions sans consensus, gestion des releases avec leurs tokens, secrets et changelogs. Les attaques de supply chain sur NPM sont devenues un risque opérationnel réel, forçant des patches en urgence. En 2026, le flux de PRs générées par IA déplace le bottleneck de la production de code vers la review humaine, dont la qualité est très inégale. Le facteur humain — désaccords, abandons, perte de financement — reste plus difficile à gérer que le technique.
 
 ## Points marquants
-- La review de PRs IA est le nouveau bottleneck des mainteneurs.
-- Attaques supply chain NPM : patches urgents désormais courants.
-- GitHub en panne arrête des milliers de projets mondiaux.
-- Une typo YAML a invalidé tout un pipeline de publication NPM.
+- En 2026, les LLM déplacent le goulot d'étranglement de la production vers la review.
+  Le volume de pull requests a augmenté, mais leur qualité est très inégale selon les modèles utilisés. Les mainteneurs ne peuvent pas toujours savoir si un contributeur est un humain ou un proxy LLM, ce qui alourdit le travail de review.
+- Des attaques supply chain ont compromis des paquets NPM connus.
+  Des paquets JavaScript populaires ont été ciblés et compromis, affectant de nombreux dépôts en cascade. Les mainteneurs doivent être prêts à publier des patches correc­tifs en urgence, sans délai.
+- Quand GitHub est en panne, des milliers de projets s'arrêtent simultanément.
+  La centralisation de la CI/CD sur GitHub Actions crée un risque systémique : l'indisponibilité de la plateforme bloque l'ensemble des pipelines de l'écosystème, y compris les projets critiques.
+- Une majuscule dans un fichier YAML a invalidé une publication NPM entière.
+  Dans la configuration des Trusted Publishers NPM (mécanisme sans token API), un "R" majuscule au lieu d'un "r" minuscule a rendu la configuration inopérante. Illustration que la complexité des pipelines de release est devenue une source de bugs à part entière.
+- Le facteur humain est plus difficile à gérer que les problèmes techniques.
+  Désaccords sur la direction du projet, contributeurs qui partent ou perdent leur financement, intérêts divergents entre mainteneurs — ces situations reviennent sur des mois ou des années et ne se résolvent pas avec un patch.
 
 ## Technologies
 - **JupyterLab / JupyterLite** — Environnements de notebooks interactifs, standards en data science et ML. JupyterLite fait tourner Jupyter entièrement dans le navigateur via WebAssembly, sans serveur backend — rupture architecturale majeure pour le déploiement d'environnements de calcul légers.

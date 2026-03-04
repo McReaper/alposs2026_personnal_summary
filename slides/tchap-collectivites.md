@@ -10,10 +10,16 @@ L'ADULLACT est l'association nationale des développeurs et utilisateurs de logi
 Tchap, la messagerie de l'État basée sur Matrix/Element, ne couvre pas les collectivités territoriales. Ce projet porté par l'ADULLACT, Arawa et la fédération Déclic vise à déployer une infrastructure Matrix fédérée, une instance par collectivité, pour permettre des échanges chiffrés de bout en bout entre agents publics locaux. Le réseau sera fermé aux seules collectivités membres, avec des passerelles envisagées vers Tchap État. L'identité des agents sera labellisée via ProConnect pour éviter toute dépendance à Microsoft ou Google.
 
 ## Points marquants
-- Tchap exclut les 30 000 collectivités françaises en 2026.
-- Matrix garantit le chiffrement E2EE, même pour les admins.
-- Tchap État a forké Synapse : il n'est plus fédéré avec Matrix.
-- Le réseau collectivités sera fermé, avec passerelles vers l'État.
+- Tchap couvre uniquement l'administration centrale de l'État, pas les collectivités.
+  Après plusieurs changements de périmètre, la situation en 2026 est claire : les 30 000 collectivités françaises ne sont pas couvertes par Tchap et recourent à WhatsApp, Telegram ou Teams pour leur messagerie instantanée professionnelle. Ce projet comble ce vide.
+- Matrix est la seule messagerie combinant réseau distribué, E2EE, multiplateforme et logiciel libre.
+  Le chiffrement de bout en bout signifie que même les administrateurs de l'instance ne peuvent pas lire les contenus — contrairement à Teams ou Exchange où l'administrateur a accès à tout. La nature open source permet de vérifier que les processus de chiffrement sont bien respectés.
+- Tchap État a forké Element et Synapse, se coupant de l'écosystème Matrix.
+  Ce fork a été réalisé pour des raisons de sécurité permettant de gérer des niveaux de communication élevés côté État. Le projet des collectivités cherche à éviter cette erreur et reste au plus proche des packagings existants.
+- Le réseau sera fermé aux collectivités membres, avec des passerelles envisagées vers Tchap État.
+  La fermeture est nécessaire pour établir la confiance : on ne peut pas laisser n'importe qui rejoindre le réseau. Des discussions sont en cours avec la DINUM pour créer des passerelles, avec pour objectif à terme de "faire de Tchap le Tchap de la fonction publique."
+- L'identité des agents sera labellisée via ProConnect, sans dépendance à Microsoft ou Google.
+  La fédération Déclic (80 OPSN sur le territoire) pilote l'organisation territoriale pour que plus de 50 % des collectivités représentées soient desservies, en s'assurant qu'il n'y ait pas de zones blanches entre communes voisines.
 
 ## Technologies
 - **Matrix (protocole)** — Protocole de communication décentralisé, fédéré et chiffré de bout en bout (standard ouvert). Base technique de Tchap et d'Element. Permet un réseau distribué sans point central, une instance par structure et une fédération entre instances. Seule messagerie combinant réseau distribué + E2EE + multiplateforme + logiciel libre.

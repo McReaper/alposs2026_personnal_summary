@@ -10,10 +10,16 @@ Ygreky est une structure spécialisée en cybersécurité des systèmes embarqu�
 Le Cyber Resilience Act est publié au Journal officiel de l'UE et entre en vigueur progressivement jusqu'en décembre 2027, avec une première échéance dès septembre 2026 : la notification obligatoire des vulnérabilités activement exploitées. Les simples contributeurs open source sont explicitement exemptés ; les obligations incombent aux fabricants qui monétisent, qui doivent notamment fournir 5 ans de mises à jour de sécurité gratuites et notifier les projets upstream des failles découvertes. Entre 70 et 90 % des composants d'un produit commercial étant open source, la production de S-BOM devient incontournable. L'analyse des risques est l'unique fondement juridique des mesures de sécurité à mettre en place.
 
 ## Points marquants
-- Première échéance CRA : septembre 2026, notification des vulnérabilités.
-- Les contributeurs open source sont explicitement exemptés.
-- 5 ans de mises à jour de sécurité gratuites obligatoires pour les fabricants.
-- 70 à 90 % des composants d'un produit commercial sont open source.
+- Le CRA est en vigueur ; première échéance dès septembre 2026.
+  La notification obligatoire des vulnérabilités activement exploitées s'applique à tous les produits concernés dès septembre 2026, y compris les versions déjà en marché. L'entrée en vigueur complète est prévue pour décembre 2027.
+- Les simples contributeurs open source sont explicitement exemptés de toute obligation.
+  Cette exemption n'était pas acquise dans les premières versions du texte. Seuls les fabricants (ceux qui monétisent) et les intendants de logiciels ouverts (personnes morales supportant un projet) ont des obligations.
+- Les fabricants sont tenus de notifier les projets upstream des failles découvertes.
+  Si un fabricant découvre une faille dans une dépendance open source, il doit la signaler au projet upstream. Le projet n'a aucune obligation d'agir en retour, mais il recevra les rapports et patches des acteurs commerciaux.
+- 5 ans de mises à jour de sécurité gratuites sont obligatoires pour les fabricants.
+  Les fabricants ne peuvent pas vendre un produit au-delà de la fin de cette période d'assistance sans justification. La durée doit être alignée sur la durée de vie prévue du produit, que le fabricant doit communiquer.
+- Entre 70 et 90 % des composants d'un produit commercial sont open source.
+  Ce chiffre rend la production d'un S-BOM (Software Bill of Materials) incontournable. La génération est particulièrement complexe dans les architectures conteneurisées, où la combinaison de plusieurs S-BOM issus de microservices distincts n'est pas triviale.
 
 ## Technologies
 - **S-BOM (Software Bill of Materials)** — Inventaire exhaustif des composants logiciels d'un produit, rendu obligatoire par le CRA pour tous les fabricants. La génération de S-BOM est complexe dans les environnements conteneurisés à cause de la multiplication des composants et de la difficulté de combiner plusieurs S-BOM issus de microservices distincts.

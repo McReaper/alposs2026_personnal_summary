@@ -10,10 +10,16 @@ L'APRIL est la principale association française de promotion et de défense du 
 L'opération "Adieu Windows" agrège les événements d'aide à la migration vers Linux organisés par les GUL en France, Belgique et Suisse, en réponse à la fin du support Windows 10 prévue en octobre 2026. En une semaine, le nombre d'événements référencés est passé de 697 à 775, signe d'une dynamique réelle. Le Digital Markets Act européen a contraint Microsoft à prolonger le support d'un an, moyennant création de compte — démarche perçue comme captation de données. La présentation conclut sur le Pacte du logiciel libre 2026, signé par la mairie d'Échirolles lors de la conférence.
 
 ## Points marquants
-- 775 événements de migration Linux recensés en une semaine.
-- La vassalisation US accélère l'intérêt politique pour le libre.
-- DMA européen a forcé Microsoft à prolonger le support Windows 10.
-- Le terme "autonomie stratégique" préféré à "souveraineté numérique".
+- De 697 à 775 événements Linux recensés en une semaine.
+  L'opération Adieu Windows, pilotée par l'APRIL, agrège les événements des GUL (Groupes d'Utilisateurs de Linux) de France, Belgique et Suisse. La dynamique est croissante jusqu'à la fin du support Windows 10 le 13 octobre 2026.
+- Le DMA européen a forcé Microsoft à prolonger le support Windows 10 d'un an.
+  Sans cette loi, Microsoft aurait arrêté le support 4 ans après la sortie de Windows 11. L'année de prolongation est conditionnée à la création d'un compte Microsoft, perçue comme une captation des données utilisateurs.
+- La vassalisation vis-à-vis des États-Unis est le nouvel accélérateur du libre.
+  Depuis janvier 2025, la dépendance aux éditeurs américains est devenue un argument politique fort. L'APRIL a consacré 20 heures de travail bénévole à une contribution à l'appel de la Commission européenne pour accélérer sa démarche logiciel libre.
+- La mairie d'Échirolles a signé le Pacte du logiciel libre lors de la conférence.
+  Le Pacte 2026 engage les signataires sur trois points : donner la priorité aux logiciels libres, défendre une informatique émancipatrice, et contribuer à la pérennité des projets libres utilisés. Échirolles avait déjà signé la version 2017.
+- "Autonomie stratégique" est préféré au terme "souveraineté numérique".
+  Ce choix sémantique est assumé : "souveraineté numérique" est jugé connoté politiquement à droite dans le débat français, tandis qu'"autonomie stratégique" décrit plus précisément l'enjeu d'indépendance vis-à-vis des GAFAM.
 
 ## Technologies
 - **GNU/Linux (distributions diverses)** — Système d'exploitation libre, alternative directe à Windows pour les postes de travail. La fin du support Windows 10 en octobre 2026 représente une opportunité de migration en masse, avec une forte demande potentielle pour les ESN spécialisées en déploiement desktop.

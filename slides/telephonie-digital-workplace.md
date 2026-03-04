@@ -10,10 +10,16 @@ Belledonne Communications est une société grenobloise éditrice du projet open
 Microsoft détient 45 % du marché des Digital Workplaces et le Cloud Act américain permet aux autorités US d'accéder aux données hébergées par des éditeurs américains — l'affaire Karim Khan, dont les accès ont été coupés unilatéralement, l'illustre concrètement. Belledonne Communications intègre Linphone (SIP open source depuis 2001) dans des suites collaboratives via des standards ouverts : SIP, WebRTC, OpenID Connect, LDAP/CardDAV. La suite Hexagone, issue de l'AMI France 2030, associe Linphone, Bluemind, XWiki et Interstice pour offrir une alternative souveraine à M365. Linphone peut remplacer Teams Phone en drop-in, sans migration brutale, via un proxy OpenID Connect vers Active Directory.
 
 ## Points marquants
-- Microsoft détient 45 % du marché des Digital Workplaces.
-- Le Cloud Act permet la coupure unilatérale d'accès (cas Karim Khan).
-- Linphone remplace Teams Phone sans migration brutale.
-- Aucun acteur européen ne propose seul une intégration verticale complète.
+- Microsoft détient 45 % du marché des Digital Workplaces, soit 7 entreprises sur 10.
+  Ce monopole de fait rend impossible l'audit du code, crée une dépendance unilatérale aux hausses de prix et de licence, et expose les données au Cloud Act américain.
+- Le Cloud Act a permis la coupure unilatérale des accès de Karim Khan en 2025.
+  Le procureur de la Cour pénale internationale a vu ses accès Microsoft coupés suite à un litige avec l'administration Trump. Cet exemple illustre concrètement le risque de dépendance à un éditeur soumis à la juridiction américaine.
+- Linphone remplace Microsoft Teams Phone sans migration brutale.
+  Linphone se connecte à un Active Directory existant via un proxy OpenID Connect, sans toucher l'infrastructure en place. Le projet est en développement actif depuis 2001 et couvre téléphonie SIP, messagerie instantanée et visioconférence.
+- La suite Hexagone associe quatre éditeurs open source français issus de l'AMI France 2030.
+  Le consortium réunit Linphone (Belledonne), Bluemind (messagerie), XWiki (wiki) et Interstice (partage documentaire), hébergés chez Hotscale. Il a notamment répondu à l'appel d'offre Canopé de l'Éducation nationale.
+- Aucun acteur européen ne peut proposer seul une Digital Workplace complète.
+  La fragmentation de l'offre européenne impose des consortiums d'éditeurs open source complémentaires, là où Microsoft fournit une intégration verticale unique. L'interopérabilité repose sur des standards ouverts : SIP, WebRTC, OpenID Connect, LDAP/CardDAV.
 
 ## Technologies
 - **Linphone** — Client et serveur SIP open source (GPLv3/commercial) développé depuis 2001 par Belledonne Communications. Alternative directe à Microsoft Teams Phone et Cisco, couvrant téléphonie SIP, messagerie instantanée et visioconférence. Intégrable à un Active Directory existant via proxy OpenID Connect.
