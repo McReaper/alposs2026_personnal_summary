@@ -360,6 +360,34 @@ def parse_bullets(content):
     return items
 
 
+def parse_detailed_bullets(content):
+    """Parse bullets with optional indented detail line.
+
+    Format in slides/*.md:
+        - Short text visible on slide.
+          Optional detail line for Q&A (indented with 2+ spaces, no blank line).
+
+    Returns list of (short, detail) tuples. detail == short when absent.
+    """
+    result = []
+    current_short = None
+    current_detail = []
+    for line in content.splitlines():
+        if line.lstrip().startswith('- ') and not line.startswith(' '):
+            # flush previous
+            if current_short is not None:
+                detail = ' '.join(current_detail).strip()
+                result.append((current_short, detail if detail else current_short))
+            current_short = line.lstrip()[2:].strip()
+            current_detail = []
+        elif current_short is not None and line.startswith('  ') and line.strip():
+            current_detail.append(line.strip())
+    if current_short is not None:
+        detail = ' '.join(current_detail).strip()
+        result.append((current_short, detail if detail else current_short))
+    return result
+
+
 # ─── Data loading ─────────────────────────────────────────────────────────────
 
 def _make_item(slug, entry, summary_md):
@@ -452,21 +480,24 @@ def load_slides():
             speaker_name  = parts[0].strip()
             company_short = parts[1].strip()
 
+        # Bullets: (short, detail) pairs — both fields live in slides/*.md
+        bullet_pairs = parse_detailed_bullets(sections.get("Points marquants", ""))
+
         theme, color = THEMES.get(slug, ("Autre", "#7f8c8d"))
         result.append({
-            "id":             slug,
-            "title":          title,
-            "speaker_name":   speaker_name,
-            "company_short":  company_short,
-            "company_tip":    sections.get("Société", ""),
-            "resume":         sections.get("Résumé", ""),
-            "highlights":     parse_bullets(sections.get("Points marquants", "")),
-            "tech_items":     parse_tech_items(sections.get("Technologies", "")),
-            "personal_notes": entry.get("personal_notes", "").strip(),
-            "attended":       entry.get("attended", False),
-            "theme":          theme,
-            "theme_color":    color,
-            "duration":       DURATIONS.get(slug, "?"),
+            "id":              slug,
+            "title":           title,
+            "speaker_name":    speaker_name,
+            "company_short":   company_short,
+            "company_tip":     sections.get("Société", ""),
+            "resume":          sections.get("Résumé", ""),
+            "bullet_pairs":    bullet_pairs,
+            "tech_items":      parse_tech_items(sections.get("Technologies", "")),
+            "personal_notes":  entry.get("personal_notes", "").strip(),
+            "attended":        entry.get("attended", False),
+            "theme":           theme,
+            "theme_color":     color,
+            "duration":        DURATIONS.get(slug, "?"),
         })
 
     if missing:
@@ -808,25 +839,29 @@ def version_c(slides, all_talks=None):
     main_slides  = [s for s in slides if s["attended"]]
     extra_slides = [s for s in slides if not s["attended"]]
 
-    # Truly missed: not in slides at all, not a workshop
+    # Part 3: attended but deliberately not in diapo
     slide_ids = {s["id"] for s in slides}
-    missed = [t for t in (all_talks or [])
-              if t["id"] not in slide_ids and t.get("kind") != "atelier"]
-
-    # Excluded: attended or noted, but deliberately not in diapo
     excluded = [t for t in (all_talks or [])
                 if not t.get("in_diapo")
-                and (t.get("attended") or t.get("personal_notes", "").strip())
+                and t.get("attended")
                 and t.get("kind") != "atelier"]
+    excl_ids = {t["id"] for t in excluded}
+
+    # Part 4: not attended + not in diapo (includes notes-only talks)
+    missed = [t for t in (all_talks or [])
+              if t["id"] not in slide_ids and t["id"] not in excl_ids
+              and t.get("kind") != "atelier"]
+
+    total_attended = sum(1 for t in (all_talks or []) if t.get("attended") and t.get("kind") != "atelier")
 
     # Structural slides injected between talk groups
     intro      = {"type": "intro",    "id": "_intro",     "theme_color": "#3d7fff"}
     sec_main   = {"type": "section",  "id": "_sec_main",  "theme_color": "#3d7fff",
                   "label": "Partie principale",
-                  "num": "01", "sub": f"{len(main_slides)} talks assistés en direct"}
+                  "num": "01", "sub": f"sélection de {len(main_slides)} talks parmi les {total_attended} assistés"}
     sec_ext    = {"type": "section",  "id": "_sec_ext",   "theme_color": "#7f8c8d",
                   "label": "Mentions rapides",
-                  "num": "02", "sub": f"{len(extra_slides)} talks couverts à distance"}
+                  "num": "02", "sub": f"{len(extra_slides)} talks manqués · auraient mérité le détour"}
     sec_excl   = {"type": "section",  "id": "_sec_excl",  "theme_color": "#484f58",
                   "label": "Autres talks vus",
                   "num": "03", "sub": f"{len(excluded)} talks vus, non présentés"}
@@ -870,11 +905,19 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
 .slide-body { display:flex; gap:36px; flex:1; min-height:0; }
 .slide-left { flex:1; display:flex; flex-direction:column; gap:18px; min-width:0; }
 .slide-resume { font-size:clamp(14px,1.4vw,17px); color:var(--t2); line-height:1.8; }
-.slide-bullets ul { list-style:none; display:flex; flex-direction:column; gap:11px; }
+.slide-bullets ul { list-style:none; display:flex; flex-direction:column; gap:4px; }
 .slide-bullets li { font-size:clamp(15px,1.55vw,18px); color:var(--t2h); line-height:1.5;
-                    padding-left:22px; position:relative; }
-.slide-bullets li::before { content:"▸"; position:absolute; left:0; color:var(--tc,var(--acc));
-                             font-size:12px; top:4px; }
+                    padding:6px 10px 6px 28px; position:relative; border-radius:6px;
+                    transition:background .2s, padding .15s; cursor:default; }
+.slide-bullets li::before { content:"▸"; position:absolute; left:8px; color:var(--tc,var(--acc));
+                             font-size:12px; top:10px; transition:top .15s; }
+.slide-bullets li:hover { background:var(--bg2); padding-top:12px; padding-bottom:12px; }
+.slide-bullets li:hover::before { top:16px; }
+.hl-wrap { display:grid; }
+.hl-wrap > span { grid-area:1/1; transition:opacity .25s; }
+.hl-full { opacity:0; pointer-events:none; }
+.slide-bullets li:hover .hl-short { opacity:0; }
+.slide-bullets li:hover .hl-full { opacity:1; pointer-events:auto; }
 .slide-chips { display:flex; flex-wrap:wrap; gap:7px; margin-top:auto; padding-top:14px; }
 .chip { background:var(--bg2); border:1px solid var(--brd); border-radius:20px; padding:4px 12px;
         font-size:12px; color:var(--t3); cursor:pointer; transition:all .15s; font-family:inherit; }
@@ -897,8 +940,7 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
 .note-bubble::before { content:""; position:absolute; bottom:-8px; left:28px;
                         border:5px solid transparent; border-top-color:var(--bg3); z-index:1; }
 .note-bubble--no-ptr::after, .note-bubble--no-ptr::before { display:none; }
-.note-bubble.note-bubble--dashed { border-color:transparent;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' rx='12' ry='12' fill='none' stroke='%23888' stroke-width='2' stroke-dasharray='8 6'/%3E%3C/svg%3E"); }
+.note-bubble.note-bubble--dashed { border:2px dotted var(--t5); }
 
 /* ── Tooltip ────────────────────────────────────────────────────────────── */
 #tip { display:none; position:fixed; z-index:500; background:var(--bg2); border:1px solid var(--brd);
@@ -935,11 +977,11 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
 .section-label { font-size:clamp(2rem,4.5vw,3.5rem); font-weight:700; color:var(--t1); }
 .section-sub   { font-size:16px; color:var(--t4); }
 /* Excluded listing */
-.slide-excluded .excl-grid { display:grid; grid-template-columns:1fr 1fr; gap:0 20px; flex:1; align-content:start; overflow:hidden; }
-.excl-row { display:flex; align-items:baseline; gap:7px; padding:5px 0; border-bottom:1px solid var(--brd2); }
+.slide-excluded .excl-grid { display:flex; flex-direction:column; flex:1; align-content:start; }
+.excl-row { display:flex; align-items:baseline; gap:8px; padding:7px 0; border-bottom:1px solid var(--brd2); }
 .excl-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; margin-top:5px; }
-.excl-title { flex:1; font-size:13px; color:var(--t2); line-height:1.4; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; min-width:0; }
-.excl-sp { font-size:11px; color:var(--t5); white-space:nowrap; flex-shrink:0; }
+.excl-title { flex:1; font-size:14px; color:var(--t2); line-height:1.4; min-width:0; }
+.excl-sp { font-size:12px; color:var(--t5); white-space:nowrap; flex-shrink:0; }
 .excl-dur { font-size:11px; color:var(--t6); font-family:'JetBrains Mono',monospace; flex-shrink:0; }
 /* Rate slide */
 .slide-rate .rate-body { display:flex; flex-direction:column; gap:20px; flex:1; }
@@ -1012,6 +1054,8 @@ showSlide(0);
 
     def make_intro_html(i):
         n_main, n_extra = len(main_slides), len(extra_slides)
+        n_talks = len(SLUGS)
+        n_workshops = len(WORKSHOP_SLUGS)
         return f"""<div class="slide slide-intro" style="--tc:#3d7fff">
   <div class="slide-top">
     <span class="theme-badge" style="background:#3d7fff">Introduction</span>
@@ -1025,7 +1069,7 @@ showSlide(0);
     <div class="intro-cols">
       <div class="intro-col">
         <div class="intro-col-title">L'événement</div>
-        <p>AlpOSS est une journée de conférences et ateliers autour du logiciel libre, organisée à Grenoble. En 2026 : 44 talks, 6 ateliers, une seule journée.</p>
+        <p>AlpOSS est une journée de conférences et ateliers autour du logiciel libre, organisée à Grenoble. En 2026 : {n_talks} talks, {n_workshops} ateliers, une seule journée.</p>
       </div>
       <div class="intro-col">
         <div class="intro-col-title">Pourquoi j'y étais</div>
@@ -1033,8 +1077,8 @@ showSlide(0);
       </div>
     </div>
     <div class="intro-stats">
-      <div><div class="isn">44</div><div class="isl">talks</div></div>
-      <div><div class="isn">6</div><div class="isl">ateliers</div></div>
+      <div><div class="isn">{n_talks}</div><div class="isl">talks</div></div>
+      <div><div class="isn">{n_workshops}</div><div class="isl">ateliers</div></div>
       <div><div class="isn">{n_main}</div><div class="isl">assistés</div></div>
       <div><div class="isn">{n_extra}</div><div class="isl">mentions</div></div>
     </div>
@@ -1085,12 +1129,12 @@ showSlide(0);
         grid = f'<div class="rate-grid">{items_html}</div>' if items_html else ""
         return f"""<div class="slide slide-rate" style="--tc:#e67e22">
   <div class="slide-top">
-    <span class="theme-badge" style="background:#e67e22">Regrets</span>
+    <span class="theme-badge" style="background:#e67e22">Non couverts</span>
     <span class="slide-counter">{i+1} / {total}</span>
   </div>
   <div class="rate-body">
-    <div class="rate-title">Ce que j'ai raté...</div>
-    <div class="rate-intro">AlpOSS proposait plusieurs salles en simultané. Voici les talks que je n'ai pas pu suivre, faute d'être au bon endroit au bon moment.</div>
+    <div class="rate-title">Le reste du programme</div>
+    <div class="rate-intro">Talks que je n'ai ni assisté, ni retenus — présentés ici pour avoir une vue complète de la journée.</div>
     {grid}
   </div>
 </div>"""
@@ -1126,10 +1170,18 @@ showSlide(0);
         # Right column
         right_html = f'<div class="slide-right">{note_html}{av_html}</div>'
 
-        # Bullets (max 4)
-        bullets_html = "".join(
-            f"<li>{_html.escape(b)}</li>" for b in s["highlights"][:4]
-        ) or "<li>Voir le résumé complet.</li>"
+        # Bullets (max 4) — short text displayed, detail text revealed on hover
+        def _bullet(short, detail):
+            if detail == short:
+                return f'<li>{_html.escape(short)}</li>'
+            return (f'<li>'
+                    f'<span class="hl-wrap">'
+                    f'<span class="hl-short">{_html.escape(short)}</span>'
+                    f'<span class="hl-full">{_html.escape(detail)}</span>'
+                    f'</span>'
+                    f'</li>')
+        bullets_html = "".join(_bullet(sh, det) for sh, det in s["bullet_pairs"][:4]) \
+                       or "<li>Voir le résumé complet.</li>"
 
         # Resume (inline, single paragraph)
         resume = _html.escape(s.get("resume", "").replace("\n", " ").strip())
