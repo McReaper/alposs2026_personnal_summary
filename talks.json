@@ -1,0 +1,817 @@
+{
+  "source": "AlpOSS 2026 - Grenoble, 17 février 2026",
+  "websites": {
+    "AlpOSS": "https://alposs.fr/",
+    "replays": "https://video.echirolles.fr/w/p/7CPFbyKwNmwZBVbnMo2rmk?playlistPosition=1"
+  },
+  "workshops": [
+    {
+      "title": "Donnez une voix à vos documents avec OpenRAG",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 15:40–16:40",
+      "attended": false,
+      "personal_notes": "",
+      "description": "Un atelier de Andrzej NEUGEBAUER (Linagora)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/7SSRKX/"
+    },
+    {
+      "title": "Démo en direct+Atelier: Une infra JupyterHub opérationnelle avec contenus en 1h grâce à WoD",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 09:30–10:30",
+      "attended": false,
+      "personal_notes": "",
+      "description": "Un atelier de Bruno Cornec (Hyper-Linux.org) et Frédéric PASSERON (HPE)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/X9XHGW/"
+    },
+    {
+      "title": "Sécurisez vos données avec les clés de sécurité OpenPGP (YubiKey, NitroKey).",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 10:30–11:30",
+      "attended": false,
+      "personal_notes": "",
+      "description": "Un atelier de Jean-Jacques BRUCKER (foopgp) et Sébastien Picardeau (piseb)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/KTNMTA/"
+    },
+    {
+      "title": "Sites statiques HTML/CSS sans coder : Web Design libre avec Silex",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 11:30–12:30",
+      "attended": false,
+      "personal_notes": "",
+      "description": "Un atelier de Alex HOYAU (Internet 2000 et Silex)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/FGWSQE/"
+    },
+    {
+      "title": "Wikipedia - comprendre les coulisses",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 14:00–15:00",
+      "attended": false,
+      "personal_notes": "",
+      "description": "Un atelier de Guillaume Allegre (Wikimédia, OpenStreetMap)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/739Y9M/"
+    },
+    {
+      "title": "Découvrir Rust en 2h : construire un petit projet de CLI de A à Z ",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 15:40–17:40",
+      "attended": false,
+      "personal_notes": "",
+      "description": "Un atelier de René Ribaud (Red Hat) et Cyril Marin",
+      "official_link": "https://pretalx.com/alposs-2026/talk/MCVPPT/"
+    }
+  ],
+  "talks": [
+    {
+      "title": "AlpOSS 2026 - Comment déGAFAMiser une asso climat ?",
+      "path": "audios/AlpOSS 2026 -  Comment déGAFAMiser une asso climat _.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 -  Comment déGAFAMiser une asso climat _.txt",
+      "date_fr": "17/02/2026 14:20–14:25",
+      "attended": true,
+      "personal_notes": "Le critère \"boire un coup avec son hébergeur\" est hilarant — et pas si bête (coucou AlpiLink). OVH reste plus séduisant sur les features, mais Grésille montre qu'une alternative locale/souveraine existe. À retenir pour l'ESN : N8N et surtout Nextcloud, qui semble assez mature pour remplacer la suite Office. À tester.",
+      "description": "Une présentation de Gauthier Fanucci (Alternatiba)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/A8KQBE/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "AlpOSS 2026 - Adieu Windows, Bonjour le Libre",
+      "path": "audios/AlpOSS 2026 - Adieu Windows, Bonjour le Libre.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - Adieu Windows, Bonjour le Libre.txt",
+      "date_fr": "17/02/2026 14:30–14:50",
+      "attended": true,
+      "personal_notes": "Très politique, parfois cash — énergie communicative. Le pacte et le militantisme c'est leur truc. Ce qui m'intéresse vraiment : la mention du CRA, qui recoupe le talk précédent et confirme que c'est le vrai sujet réglementaire à surveiller.",
+      "description": "Une présentation de Bookynette (APRIL)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/XAYMJN/",
+      "in_diapo": true,
+      "esn_highlight": false
+    },
+    {
+      "title": "AlpOSS 2026 - Approche bottom-up vers la souveraineté : le programme NGI, et autres considérations",
+      "path": "audios/AlpOSS 2026 - Approche bottom-up vers la souveraineté _ le programme NGI, et autres considérations.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - Approche bottom-up vers la souveraineté _ le programme NGI, et autres considérations.txt",
+      "date_fr": "17/02/2026 14:00–14:05",
+      "attended": false,
+      "personal_notes": "Non assisté mais contenu fort : subventions NLnet ~50k€ accessibles pour projets OSS, et l'anecdote des 75M€ UE qui auraient financé Azure sous couvert d'open source. À mentionner pour les devs qui portent des projets open source.",
+      "description": "Une présentation de Pierre-Yves Gibello (OW2)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/FYKC89/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "AlpOSS 2026 - Choisir un logiciel libre au-delà de la licence",
+      "path": "audios/AlpOSS 2026 - Choisir un logiciel libre au-delà de la licence.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - Choisir un logiciel libre au-delà de la licence.txt",
+      "date_fr": "17/02/2026 11:50–12:10",
+      "attended": true,
+      "personal_notes": "Mon talk préféré. Dense mais passionnant — Red Hat ça pèse. L'idée : évaluer un projet open source sur sa gouvernance, son financement, ses cycles de release, pas juste sa licence. Les repos co-maintenus par plusieurs grandes entreprises sont les plus stables. J'y connais pas grand chose mais c'est exactement le genre de réflexion que j'ai envie de creuser.",
+      "description": "Une présentation de Michaël Scherer (Red Hat)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/USKFTT/",
+      "in_diapo": true,
+      "esn_highlight": true
+    },
+    {
+      "title": "AlpOSS 2026 - Chronique d'une journée dans le monde de l'Open Source",
+      "path": "audios/AlpOSS 2026 - Chronique d'une journée dans le monde de l'Open Source.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - Chronique d'une journée dans le monde de l'Open Source.txt",
+      "date_fr": "17/02/2026 16:20–16:25",
+      "attended": true,
+      "personal_notes": "Court mais concret — enfin du concret ! C'est exactement comme ça que je présenterais à sa place. Bouffée d'air frais après une journée très idéologique.",
+      "description": "Une présentation de Jérémy Tuloup (QuantStack)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/CSLVFJ/",
+      "in_diapo": true,
+      "esn_highlight": true
+    },
+    {
+      "title": "AlpOSS 2026 - CoopCircuits, le commun numérique qui dynamise les circuits courts !",
+      "path": "audios/AlpOSS 2026 - CoopCircuits, le commun numérique qui dynamise les circuits courts !.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - CoopCircuits, le commun numérique qui dynamise les circuits courts !.txt",
+      "date_fr": "17/02/2026 14:10–14:15",
+      "attended": true,
+      "personal_notes": "Concept de sécurité sociale de l'alimentation sympa — cotisation commune, accès universel à une nourriture de qualité. Belle idée militante. Rien à retenir pour une ESN.",
+      "description": "Une présentation de Bérengère Batiot (CoopCircuits)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/BACGL7/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "AlpOSS 2026 - Cyber Resilience Act et open source",
+      "path": "audios/AlpOSS 2026 - Cyber Resilience Act et open source.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - Cyber Resilience Act et open source.txt",
+      "date_fr": "17/02/2026 16:55–17:15",
+      "attended": true,
+      "personal_notes": "Septembre 2026 c'est demain. On devra lister tout ce qu'on livre aux clients (S-BOM). Les outils autour de la conteneurisation vont devenir incontournables — et il faudra se certifier.",
+      "description": "Une présentation de Marta Rybczynska (Ygreky)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/V3XWRM/",
+      "in_diapo": true,
+      "esn_highlight": true
+    },
+    {
+      "title": "AlpOSS 2026 - De l'outil isolé au composant central : la téléphonie dans la Digital Workplace",
+      "path": "audios/AlpOSS 2026 - De l’outil isolé au composant central _ la téléphonie dans la Digital Workplace.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - De l'outil isolé au composant central : la téléphonie dans la Digital Workplace.txt",
+      "date_fr": "17/02/2026 09:40–10:00",
+      "attended": true,
+      "personal_notes": "Sympa mais pas vendeur. Rien à retenir pour une ESN : Microsoft reste bien plus complet, intégré et mature. Linphone est encore trop rudimentaire pour rivaliser au quotidien.",
+      "description": "Une présentation de Jehan Monnier et Pauline Perconte (Belledonne Communications)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/UAEZQ3/",
+      "in_diapo": true,
+      "esn_highlight": true
+    },
+    {
+      "title": "AlpOSS 2026 - Des exemples d'open-source chez Inria Grenoble au service des politiques publiques",
+      "path": "audios/AlpOSS 2026 - Des exemples d'open-source chez Inria Grenoble au service des politiques publiques.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - Des exemples d'open-source chez Inria Grenoble au service des politiques publiques.txt",
+      "date_fr": "17/02/2026 14:15–14:20",
+      "attended": true,
+      "personal_notes": "Nos voisins grenoblois — et ils font des trucs de fou. Siconos fait écho aux softs de simulation qu'on retrouve chez EDF et autres grands comptes. Terriflux et Stax : à creuser, voir si des collègues connaissent déjà.",
+      "description": "Une présentation d'Albin Petit et Roger Pissard-Gibollet (INRIA)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/FQRRLU/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "AlpOSS 2026 - Des outils IAM Open Source pour OpenLDAP et Active Directory, votre RSSI vous dira merci !",
+      "path": "audios/AlpOSS 2026 - Des outils IAM Open Source pour OpenLDAP et Active Directory, votre RSSI vous dira merci !.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - Des outils IAM Open Source pour OpenLDAP et Active Directory, votre RSSI vous dira merci !.txt",
+      "date_fr": "17/02/2026 16:00–16:20",
+      "attended": true,
+      "personal_notes": "Dense si on n'a pas de background IAM. L'idée clé : des frontends web open source pour s'interfacer avec AD/OpenLDAP et en sortir progressivement. À retenir pour les clients qui voudront un jour quitter Microsoft sans tout casser.",
+      "description": "Une présentation de Clément Oudot (Worteks)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/P8W7MG/",
+      "in_diapo": true,
+      "esn_highlight": true
+    },
+    {
+      "title": "AlpOSS 2026 - Déploiement de la messagerie OpenXchange au SITPI : RETEX de la migration de la ville de Claix",
+      "path": "audios/AlpOSS 2026 - Déploiement de la messagerie OpenXchange au SITPI _ RETEX de la migration de la ville de Claix.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - Déploiement de la messagerie OpenXchange au SITPI _ RETEX de la migration de la ville de Claix.txt",
+      "date_fr": "17/02/2026 10:00–10:20",
+      "attended": true,
+      "personal_notes": "Les intervenants vraiment enthousiastes — mais au fond c'est une migration de messagerie. Pas très convaincant pour une ESN.",
+      "description": "Une présentation de : Fayçal Braiki (SITPI), Baptiste Danielewicz (Ville de Claix), Yoann Dupont (Alma), Christophe Ninucci (DINUM), Nicolas Ecarnot (SITPI)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/3VKV3J/",
+      "in_diapo": true,
+      "esn_highlight": true
+    },
+    {
+      "title": "AlpOSS 2026 - La Mouette en 5 minutes et quelles contributions possibles à la bureautique libre",
+      "path": "audios/AlpOSS 2026 - La Mouette en 5 minutes et quelles contributions possibles à la bureautique libre.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - La Mouette en 5 minutes et quelles contributions possibles à la bureautique libre.txt",
+      "date_fr": "17/02/2026 17:15–17:20",
+      "attended": true,
+      "personal_notes": "Rien à retenir.",
+      "description": "Une présentation de Régis Perdreau (La Mouette)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/KVKDUP/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "AlpOSS 2026 - Les GUL ne sont pas morts !",
+      "path": "audios/AlpOSS 2026 - Les GUL ne sont pas morts !.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - Les GUL ne sont pas morts !.txt",
+      "date_fr": "17/02/2026 16:25–16:30",
+      "attended": true,
+      "personal_notes": "Principe sympa — ouvrir des portes aux curieux, dépanner les voisins. Mais ça reste méconnu. À garder en tête si quelqu'un cherche une porte d'entrée vers Linux.",
+      "description": "Une présentation de Cédric Abonnel et Florian (Alpinux)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/VPHHSM/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "AlpOSS 2026 - Licences open source : peut-on vraiment les faire respecter ?",
+      "path": "audios/AlpOSS 2026 - Licences open source _ peut-on vraiment les faire respecter _.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - Licences open source _ peut-on vraiment les faire respecter _.txt",
+      "date_fr": "17/02/2026 16:35–16:55",
+      "attended": true,
+      "personal_notes": "Peu le respectent, mais quand ça explose, ça coûte cher (Orange : ~1 M€). En tant que dev, on est directement responsable de ce qu'on embarque. Vérifier les licences de ses dépendances, c'est pas optionnel.",
+      "description": "Une présentation de Josquin Louvier (Champollion Avocats)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/MWUBWS/",
+      "in_diapo": true,
+      "esn_highlight": true
+    },
+    {
+      "title": "AlpOSS 2026 - Linux à l'école ? Enfin un espoir avec la démarche NIRD !",
+      "path": "audios/AlpOSS 2026 - Linux à l'école _ Enfin un espoir avec la démarche NIRD !.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - Linux à l'école _ Enfin un espoir avec la démarche NIRD !.txt",
+      "date_fr": "17/02/2026 10:20–10:40",
+      "attended": true,
+      "personal_notes": "Très inspirant — fait écho à la vidéo Micode/Underscore. Envie de contribuer aux repos GitLab de la Forge des communs numériques pour aider les profs. Si j'avais un gamin, j'aimerais le voir dans cette démarche.",
+      "description": "Une présentation de Bertrand Chartier (Académie de Grenoble) et Marius Monnier (Lycée Marie Curie, Échirolles)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/GSGJNS/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "AlpOSS 2026 - Logiciel libre et standards pour les noms de domaines",
+      "path": "audios/AlpOSS 2026 - Logiciel libre et standards pour les noms de domaines.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - Logiciel libre et standards pour les noms de domaines.txt",
+      "date_fr": "17/02/2026 14:50–15:10",
+      "attended": true,
+      "personal_notes": "L'enshittification des services numériques pousse encore plus vers le libre. Let's Encrypt et Certbot déjà utilisés en interne — si les collègues sont curieux sur le DNS, ce talk donne de bons mots-clés pour creuser : Lexicon, OctoDNS, PowerDNS.",
+      "description": "Une présentation d'Arthur Vuillard (LeBureau.coop)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/KYFKRA/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "AlpOSS 2026 - OpenStreetMap, Wikipedia, Commons, Wikidata et les figures de Nazca",
+      "path": "audios/AlpOSS 2026 - OpenStreetMap, Wikipedia, Commons, Wikidata et les figures de Nazca.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - OpenStreetMap, Wikipedia, Commons, Wikidata et les figures de Nazca.txt",
+      "date_fr": "17/02/2026 12:10–12:30",
+      "attended": true,
+      "personal_notes": "Révélation sur la puissance d'OSM : utilisable facilement pour des projets perso. L'outillage autour (Overpass, Leaflet, GeoJSON) et l'intégration dans l'écosystème Wikimédia sont bien pensés. Bon point d'entrée pour la cartographie open source.",
+      "description": "Une présentation de Guillaume Allègre (Wikimédia, OpenStreetMap)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/79FJFK/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "AlpOSS 2026 - P16 : Promouvoir une politique publique pour créer des communs numériques pour une IA souveraine",
+      "path": "audios/AlpOSS 2026 - P16 _ Promouvoir une politique publique pour créer des communs numériques pour une IA souveraine.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - P16 _ Promouvoir une politique publique pour créer des communs numériques pour une IA souveraine.txt",
+      "date_fr": "2026-02-17",
+      "attended": true,
+      "personal_notes": "Vu à moitié seulement (parti mi-chemin). Le tooling Python open source présenté (Scikit-learn, Shapash, TSlearn) pourra servir si je me lance dans le machine learning open source.",
+      "description": "Une présentation de Laurent Patoux (INRIA)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/7SEHMK/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "AlpOSS 2026 - Partagez votre RAG sans partager vos données : l'IA mutualisée et souveraine",
+      "path": "audios/AlpOSS 2026 - Partagez votre RAG sans partager vos données _ l'IA mutualisée et souveraine.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - Partagez votre RAG sans partager vos données _ l'IA mutualisée et souveraine.txt",
+      "date_fr": "2026-02-17",
+      "attended": false,
+      "description": "Une présentation de Benjamin Bellamy et Andrzej Neugebauer (Linagora)",
+      "official_link": "",
+      "in_diapo": true,
+      "esn_highlight": true
+    },
+    {
+      "title": "AlpOSS 2026 - Radios libres ?",
+      "path": "audios/AlpOSS 2026 - Radios libres _.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - Radios libres _.txt",
+      "date_fr": "17/02/2026 17:25–17:45",
+      "attended": true,
+      "personal_notes": "Talk de niche : de l'OCaml et de la radio, rien qui ne parle à une ESN. À passer.",
+      "description": "Une présentation de Martin Kirchgessner (Radio Campus Grenoble)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/LBYTDU/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "AlpOSS 2026 - Sensibiliser toute une génération étudiante au libre",
+      "path": "audios/AlpOSS 2026 - Sensibiliser toute une génération étudiante au libre.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - Sensibiliser toute une génération étudiante au libre.txt",
+      "date_fr": "17/02/2026 17:20–17:25",
+      "attended": false,
+      "description": "Une présentation de Jean-Christophe Becquet (Apitux)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/B9BYRG/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "AlpOSS 2026 - Sortez vos événements des réseaux sociaux grâce à Mobilizon",
+      "path": "audios/AlpOSS 2026 - Sortez vos événements des réseaux sociaux grâce à Mobilizon.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - Sortez vos événements des réseaux sociaux grâce à Mobilizon.txt",
+      "date_fr": "17/02/2026 14:05–14:10",
+      "attended": true,
+      "personal_notes": "L'idée de trouver des events open source en région est séduisante, mais Mobilizon manque de masse critique — peu d'événements à Grenoble. L'outil ne décolle pas sans adoption.",
+      "description": "Une présentation d'Alexandra Cadet (Kaihuri)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/G3XMWK/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "AlpOSS 2026 - Table ronde : migrations vers l'open source",
+      "path": "audios/AlpOSS 2026 - Table ronde _ migrations vers l'open source.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - Table ronde _ migrations vers l'open source.txt",
+      "date_fr": "17/02/2026 11:10–11:50",
+      "attended": true,
+      "personal_notes": "Arrivé en cours de route. Très orienté politique — loin du quotidien ESN. Mais la mise en garde est réelle : sans volonté de tous (direction, DSI, utilisateurs), ça échoue. Pour nous : c'est faisable, mais ça demande du travail et du suivi. Pas spontané sans demande client explicite.",
+      "description": "Participants : Marie-Jo Kopp Castinel (OpenGo), Damien Accorsi (Algoo), Baptiste Danielewicz (Ville de Claix), Nicolas Benoît (CGT Isère) / Animation : Nicolas Vivant (Ville d'Échirolles)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/CLQGZE/",
+      "in_diapo": true,
+      "esn_highlight": true
+    },
+    {
+      "title": "AlpOSS 2026 - TeemIP, du projet open source à l'entreprise",
+      "path": "audios/AlpOSS 2026 - TeemIP, du projet open source à l'entreprise.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - TeemIP, du projet open source à l'entreprise.txt",
+      "date_fr": "17/02/2026 16:30–16:35",
+      "attended": true,
+      "personal_notes": "Ambiance froide dans la salle — l'aspect politique a noyé l'enthousiasme des intervenants du privé, dommage. TeemIP reste intéressant comme IPAM open source, à creuser si besoin de gérer de l'adressage réseau.",
+      "description": "Une présentation de Christophe Naud (Combodo, TeemIP)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/NAVCHB/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "AlpOSS 2026 - Vers une messagerie instantanée libre, décentralisée et souveraine : quel Tchap pour les collectivités ?",
+      "path": "audios/AlpOSS 2026 - Vers une messagerie instantanée libre, décentralisée et souveraine _ quel Tchap pour les collectivités _.m4a",
+      "transcription": "transcriptions/AlpOSS 2026 - Vers une messagerie instantanée libre, décentralisée et souveraine _ quel Tchap pour les collectivités _.txt",
+      "date_fr": "2026-02-17",
+      "attended": true,
+      "personal_notes": "Talk très métier collectivités — domaine que je ne connais pas, j'ai décroché. Pas d'application ESN directe à court terme. Mais Matrix en soi est intéressant : protocole ouvert pour une messagerie distribuée souveraine, au-delà du cas Tchap.",
+      "description": "Une présentation de Matthieu Faure (ADULLACT), Erik Da Silva (Arawa), Philippe Le Brouster (Échirolles) et Stéphane Vangheluwe (SITIV)",
+      "official_link": "",
+      "in_diapo": true,
+      "esn_highlight": true
+    },
+    {
+      "title": "AlternC : Une solution pour gérer la souveraineté de ses données",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 09:30–09:45",
+      "attended": false,
+      "personal_notes": "",
+      "description": "Une présentation de Camille LAFITTE (Webelys)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/WEDJJQ/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "VATES - Souveraineté en action : construire des écosystèmes ouverts et européens ",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 09:45–10:00",
+      "attended": true,
+      "personal_notes": "Petite salle mais talk impressionnant. Broadcom a explosé les prix VMware → opportunité réelle de migration vers XCP-ng + conseil. Xen Orchestra visuellement convaincant. Migration v2v offerte : point fort. À creuser : parité fonctionnelle avec VMware (à vérifier côté terrain).",
+      "description": "Une présentation de Marc UNGESCHIKTS (Vates)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/MJ7WJY/",
+      "in_diapo": true,
+      "esn_highlight": true
+    },
+    {
+      "title": "PostgreSQL sur Kubernetes avec CloudNativePG - N'oubliez pas d'embarquer votre DBA PostgreSQL !",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 10:00–10:15",
+      "attended": false,
+      "personal_notes": "CloudNativePG est le seul opérateur PostgreSQL graduated CNCF — référence pour tout projet cloud-native avec PG. Le titre résume bien le piège : automatiser ne dispense pas d'expertise DBA.",
+      "description": "Une présentation de Pierrick Chovelon (Dalibo)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/BMQBBM/",
+      "in_diapo": true,
+      "esn_highlight": true
+    },
+    {
+      "title": "Migrer sa messagerie vers une solution souveraine : qu'est ce qui freine et les clés pour y parvenir",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 10:15–10:30",
+      "attended": false,
+      "personal_notes": "BlueMind = seule solution EU compatible Outlook sans plugin, 20k agents à Marseille et au Ministère des AE. L'angle 'les freins sont humains pas techniques' est parfait pour les commerciaux ESN.",
+      "description": "Une présentation de Pierre Baudracco (BlueMind)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/P8Z7EW/",
+      "in_diapo": true,
+      "esn_highlight": true
+    },
+    {
+      "title": "Partagez votre RAG sans partager vos données : l'IA mutualisée et souveraine",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 11:10–11:25",
+      "attended": false,
+      "personal_notes": "Talk très technique sur RAG : Milvus, Ray, API OpenAI-compatible, isolation multi-tenant. La mise en garde 'un POC RAG en demi-journée, une solution industrielle c'est autre chose' est parfaite pour une ESN.",
+      "description": "Une présentation de Benjamin BELLAMY (Linagora), et Andrzej NEUGEBAUER (Linagora)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/AZEW8Z/",
+      "in_diapo": false,
+      "esn_highlight": true
+    },
+    {
+      "title": "Linux sur les Mac : état des lieux du support matériel (Intel 2017‑2020 et Apple Silicon)",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 11:25–11:40",
+      "attended": false,
+      "personal_notes": "",
+      "description": "Une présentation de Walid Nouh",
+      "official_link": "https://pretalx.com/alposs-2026/talk/CMABAD/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "Faire vivre un logiciel libre depuis plus de 20 ans : le cas d'XWiki",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 11:40–11:55",
+      "attended": false,
+      "personal_notes": "20 ans sans VC, plusieurs dizaines d'employés, impliqué dans openDesk (gouvernement allemand). Modèle rare dans le logiciel libre — bon exemple de pérennité sans capital-risque.",
+      "description": "Une présentation de Raphaël Jakse (XWiki SAS)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/EHJNYK/",
+      "in_diapo": true,
+      "esn_highlight": true
+    },
+    {
+      "title": "Files2Anywhere : la brique qui connecte Nextcloud et Pastell pour vos processus métiers",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 11:55–12:10",
+      "attended": false,
+      "personal_notes": "",
+      "description": "Une présentation de Philippe SCOFFONI (Opendsi)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/9Q3N89/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "ANCT : la suite territoriale",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 12:10–12:25",
+      "attended": false,
+      "personal_notes": "",
+      "description": "Une présentation de Alexis Boudard",
+      "official_link": "https://pretalx.com/alposs-2026/talk/3QWJCX/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "LaSuite.coop : une alternative souveraine pour vos outils numériques collaboratifs",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 14:00–14:15",
+      "attended": false,
+      "personal_notes": "",
+      "description": "Une présentation de Timothée Gosselin (Hindie Hosters)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/TKVGKG/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "Présentation Crème CRM",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 14:15–14:30",
+      "attended": false,
+      "personal_notes": "CRM Python/Django open source, 17 ans sans VC, 7 personnes. Alternative concrète à Salesforce/HubSpot. Modèle économique sobre et durable — à connaître pour les ESN qui font du CRM.",
+      "description": "Une présentation de Jean-Michel ARMAND (Hybird)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/YXNX9P/",
+      "in_diapo": false,
+      "esn_highlight": false
+    },
+    {
+      "title": "Comment répondre aux enjeux de la gestion de services IT dans les entités publiques ?",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 14:30–14:45",
+      "attended": false,
+      "personal_notes": "iTop (Combodo, Grenoble) = ITSM/CMDB open source déployé au CISIRH et à l'Éducation Nationale. Complète naturellement TeemIP (même éditeur). Alternative crédible à ServiceNow pour les ESN publiques.",
+      "description": "Une présentation de Luca CHEVRIER (Combodo)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/X9S7DU/",
+      "in_diapo": true,
+      "esn_highlight": true
+    },
+    {
+      "title": "Construire un hébergeur sur Kubernetes : Porté par l’Opensource, le YAML et un peu d’espoir ",
+      "path": "",
+      "transcription": "",
+      "date_fr": "17/02/2026 14:45–15:00",
+      "attended": false,
+      "personal_notes": "RETEX d’Agora Calycé : Kubernetes comme fondation complète d’hébergeur, pas juste un orchestrateur d’apps. Agorakube certifié CNCF. Pertinent pour les ESN DevOps ou Platform Engineering.",
+      "description": "Une présentation de Arthur MEYER (Agora Calycé)",
+      "official_link": "https://pretalx.com/alposs-2026/talk/TRXQSU/",
+      "in_diapo": true,
+      "esn_highlight": true
+    }
+  ],
+  "attendees": [
+    {
+      "name": "Gauthier Fanucci",
+      "organization": "Alternatiba",
+      "description": "Gauthier, responsable informatique d'Alternatiba / ANV-COP21"
+    },
+    {
+      "name": "Bookynette",
+      "organization": "APRIL",
+      "description": "Présidente de l'April et membre de Framasoft. N'étant pas informaticienne de formation, mais libraire, je m'efforce de faire circuler l'éthique et la philosophie du libre, de défendre les logiciels libres et de leur donner la priorité! Depuis trois ans, je parcours la France pour réaliser mon Tour des GULL afin d'aller à la rencontre des acteurs du libre, un peu partout."
+    },
+    {
+      "name": "Pierre-Yves Gibello",
+      "organization": "OW2",
+      "description": "Pierre-Yves, engagé dans l'open source depuis 28 ans, dirige OW2 depuis 2022 : fondation Européenne sans but lucratif, nous hébergeons des projets open source professionnels, en faisons la promotion, animons une communauté regroupant enteprises, académiques, acteurs publics, associations et individus, et défendons l'open source au niveau sociétal et politique. OW2 est également impliquée dans le programme de financement Européen NGI (Next Generation Internet) : et accessoirement, dans l'organisation d'AlpOSS !"
+    },
+    {
+      "name": "Michaël Scherer",
+      "organization": "Red Hat",
+      "description": "Administrateur système chez Red Hat, dans le département OSPO (Open Source Project Office)"
+    },
+    {
+      "name": "Jérémy Tuloup",
+      "organization": "QuantStack",
+      "description": "Jérémy Tuloup est Directeur Technique chez QuantStack et \"Jupyter Distinguished Contributor\". Mainteneur et contributeur de JupyterLab, JupyterLite, Jupyter Notebook, Voilà Dashboards, et de nombreux autres projets au sein de l'écosystème Jupyter."
+    },
+    {
+      "name": "Bérengère Batiot",
+      "organization": "CoopCircuits",
+      "description": "Bérengère est juriste et engagée au service de l'écologie depuis plus de 20 ans. Convaincue que les coopératives de la transition sont une des clés pour transformer l'économie, elle est aujourd'hui responsable de la communication de la SCIC CoopCircuits et représente la coopérative au sein de l'alliance des Licoornes."
+    },
+    {
+      "name": "Marta Rybczynska",
+      "organization": "Ygreky",
+      "description": "Marta Rybczynska a un parcours en sécurité des réseaux et plus de vingt ans d’expérience dans l’Open Source, dont quinze dans le développement embarqué. Elle a travaillé avec des systèmes d’exploitation embarqués comme Linux et divers systèmes temps réel, ainsi qu’avec des bibliothèques système, des frameworks et des interfaces utilisateur. Ses spécialités portent notamment sur les parties spécifiques à l’architecture du noyau Linux. Par le passé, Marta a été vice-présidente et trésorière de KDE e.V. Elle est impliquée dans plusieurs projets Open Source et contribue également à LWN.net par des articles invités liés au noyau. Elle fait partie de l’équipe sécurité du projet Yocto. Elle possède une solide expérience de la prise de parole lors de conférences scientifiques et liées aux logiciels libres, notamment LinuxCon, Open Source Summit, Embedded Linux Conference, Akademy et FOSDEM."
+    },
+    {
+      "name": "Jehan Monnier",
+      "organization": "Belledonne Communications",
+      "description": "Après avoir travaillé pendant 10 années dans les télécommunications au sein du groupe Hewlett Packard, Jehan Monnier fonde Belledonne Communications en 2010 avec Simon Morlat, l'auteur original du projet Linphone. Jehan occupe des postes de direction technique et de management depuis désormais 13 ans."
+    },
+    {
+      "name": "Pauline Perconte",
+      "organization": "Belledonne Communications",
+      "description": "Chargée de communication depuis plus de 4 ans chez Belledonne Communications, entreprise open source spécialisée dans les communications en temps réel. Sa mission consiste à valoriser les solutions de l'entreprise, concevoir des designs percutants et gérer les relations publiques. Au fil du temps, elle a développé une expertise technique dans son domaine et possède une vision globale, lui permettant de s'épanouir pleinement dans cet écosystème. Depuis 3 ans, elle co-organise également AlpOSS, un événement open source au sein de la capitale des Alpes françaises."
+    },
+    {
+      "name": "Albin Petit",
+      "organization": "INRIA",
+      "description": "Albin PETIT est ingénieur de recherche au sein du Service Expérimentation & Développement (SED) du centre Inria de l'Université de Grenoble-Alpes. Il travaille principalement avec l'équipe de recherche STEEP sur des outils d'aide à l'analyse systémique d’alternatives sociotechniques."
+    },
+    {
+      "name": "Roger Pissard-Gibollet",
+      "organization": "INRIA",
+      "description": "Roger Pissard-Gibollet est ingénieur de recherche au sein du Service Expérimentation & Développement (SED) d’Inria de l'Université de Grenoble-Alpes. Il y travaille sur les systèmes d'aide pour et avec les personnes en situation de handicap avec une approche frugale et sur les outils d'aide à l'analyse systémique d’alternatives sociotechniques. Il a cofondé deux start-up, notamment Athys en 2000 et mars-hello! en 2017."
+    },
+    {
+      "name": "Clément Oudot",
+      "organization": "Worteks",
+      "description": "Contributeur de plusieurs logiciels libres de gestion des identités et des accès, responsable de l'activité identité chez Worteks, j'aime parler de ces sujets dès qu'on m'en donne l'occasion !"
+    },
+    {
+      "name": "Fayçal Braiki",
+      "organization": "SITPI",
+      "description": ""
+    },
+    {
+      "name": "Baptiste Danielewicz",
+      "organization": "Ville de Claix",
+      "description": "Responsable du service Systèmes d'Information et Téléphonie"
+    },
+    {
+      "name": "Yoann Dupont",
+      "organization": "Alma",
+      "description": "Ingénieur Systèmes et Réseaux à ALMA"
+    },
+    {
+      "name": "Christophe Ninucci",
+      "organization": "DINUM",
+      "description": "Christophe Ninucci est directeur de projet à la DINUM en charge de la Messagerie de Suite Numérique depuis début 2024. Venant de la sphère privée (industrie, assurance), il a travaillé en tant qu'Entrepreneur d'Intérêt Général au Ministère des Finances sur le projet Signaux-Faibles visant à détecter les entreprises en difficulté."
+    },
+    {
+      "name": "Nicolas Ecarnot",
+      "organization": "SITPI",
+      "description": ""
+    },
+    {
+      "name": "Régis Perdreau",
+      "organization": "La Mouette",
+      "description": "Libriste depuis l'an 2000 et même avant. Président La Mouette"
+    },
+    {
+      "name": "Cédric Abonnel",
+      "organization": "Alpinux",
+      "description": "Cédric Abonnel (alias Cedrix) est président d’Alpinux, le Groupe d’Utilisateurs de Linux de Savoie. Militant du logiciel libre et vulgarisateur passionné, il s’engage pour rendre Linux et les outils libres accessibles à tous, à travers l’accompagnement humain, la pédagogie et la convivialité. Passionné d’informatique et de culture libre depuis de nombreuses années, il milite activement pour la démocratisation des logiciels libres et la transmission des savoirs techniques au plus grand nombre. Sous sa présidence, Alpinux a renforcé son rôle d’acteur local en proposant des ateliers pratiques, renforçant les install-parties et des permanences d’accompagnement destinées aussi bien aux curieux qu’aux utilisateurs confirmés au sein de la Dynamo. Cédric défend une vision humaine et accessible du numérique, où l’entraide en présentiel complète la richesse des ressources en ligne."
+    },
+    {
+      "name": "Florian",
+      "organization": "",
+      "description": ""
+    },
+    {
+      "name": "Josquin Louvier",
+      "organization": "Champollion Avocats",
+      "description": "Avocat au Barreau de Grenoble, associé fondateur du cabinet Champollion Avocats, Josquin Louvier intervient en droit de la propriété intellectuelle et du numérique. Il dispose d'une appétence et d'une expertise particulière en matière de licences open source."
+    },
+    {
+      "name": "Bertrand Chartier",
+      "organization": "Académie de Grenoble",
+      "description": "🧮 Enseignant de mathématiques au Lycée Alain BORNE de Montélimar ⛷️ Chargé de mission à la DRANE Ac-Grenoble ❤️ Éléa & ForgeÉdu"
+    },
+    {
+      "name": "Marius Monnier",
+      "organization": "Lycée Marie Curie, Échirolles",
+      "description": "Enseignant du secondaire au lycée Marie Curie d'Échirolles. J'enseigne l'informatique aux secondes, premières et Terminale. Je suis impliqué dans la démarche NIRD dans mon lycée."
+    },
+    {
+      "name": "Arthur Vuillard",
+      "organization": "LeBureau.coop",
+      "description": "Je suis développeur web et Python et bash et SQL, cis-admin GNU/Linux et fondateur d’Hashbang, de Gentils Nuages et de LeBureau.coop. Hashbang est une société coopérative de développement web (principalement Python). Gentils Nuages propose des services d’hébergement informatique avec une faible empreinte environnementale. LeBureau.coop est un bureau d'enregistrement de noms de domaine coopératif. J’ai longtemps été actif dans l’Association Francophone Python, organisateur de rencontres Python à Lyon et de conférences Python nationales."
+    },
+    {
+      "name": "Guillaume Allègre",
+      "organization": "Wikimédia, OpenStreetMap",
+      "description": "Administrateur système Linux et développeur web PHP... Contributeur aux projets Wikimédia et OpenStreetMap."
+    },
+    {
+      "name": "Laurent Patoux",
+      "organization": "INRIA",
+      "description": "Spécialiste du digital et de l'innovation, Laurent a travaillé au sein d'ESN et de startups et créé deux sociétés, une agence de conseil et développement d'applications mobiles et web et une entreprise de conseil et services en Data Science et IA. Il est aujourd'hui responsable de l'écosystème du projet P16 du programme IA d’Inria. Un projet dont la mission est de renforcer l’autonomie de la France, et de l’Europe, par le développement de bibliothèques open source et interopérables, couvrant l’ensemble du cycle de la donnée et des modèles d’Intelligence Artificielle."
+    },
+    {
+      "name": "Benjamin Bellamy",
+      "organization": "Linagora",
+      "description": "Passionné par le logiciel libre et open source, Benjamin est responsable du développement commercial pour les solutions d'IA chez LINAGORA, où il transforme l'IA ouverte et respectueuse de la vie privée en produits pratiques et utiles. Il a également fondé Ad Aures, créateur de Castopod, une plateforme libre et open source d'hébergement de podcasts conçue pour libérer les créateur·ices et renforcer l'écosystème ouvert du podcasting. Actif dans la communauté Podcast 2.0, il contribue à l'émission de radio Libre à vous !, produite par l'April et il anime le podcast RdGP. Plus récemment, il a rejoint WikiPortraits, un collectif qui fournit des portraits de haute qualité sous licence libre pour Wikipédia."
+    },
+    {
+      "name": "Andrzej Neugebauer",
+      "organization": "Linagora",
+      "description": "Andrzej Neugebauer est un expert en intelligence artificielle (IA) et en mathématiques, fort d’une carrière riche en projets innovants et en recherche académique de haut niveau. Diplômé en mathématiques théoriques de l'Université Adam Mickiewicz et en mathématiques et informatique de l'Université Heinrich-Heine, il a également été chercheur invité à l'Université de Cambridge. Expert en NLP et modélisation prédictive, actuellement, directeur de programme en IA chez LINAGORA, il a précédemment dirigé des équipes scientifiques et consulté sur des stratégies d'IA pour diverses entreprises. Lauréat de prestigieuses bourses, dont celles du Fields Institute et du Clay Mathematics Institute. Polyglotte et passionné par la transmission des connaissances, il conseille entreprises et institutions académiques sur l’intégration de l’intelligence artificielle dans des domaines variés. Autre(s) intervention(s) de l'orateur : Donnez une voix à vos documents avec OpenRAG"
+    },
+    {
+      "name": "Martin Kirchgessner",
+      "organization": "Radio Campus Grenoble",
+      "description": "Informaticien depuis 20 ans (spécialisé Web & bases de données), bénévole à Radio Campus Grenoble depuis 12 ans et auteur de radiotomate."
+    },
+    {
+      "name": "Jean-Christophe Becquet",
+      "organization": "Apitux",
+      "description": "Jean-Christophe Becquet s’implique dans les communautés du logiciel libre et des données ouvertes depuis 1997. Titulaire d’un DESS double compétence informatique et sciences sociales, il justifie de plus de 20 ans d’expérience dans le conseil et la formation. Son action est principalement orientée vers le secteur public. Son champ d’intervention va de la sensibilisation sur les enjeux des données ouvertes et des communs numériques à la mise en œuvre de solutions opérationnelles avec des logiciels libres. Il développe également une expertise sur OpenStreetMap. Il est sollicité en tant que contributeur et organisateur d’événements (cartoparties), ré-utilisateur de la base de données, conférencier, formateur et conseil. Il participe activement à la communauté et connaît ses codes et ses règles de fonctionnement. Il est le fondateur et directeur d’APITUX dont la mission est de mettre le logiciel libre et les données ouvertes au service des besoins métiers dans la mobilité, le tourisme, l’urbanisme, le sport, l’éducation, la santé, l’environnement…"
+    },
+    {
+      "name": "Alexandra Cadet",
+      "organization": "Kaihuri",
+      "description": "Co-fondatrice de l'association Kaihuri et responsable du projet Empowering Mobilizon financé par NLNet."
+    },
+    {
+      "name": "Marie-Jo Kopp Castinel",
+      "organization": "OpenGo",
+      "description": "Fondatrice et Directrice de la société OpenGo en Isère, je suis formatrice depuis plus de 30 ans en bureautique. Spécialiste des migrations à LibreOffice depuis 2006, je suis aujourd'hui spécialiste sur l'ensemble des principales suites bureautiques utilisées. (LibreOffice, Onlyoffice, MsOffice) Également conceptrice de modules e-learning sur Chamilo. Avec un passé de développeur base de données et sur VBA, la pédagogie est devenu mon dada. Je constate qu'au 21è siècle, des millions d'utilisateurs de traitements de texte l'utilisent comme une machine à écrire électronique. Des mises en forme qui prennent des heures, des documents non accessibles et très volumineux. À l'heure où tout le monde se dit \"débordé\", n'est-il pas temps d'optimiser les ressources et les process ?"
+    },
+    {
+      "name": "Damien Accorsi",
+      "organization": "Algoo",
+      "description": ""
+    },
+    {
+      "name": "Nicolas Benoît",
+      "organization": "CGT Isère",
+      "description": ""
+    },
+    {
+      "name": "Nicolas Vivant",
+      "organization": "Ville d'Échirolles",
+      "description": ""
+    },
+    {
+      "name": "Christophe Naud",
+      "organization": "Combodo, TeemIP",
+      "description": "Les mondes du DNS, DHCP et de l’IP Management ont été mes terrains de jeu pendant les 16 ans (1998 – 2014) que j’ai passé chez Hewlett-Packard en tant qu’ingénieur « DDI » à travailler sur une grande variété d’infrastructures, au sein de diverse équipes IT ou d’organisations en charge des opérations clients. Pendant ces années, j’ai eu l’opportunité de désigner, déployer et maintenir des infrastructures globales pour l’IT interne d’HP, pour l’infrastructure à partir de laquelle HP délivre ses services auprès de ses clients ou directement pour certains de ses clients mondiaux. VitalQIP, NetID, BlueCat, Infoblox ou EfficientIP… ont longtemps été mes outils quotidiens. En 2010, trois de mes collègues décidèrent de quitter HP et de fonder leur propre entreprise, Combodo, pour développer une solution de gestion de services informatiques, web, open source et alignée sur la bibliothèque ITIL: iTop. Mon ambition de développer une solution open source pour le monde « DDI », basée sur le framework iTop, se révéla quelques mois après leur départ. Beaucoup d’entreprises se reposent sur des tableurs pour gérer leur espace d’adressage. En même temps, le coût et la complexité des solutions DDI présentes sur le marché sont suffisamment hauts pour décourager toute velléité d’investir dans un outil décent. D’où l’idée de créer un outil open source, simple d’utilisation mais complet pour fournir des services DDI. Cette idée se transforma en un logiciel et un projet fut ouvert sur SourceForge fin 2011. L’aventure TeemIp ne s’arrêta jamais depuis cette date_fr ! Je rejoignis naturellement Combodo quelques années plus tard, en 2014, pour travailler en tant que consultant sur les produits iTop. En même temps, je continuais à développer et maintenir TeemIp, essentiellement pendant mon temps libre. A ce jour, TeemIp est toujours un projet indépendant, régulièrement enrichi par de nouvelle fonctionnalités."
+    },
+    {
+      "name": "Matthieu Faure",
+      "organization": "ADULLACT",
+      "description": "Délégué Général de l’Adullact https://adullact.org/, association de collectivités œuvrant à la co-construction de solutions numériques métier. Créateur d’Asqatasun https://Asqatasun.org/ logiciel libre de mesure d’accessibilité web."
+    },
+    {
+      "name": "Erik Da Silva",
+      "organization": "Arawa",
+      "description": "Intégrateur libre"
+    },
+    {
+      "name": "Philippe Le Brouster",
+      "organization": "Échirolles",
+      "description": "Philippe Le Brouster est le Directeur des Systèmes d'Information de la Ville d'Échirolles depuis 2022. Il pilote la mise en œuvre technique du schéma directeur « Échirolles Numérique Libre »."
+    },
+    {
+      "name": "Stéphane Vangheluwe",
+      "organization": "SITIV",
+      "description": ""
+    },
+    {
+      "name": "Camille Lafitte",
+      "organization": "Webelys",
+      "description": "Camille Lafitte est un acteur majeur de l'écosystème du logiciel libre francophone, connu pour ses nombreuses contributions en tant que développeur, animateur communautaire et défenseur de la souveraineté numérique. Parcours et Engagements Fondateur et dirigeant de Webelys, un hébergeur régional qui privilégie les solutions open source pour une gestion transparente et éthique des données. Lead developer du projet AlternC, une solution libre pour l’hébergement de données et de mails, à laquelle il contribue activement par l'animation, la maintenance du projet et le développement de son écosystème via des modules dédiés. Vice-président éducation au sein du Ploss-RA (Professionnels du Libre et Open Source Software en Rhône-Alpes Auvergne), participant à l’animation de l’écosystème local et à la sensibilisation autour du logiciel libre. Ancien contributeur au CMS libre SPIP et impliqué dans divers projets communautaires, témoignant d'un engagement historique en faveur de la culture du partage et de l’échange. Contributions pour le logiciel libre Animation et soutien de la communauté AlternC : maintien de la cohérence technique du projet, accompagnement des utilisateurs et encouragement à la contribution. Développement de modules open source, principalement liés à la gestion d’hébergement (sauvegardes, archivage), et organisation d’ateliers et conférences lors d’événements comme les Journées du Logiciel Libre, le campus du libre ou les RPLL. Engagement pour un numérique responsable et souverain via l’utilisation de solutions libres, la sensibilisation sur la maîtrise des données face aux grands acteurs propriétaires et la promotion de l’interopérabilité. Participation à des initiatives locales et nationales pour populariser les “communs numériques” et les alternatives libres dans l'administration, l'entreprise, et la société civile. Influence et impact Grâce à ses compétences techniques, à son implication associative et à son activisme, Camille Lafitte incarne une démarche engagée et éducative pour l'adoption et le développement de logiciels libres, favorisant une culture numérique accessible, transparente et collaborative."
+    },
+    {
+      "name": "Marc Ungeschikts",
+      "organization": "Vates",
+      "description": "VATES Product Operational Manager and Agile manager for Xen orchestra, XCP-ng and Vates internal dev teams. I am a servant leader dedicated to the teams and a Vates enthusiast since 2020. https://www.linkedin.com/in/marc-ungeschikts/"
+    },
+    {
+      "name": "Pierrick Chovelon",
+      "organization": "Dalibo",
+      "description": "Consultant DBA PostgreSQL chez Dalibo 🐘."
+    },
+    {
+      "name": "Pierre Baudracco",
+      "organization": "BlueMind",
+      "description": ""
+    },
+    {
+      "name": "Walid Nouh",
+      "organization": "",
+      "description": "Tombé dans la marmitte du logiciel libre il y a plus de 25 ans, dont 15 ans passé dans différentes sociétés de service et éditeurs du libre. Partage sa passion à travers la création et animation du podcast Projets Libres, qui explore les différentes facettes de notre écosystème (modèles économiques, gouvernance, open data, etc)."
+    },
+    {
+      "name": "Raphaël Jakse",
+      "organization": "XWiki SAS",
+      "description": "J'ai fait des études d'informatique à Grenoble, et après un doctorat, j'ai quitté le monde de la recherche pour travailler, autant que possible, pour le logiciel libre, précédemment pour Algoo (sur Tracim), actuellement pour XWiki SAS. Pour moi, le logiciel libre est politique. Un logiciel libre est un logiciel qui respecte les droits fondamentaux des utilisateurs et des utilisatrices, dans un contexte où l'informatique est omniprésente dans tous les aspects de nos vies. Le libre permet également une certaine indépendance fasse aux géants de la tech, qui n'ont pas un fonctionnement démocratique et qui n'ont pas nécessairement nos intérêts dans leurs priorités. Nous devrions mettre nos compétences au service de l'humain et de l'environnement, pas l'inverse. Le logiciel libre est un premier pas. L'aspect (développement) coopératif permis par les licences libres est la cerise sur le gâteau : il peut constituer un aspect social agréable, et peut permettre d'éviter de réinventer la roue chacun de son côté, sur cette planète aux ressources limitées et considérant nos passages finalement assez brefs sur cette dernière. Et sinon, dans mon temps libre, quand je n'écris pas du code pour le fun, je vois des gens, je fais un peu de musique et un peu de rando."
+    },
+    {
+      "name": "Philippe Scoffoni",
+      "organization": "Opendsi",
+      "description": "Philippe Scoffoni est fondateur et dirigeant d’Opendsi, société spécialisée dans l’intégration de solutions souveraine de gestion et collaboratives libres."
+    },
+    {
+      "name": "Alexis Boudard",
+      "organization": "",
+      "description": ""
+    },
+    {
+      "name": "Timothée Gosselin",
+      "organization": "Hindie Hosters",
+      "description": ""
+    },
+    {
+      "name": "Jean-Michel Armand",
+      "organization": "Hybird",
+      "description": "Jean-Michel ARMAND, Cofondateur Hybird, Libriste et Djangonaute"
+    },
+    {
+      "name": "Luca Chevrier",
+      "organization": "Combodo",
+      "description": ""
+    },
+    {
+      "name": "Arthur Meyer",
+      "organization": "Agora Calycé",
+      "description": "Arthur MEYER est CTO chez Agora Calycé, un hébergeur français spéalisé dans l'accompagnement de ses clients. Fort de ses nombreuses années d’expérience dans l’écosystème cloud et de son expertise dans des domaines tels que les réseaux, le stockage ou le développement logiciel, il participe chaque jour à des projets complexes. Il défend les logiciels open source et y contribue fréquemment, en particulier dans le cadre de projets liés à Kubernetes ou à la technologie Cloud Native."
+    },
+    {
+      "name": "Bruno Cornec",
+      "organization": "Hyper-Linux.org",
+      "description": "Bruno Cornec a géré divers systèmes Unix depuis 1987 and Linux depuis 1993 (0.99pl14). Bruno a d'abord travaillé 8 ans dans le Génie Logiciel et la Gestion de configuration en environnements Unix. Depuis 1995, il est Stratégiste et Evangéliste Open Source and Linux (OSL) pour Hewlett Packard Enterprise directement dans son Customer Innovation Center européen. Bruno est aussi responsable de la communauté Linux mondiale d'HPE. Il est membre de l'APRIL et des CA de Mageia, de l'AFUL, et de la Guilde. Bruno est contributeur sur des projets OSL variés : Mageia, LinuxCOE, Tellico, FOSSology. Il prend soin aussi des projets MondoRescue (solution GPL de récupération en cas de désastre), project-builder.org (fabrication de paquets en GPL), et python-redfish (bibliothèque et outil de support de Redfish). Dans le cadre de son travail, il a effectué de nombreuses présentations pour Solutions Linux et les RMLL en France, ainsi que pour NordU, LinuxCon/Open Source Summit (USA, EMEA, Japan, Brasil), Linux Conf Australia, OSCON, Linux Symposium autour de sujets variés (Haute Disponibilité, Solutions de déploiement, Gestion de systèmes, Restauration en cas de désastre, Fabrication de paquets...) En dehors des ordinateurs, Bruno aime aussi la musique ancienne, chanter et jouer de la flûte à bec. Il est marié et père de 3 enfants."
+    },
+    {
+      "name": "Frédéric Passeron",
+      "organization": "HPE",
+      "description": "Frédéric Passeron est architecte de solutions au sein de l’équipe du programme HPE Developer Community. Frédéric participe à la promotion du programme HPE Dev Community par le biais de plusieurs moyens tels que des événements, des ateliers et la rédaction d’articles de blog... Frédéric a travaillé pour HPE au cours des 25 dernières années dans des organisations d’avant-vente à différents niveaux, du pays (France) à la région (EMEA) et maintenant au monde entier. Il s’est fortement concentré sur les solutions de gestion d'infrastructure et de Cloud. Il travaille actuellement à l’évangélisation du programme HPE DEV et plus particulierement à celui des Workshops-on-Demand. Lorsqu’il ne travaille pas, Frédéric est un passionné de HIFI, il construit des streamers digitaux, redonne vie à de vieilles platines vinyle vintage. S'il fait beau, vous le trouverez surement sur un terrain de beach volley ou en train de se ballader en montagne..."
+    },
+    {
+      "name": "Jean-Jacques BRUCKER",
+      "organization": "foopgp",
+      "description": "Mage logiciel plutôt discret. Plus de 20 ans d’expérience dans les systèmes Linux (GNU et embarqués), les réseaux, l’architecture ou la sécurité (Sagem, Philips, Pace, Orange, ...). À l'origine de la monnaie libre (Ğ1)."
+    },
+    {
+      "name": "Sébastien Picardeau",
+      "organization": "piseb",
+      "description": "dev, tech, Linux, Husky"
+    },
+    {
+      "name": "Alex HOYAU",
+      "organization": "Internet 2000 et Silex",
+      "description": "Depuis plus de 20 ans, Alex Hoyau construit le web en tant que CTO, développeur·euse JavaScript et défenseur·euse de l’open source. Il a cofondé Internet 2000, studio web dédié à l’écoconception, et maintient Silex, un éditeur visuel de sites web qui génère des sites statiques. Sa passion : créer des outils fidèles aux standards du web et qui donnent du pouvoir aux développeur·euses, aux designer·euses et à toutes les personnes qui veulent apprendre"
+    },
+    {
+      "name": "René Ribaud",
+      "organization": "Red Hat",
+      "description": "$ cat ~/.bash_profile NAME=\"René Ribaud\" source ./1998.sh PROFESSION=\"Unices system and storage administrator and Software engineer\" HISTORY=\"Lots (too many) of infrastructure implementation projects\" \"Discover Linux & FLOSS between 1995 / 2000\" \"First step in the cloud around 2011, pre-sales solution architect 2014 (Cloud, DevOps)\" \"I’m an Ops !\" COMPANY=\"Red Hat\" JOB=\"OSS Software engineer\" VARIOUS=\"Curious & self-learner, I spend part of my time monitoring new technologies in order to provide new and original solutions and sharing my knowledge.\""
+    }
+  ]
+}
