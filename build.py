@@ -1089,6 +1089,9 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
 .excl-title { flex:1; font-size:14px; color:var(--t2); line-height:1.4; min-width:0; }
 .excl-sp { font-size:12px; color:var(--t5); white-space:nowrap; flex-shrink:0; }
 .excl-dur { font-size:11px; color:var(--t6); font-family:'JetBrains Mono',monospace; flex-shrink:0; }
+.excl-report { margin-top:auto; padding-top:16px; font-size:13px; color:var(--t4); }
+.excl-report-link { color:var(--link); text-decoration:none; display:block; margin-top:4px; font-size:13px; opacity:.85; }
+.excl-report-link:hover { opacity:1; text-decoration:underline; }
 /* Rate slide */
 .slide-rate .rate-body { display:flex; flex-direction:column; gap:20px; flex:1; }
 .rate-title { font-size:clamp(1.6rem,3vw,2.4rem); font-weight:700; color:var(--t1); }
@@ -1265,6 +1268,10 @@ updateNavLayout();
       <span class="slide-counter">{i+1} / {total}</span>
     </div>
     <div class="excl-grid">{rows}</div>
+    <div class="excl-report">
+      Résumés complets disponibles dans le rapport de mission :
+      <a class="excl-report-link" href="https://mcreaper.github.io/alposs2026_personnal_summary/" target="_blank" rel="noopener">mcreaper.github.io/alposs2026_personnal_summary</a>
+    </div>
   </div>
 </div>"""
 
@@ -1377,8 +1384,6 @@ updateNavLayout();
     <div class="end-body">
       <div class="end-title">Merci !</div>
       <div class="end-sub">AlpOSS 2026 · 17 février 2026 · Grenoble</div>
-      <div class="end-note">Le rapport de mission complet est disponible en ligne :</div>
-      <a class="end-link" href="https://mcreaper.github.io/alposs2026_personnal_summary/" target="_blank" rel="noopener">mcreaper.github.io/alposs2026_personnal_summary</a>
     </div>
   </div>
 </div>"""
