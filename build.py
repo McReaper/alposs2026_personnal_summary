@@ -960,11 +960,10 @@ def version_c(slides, all_talks=None):
     total = len(all_items)
 
     css = THEME_VARS + """
-html { zoom: 1.75; }
 * { box-sizing:border-box; margin:0; padding:0; }
 body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); color:var(--t1);
        height:100vh; overflow:hidden; user-select:none; }
-/* Disable fixed banner in zoomed context — disclaimer shown in controls bar */
+/* Disclaimer masqué sur le diaporama */
 .ai-disclaimer { display: none; }
 
 /* ── Slides ─────────────────────────────────────────────────────────────── */
@@ -972,7 +971,6 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
          padding:44px 72px 88px; opacity:0; transition:opacity .3s; pointer-events:none;
          overflow-y:auto; }
 .slide.active { opacity:1; pointer-events:all; }
-.slide { zoom:0.85; }
 
 .slide-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; }
 .theme-badge { display:inline-block; padding:4px 14px; border-radius:20px; font-size:11px;
@@ -1006,17 +1004,14 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
            transition:max-height .35s ease, opacity .25s;
            font-size:.87em; color:var(--t5); margin-top:5px; line-height:1.55; }
 .slide-bullets li:hover .hl-full { max-height:10em; opacity:1; }
-.slide-chips { display:flex; flex-wrap:wrap; gap:7px; padding-top:14px; }
-.slide-link { display:inline-block; margin-top:auto; padding-top:10px; font-size:11px; color:var(--t5);
-              text-decoration:none; opacity:.7; transition:opacity .15s; }
-.slide-link:hover { opacity:1; color:var(--link); }
+.slide-chips { display:flex; flex-wrap:wrap; gap:7px; padding-top:14px; margin-top:auto; }
 .chip { background:var(--bg2); border:1px solid var(--brd); border-radius:20px; padding:4px 12px;
         font-size:12px; color:var(--t3); cursor:pointer; transition:all .15s; font-family:inherit; }
 .chip:hover { border-color:var(--tc,var(--acc)); color:var(--tc,var(--acc)); }
 
-/* ── Right column ───────────────────────────────────────────────────────── */
-.slide-right { width:200px; flex-shrink:0; display:flex; flex-direction:column;
-               align-items:center; justify-content:flex-end; gap:20px; }
+/* ── Right column (overlay, hors flux flex) ─────────────────────────────── */
+.slide-right { position:absolute; right:72px; bottom:88px; width:200px; display:flex;
+               flex-direction:column; align-items:center; gap:20px; z-index:10; }
 .slide-avatar { width:96px; height:96px; border-radius:50%;
                 border:3px solid var(--tc,var(--acc)); opacity:.9; }
 .thought-bubble { width:96px; height:96px; color:var(--t5); opacity:.45; }
@@ -1024,8 +1019,18 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
 /* ── Note bubble (Caveat) ───────────────────────────────────────────────── */
 .note-bubble { font-family:'Caveat',cursive; font-size:17px; font-weight:500;
                background:var(--bg3); border:1px solid var(--brd); border-radius:12px;
-               padding:14px 16px; line-height:1.55; color:var(--t2);
+               padding:14px 16px 14px 16px; line-height:1.55; color:var(--t2);
                width:200px; text-align:left; position:relative; }
+.note-close { position:absolute; top:6px; right:8px; background:none; border:none;
+              color:var(--t5); font-size:14px; cursor:pointer; line-height:1; padding:2px 4px;
+              opacity:.6; }
+.note-close:hover { opacity:1; color:var(--t2); }
+.note-closed .note-bubble { display:none; }
+.note-toggle { display:none; background:var(--bg3); border:1px solid var(--brd); border-radius:20px;
+               padding:4px 10px; font-size:12px; color:var(--t4); cursor:pointer;
+               font-family:inherit; transition:all .15s; }
+.note-toggle:hover { color:var(--t2); border-color:var(--t4); }
+.note-closed .note-toggle { display:block; }
 .note-bubble::after  { content:""; position:absolute; bottom:-10px; left:28px;
                         border:5px solid transparent; border-top-color:var(--brd); }
 .note-bubble::before { content:""; position:absolute; bottom:-8px; left:28px;
@@ -1053,20 +1058,20 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
 /* ── Structural slides ──────────────────────────────────────────── */
 /* Intro */
 .slide-intro .intro-body { display:flex; flex-direction:column; gap:32px; flex:1; justify-content:center; }
-.intro-title { font-size:clamp(2.8rem,6vw,5rem); font-weight:900; color:var(--t1); line-height:1.1; }
-.intro-date  { font-size:16px; color:var(--t4); margin-top:6px; }
+.intro-title { font-size:clamp(4rem,8vw,7rem); font-weight:900; color:var(--t1); line-height:1.1; }
+.intro-date  { font-size:20px; color:var(--t4); margin-top:6px; }
 .intro-cols  { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
 .intro-col   { background:var(--bg2); border-radius:10px; padding:18px 22px; border-top:3px solid var(--tc,var(--acc)); }
-.intro-col-title { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--tc,var(--acc)); margin-bottom:10px; }
-.intro-col p { font-size:14px; color:var(--t2); line-height:1.75; }
+.intro-col-title { font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--tc,var(--acc)); margin-bottom:10px; }
+.intro-col p { font-size:16px; color:var(--t2); line-height:1.75; }
 .intro-stats { display:flex; gap:40px; }
-.isn { font-size:clamp(2rem,4vw,3rem); font-weight:800; color:var(--t1); line-height:1; }
-.isl { font-size:11px; text-transform:uppercase; letter-spacing:.8px; color:var(--t4); margin-top:4px; }
+.isn { font-size:clamp(2.8rem,5.5vw,4.5rem); font-weight:800; color:var(--t1); line-height:1; }
+.isl { font-size:13px; text-transform:uppercase; letter-spacing:.8px; color:var(--t4); margin-top:4px; }
 /* Section divider */
 .slide-section .section-body { display:flex; flex-direction:column; align-items:center; justify-content:center; flex:1; text-align:center; gap:16px; }
-.section-num   { font-size:clamp(5rem,12vw,9rem); font-weight:900; color:var(--brd); line-height:1; font-family:'JetBrains Mono',monospace; }
-.section-label { font-size:clamp(2rem,4.5vw,3.5rem); font-weight:700; color:var(--t1); }
-.section-sub   { font-size:16px; color:var(--t4); }
+.section-num   { font-size:clamp(7rem,16vw,13rem); font-weight:900; color:var(--brd); line-height:1; font-family:'JetBrains Mono',monospace; }
+.section-label { font-size:clamp(3rem,6vw,5rem); font-weight:700; color:var(--t1); }
+.section-sub   { font-size:20px; color:var(--t4); }
 /* Excluded listing */
 .slide-excluded .excl-grid { display:flex; flex-direction:column; flex:1; align-content:start; }
 .excl-row { display:flex; align-items:baseline; gap:8px; padding:7px 0; border-bottom:1px solid var(--brd2); }
@@ -1138,12 +1143,11 @@ function showTip(el, text) {{
   tip.style.left = '-9999px'; tip.style.top = '-9999px';
   tip.classList.add('open');
   const r = el.getBoundingClientRect();
-  const zoom = parseFloat(getComputedStyle(document.documentElement).zoom) || 1;
   const tw = tip.offsetWidth, th = tip.offsetHeight;
-  const vw = window.innerWidth / zoom, vh = window.innerHeight / zoom;
-  let left = r.left / zoom, top = r.bottom / zoom + 8;
+  const vw = window.innerWidth, vh = window.innerHeight;
+  let left = r.left, top = r.bottom + 8;
   if (left + tw > vw - 12) left = vw - tw - 12;
-  if (top + th > vh - 12) top = r.top / zoom - th - 8;
+  if (top + th > vh - 12) top = r.top - th - 8;
   tip.style.left = Math.max(12, left) + 'px';
   tip.style.top  = Math.max(8,  top)  + 'px';
 }}
@@ -1267,7 +1271,10 @@ showSlide(0);
         note_html = ""
         if s.get("personal_notes"):
             extra = "" if s["attended"] else " note-bubble--no-ptr note-bubble--dashed"
-            note_html = f'<div class="note-bubble{extra}">{_html.escape(s["personal_notes"])}</div>'
+            note_html = (f'<div class="note-bubble{extra}">'
+                         f'<button class="note-close" onclick="this.closest(\'.slide-right\').classList.add(\'note-closed\')" title="Fermer">✕</button>'
+                         f'{_html.escape(s["personal_notes"])}</div>'
+                         f'<button class="note-toggle" onclick="this.closest(\'.slide-right\').classList.remove(\'note-closed\')" title="Afficher la note">💬 Note</button>')
 
         # Avatar (only if attended)
         av_html = f'<img src="{AVATAR}" class="slide-avatar" />' if s["attended"] else ""
@@ -1309,7 +1316,6 @@ showSlide(0);
       <div class="slide-resume">{resume}</div>
       <div class="slide-bullets"><ul>{bullets_html}</ul></div>
       <div class="slide-chips">{chips_html}</div>
-      <a class="slide-link" href="../a/#{s['id']}" target="_blank" rel="noopener">↗ Rapport complet</a>
     </div>
     {right_html}
   </div>
