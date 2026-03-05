@@ -4,7 +4,7 @@
 Cédric Abonnel et Florian · Alpinux (Chambéry)
 
 ## Société
-Alpinux est le LUG (Linux Users Group) de Chambéry, en Savoie. Association ouverte à tous sans prérequis technique, elle compte 55 adhérents et une équipe motrice d'une dizaine de bénévoles. Ses activités incluent des réunions mensuelles (installation Linux, thématiques grand public) et deux install parties annuelles où l'on peut venir avec un ordinateur incompatible Windows 11 et repartir avec Linux Mint installé. Alpinux participe activement aux événements nationaux (JDLL, FOSDEM, Open Source Experience) et entretient des liens avec d'autres GUL régionaux.
+Alpinux est le GUL (Groupe d'Utilisateurs de Linux) de Chambéry, en Savoie. Association ouverte à tous sans prérequis technique, elle compte 55 adhérents et une équipe motrice d'une dizaine de bénévoles. Ses activités incluent des réunions mensuelles (installation Linux, thématiques grand public) et deux install parties annuelles où l'on peut venir avec un ordinateur incompatible Windows 11 et repartir avec Linux Mint installé. Alpinux participe activement aux événements nationaux (JDLL, FOSDEM, Open Source Experience) et entretient des liens avec d'autres GUL régionaux.
 
 ## Résumé
 Alpinux cible délibérément le grand public non technique : sécurité numérique, LibreOffice, install parties. Windows 11 a créé un afflux inattendu de nouveaux venus, transformant Microsoft en recruteur involontaire du libre.

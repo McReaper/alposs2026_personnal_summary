@@ -4,7 +4,7 @@
 Laurent Patoux · INRIA
 
 ## Société
-L'INRIA (Institut national de recherche en sciences et technologies du numérique) est l'organisme public français de référence pour la recherche en informatique et mathématiques appliquées. Le programme P16, financé par France 2030, vise à identifier des bibliothèques open source issues des laboratoires académiques et à les faire monter en maturité industrielle. INRIA travaille avec des partenaires industriels (Capgemini, MAIF) et académiques pour créer des communs numériques en science des données. La spin-off Probable a été créée pour assurer la pérennité commerciale de l'écosystème après la période de financement public.
+L'INRIA (Institut national de recherche en informatique et en automatique) est l'organisme public français de référence pour la recherche en informatique et mathématiques appliquées. Le programme P16, financé par France 2030, vise à identifier des bibliothèques open source issues des laboratoires académiques et à les faire monter en maturité industrielle. INRIA travaille avec des partenaires industriels (Capgemini, MAIF) et académiques pour créer des communs numériques en science des données. La spin-off Probable a été créée pour assurer la pérennité commerciale de l'écosystème après la période de financement public.
 
 ## Résumé
 L'INRIA finance un écosystème de bibliothèques Python open source pour l'IA, en s'appuyant sur le modèle Scikit-learn — né à Grenoble — pour reproduire son succès mondial sur d'autres outils. L'objectif est de réduire la dépendance aux géants cloud américains, avec une société commerciale prévue pour prendre le relais après les cinq ans de financement.
