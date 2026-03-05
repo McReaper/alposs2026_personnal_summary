@@ -7,18 +7,18 @@ Benjamin Bellamy · Linagora
 Linagora est une ESN française spécialisée en logiciels libres pour entreprises et administrations. Connue pour TWake (messagerie collaborative open source) et son engagement pour la souveraineté numérique. Intervient sur des projets RAG/IA on-premise pour DSI publiques et privées.
 
 ## Résumé
-OpenRAG de Linagora adresse le problème de fond des LLM : l'hallucination, faute d'ancrage documentaire. Via une pipeline RAG multi-tenant, chaque organisation interroge un LLM commun sur ses propres documents, sans jamais exposer ses données aux autres tenants. L'API est 100 % compatible OpenAI, ce qui facilite l'intégration dans les stacks existants. Un POC se monte en demi-journée ; une solution industrielle scalable, c'est un tout autre chantier.
+OpenRAG permet à plusieurs organisations de partager un LLM commun sans jamais exposer leurs données entre elles. L'API 100 % compatible OpenAI s'intègre dans les stacks existants, mais industrialiser dépasse largement le POC en demi-journée.
 
 ## Points marquants
-- Les LLM ne comprennent pas ce qu'ils disent : ce sont des modèles probabilistes.
+- LLM = prédiction statistique, pas compréhension.
   Un LLM prédit le mot suivant à partir de statistiques sur ses données d'entraînement. Il n'a pas d'intention, pas de compréhension, et peut produire des réponses plausibles mais fausses — c'est le problème de l'hallucination que le RAG vise à réduire.
-- L'IA est très politique : les biais viennent des données d'entraînement.
+- Les biais IA viennent directement du corpus d'entraînement.
   Si le corpus d'entraînement est constitué exclusivement d'auteurs masculins, blancs, cisgenres de l'hémisphère nord, l'IA reproduira ces biais. Ce n'est pas un bug, c'est une conséquence directe de la conception du dataset.
-- Le RAG leakage est le risque principal des solutions multi-tenant mal architecturées.
+- RAG leakage : risque numéro un du multi-tenant mal architecturé.
   OpenRAG garantit un partitionnement étanche par organisation : une même question posée sur la partition d'Échirolles et sur celle de Fontaine retourne des réponses différentes et sourcées, sans aucune fuite entre les deux contextes.
-- OpenRAG est compatible avec l'API OpenAI et s'intègre dans LibreOffice et Thunderbird.
+- Compatible OpenAI API : branche sur LibreOffice et Thunderbird sans refonte.
   La compatibilité 100 % OpenAI permet de brancher OpenRAG sur n'importe quel outil existant (WebUI, N8N, LibreOffice, Thunderbird) sans refonte de la stack. Le code source est intégralement public — pas d'open core, pas de fonctionnalités premium cachées.
-- Un POC RAG se monte en demi-journée, mais une solution industrielle est un autre défi.
+- POC en demi-journée, industrialisation en cinq chantiers.
   Linagora identifie cinq défis majeurs pour industrialiser : partitionnement étanche, indexation scalable (Milvus + Ray), qualité de pipeline (MQR, contextualisation), intégration avec monitoring, et pipeline d'évaluation semi-automatique en production.
 
 ## Technologies

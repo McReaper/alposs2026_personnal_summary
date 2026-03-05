@@ -7,18 +7,18 @@ Arthur Meyer · Agora Calycé
 Agora Calycé est un hébergeur français indépendant spécialisé dans les environnements cloud complexes (IaaS, PaaS), disposant de quatre datacenters en France. La société a développé Agorakube, une distribution Kubernetes certifiée CNCF entièrement open source, positionnée comme alternative aux distributions propriétaires (Rancher, OpenShift). Elle participe activement à la communauté CNCF mondiale, notamment via sa présence à KubeCon North America 2025 à Atlanta. Son CTO Arthur Meyer cumule expertise réseau, stockage, orchestration de conteneurs et développement cloud-native.
 
 ## Résumé
-Agora Calycé a construit toute son offre d'hébergement managé sur Kubernetes — non pas comme outil d'orchestration d'applications, mais comme fondation complète de la plateforme hébergeur. Le talk couvre les choix d'outillage open source (CNCF stack), la gestion du multi-tenant, les opérateurs Kubernetes custom et les enjeux d'exploitation en production. Agorakube, leur distribution Kubernetes certifiée CNCF, sert de brique de base. Le titre décalé ("un peu d'espoir") reflète honnêtement la complexité opérationnelle de cette approche.
+Agora Calycé a fait de Kubernetes la fondation complète de son hébergement — pas juste un orchestrateur d'applis, mais le socle provisionnement, réseau, stockage et multi-tenant. Leur distribution Agorakube est certifiée CNCF et entièrement open source.
 
 ## Points marquants
-- Agora Calycé a bâti toute sa plateforme d'hébergement sur Kubernetes, pas seulement ses applications.
+- K8s comme fondation hébergeur, pas comme outil applicatif.
   Kubernetes est utilisé ici comme fondation complète — provisionnement, réseaux, stockage, monitoring, multi-tenant — ce qui va bien au-delà de l'usage standard d'orchestration d'applications, encore peu répandu chez les hébergeurs européens.
-- Agorakube est une distribution Kubernetes certifiée CNCF, entièrement open source.
+- Agorakube : distribution K8s certifiée CNCF, 100 % open source.
   Développée par Agora Calycé, elle constitue une alternative auditable aux distributions propriétaires comme Red Hat OpenShift ou SUSE Rancher, avec une certification CNCF qui atteste de la conformité aux standards de l'industrie.
-- La gestion du multi-tenant sur Kubernetes en contexte hébergeur pose des défis spécifiques.
+- Multi-tenant K8s : isolation clients, quotas, sécurité réseau.
   Isoler les clients, gérer les quotas de ressources et sécuriser les flux réseau entre tenants nécessite une maîtrise avancée des primitives Kubernetes et de la stack réseau (Cilium/eBPF).
-- Agora Calycé s'appuie sur une stack de stockage distribué open source sans dépendance cloud.
+- Stockage distribué souverain : Longhorn et Rook-Ceph.
   Longhorn et Rook-Ceph permettent de gérer des volumes persistants sur l'infrastructure propre de l'hébergeur, condition nécessaire pour proposer une offre souveraine indépendante des hyperscalers AWS, Azure et GCP.
-- Agora Calycé a participé à KubeCon North America 2025 à Atlanta.
+- KubeCon Atlanta 2025 : Agora Calycé dans la communauté CNCF mondiale.
   Cette présence dans l'événement majeur de la communauté CNCF mondiale place l'hébergeur français dans le circuit des contributeurs actifs de l'écosystème Kubernetes.
 
 ## Technologies

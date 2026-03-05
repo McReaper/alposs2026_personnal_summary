@@ -7,7 +7,7 @@ Pierrick Chovelon · Dalibo
 Dalibo est une société française de services exclusivement dédiée à PostgreSQL : support, audit, formation et conseil. Elle est la référence nationale pour les missions DBA PostgreSQL en environnements critiques. Dalibo organise chaque année les PGSessions, conférences techniques PostgreSQL, et maintient un blog de référence sur l'écosystème PostgreSQL en français. Ses consultants contribuent activement aux projets communautaires autour de PostgreSQL et CloudNativePG.
 
 ## Résumé
-CloudNativePG (CNPG) est l'opérateur Kubernetes de référence pour PostgreSQL : il couvre déploiement, réplication streaming, haute disponibilité, failover automatique et sauvegardes PITR sur object storage. Le message central du talk est que l'opérateur automatise des tâches complexes mais ne remplace pas l'expertise DBA — les choix de configuration (synchrone vs asynchrone, politique WAL, stratégie de failover) restent critiques. Comprendre ce que fait CNPG "sous le capot" est indispensable pour éviter les incidents en production.
+CloudNativePG automatise déploiement, HA, failover et PITR pour PostgreSQL sur Kubernetes, mais ne remplace pas l'expertise DBA. Les choix de configuration WAL, réplication et failover restent critiques et nécessitent de comprendre ce que l'opérateur fait sous le capot.
 
 ## Points marquants
 - CloudNativePG est le seul opérateur PostgreSQL certifié "graduated" à la CNCF.

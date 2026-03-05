@@ -7,18 +7,18 @@ Pierre Baudracco · BlueMind
 BlueMind est un éditeur français de suite de messagerie et collaboration open source, fondé par Pierre Baudracco. La société développe la solution BlueMind, seule plateforme européenne nativement compatible avec Outlook sans plugin. Elle adresse les marchés public et privé avec des déploiements allant jusqu'à 20 000 utilisateurs, et positionne sa solution comme alternative directe à Microsoft Exchange/M365 et Google Workspace dans les contextes de souveraineté numérique. Pierre Baudracco co-préside également le CNLL (Conseil National du Logiciel Libre).
 
 ## Résumé
-La migration de messagerie vers une solution souveraine échoue rarement pour des raisons techniques : les freins sont culturels (inertie des usages Microsoft), fonctionnels (imbrication avec Teams, SharePoint, Outlook) et économiques (coût perçu du changement). BlueMind a résolu le verrou technique principal en atteignant une compatibilité native avec Outlook sans plugin, après 12 ans de développement. Les clés du succès sont une volonté politique traduite en actes d'achat, un accompagnement utilisateur solide et un écosystème d'intégrateurs formés.
+Les migrations de messagerie échouent rarement sur le technique : l'inertie culturelle Microsoft, l'imbrication Teams/SharePoint et le coût perçu du changement sont les vrais freins. BlueMind lève le verrou Outlook avec une compatibilité native sans plugin, mais le succès dépend surtout de la volonté politique et de l'accompagnement.
 
 ## Points marquants
-- BlueMind est la seule messagerie européenne compatible Outlook sans plugin.
+- BlueMind : seule messagerie européenne compatible Outlook sans plugin.
   Cette compatibilité native, fruit de 12 ans de développement, lève le verrou technique le plus cité dans les projets de migration — les clients Outlook en place n'ont pas besoin d'être modifiés.
-- Les freins à la migration de messagerie sont d'abord humains et politiques, pas techniques.
+- Les vrais freins sont humains et politiques, pas techniques.
   L'inertie des usages Microsoft, la crainte de perturber les utilisateurs quotidiens et la complexité perçue de la conduite du changement bloquent les projets bien plus que les limitations logicielles.
-- Le Ministère des Affaires Étrangères et la Ville de Marseille ont migré vers BlueMind.
+- Marseille (20 000 agents) et le MAE ont migré vers BlueMind.
   Le déploiement à Marseille couvre 20 000 agents, ce qui démontre la capacité de la solution à fonctionner à grande échelle dans des environnements publics exigeants.
-- Les hausses tarifaires répétées de Microsoft deviennent un levier favorable aux migrations.
+- Hausses M365 : levier économique qui accélère les arbitrages.
   Là où le coût du changement décourageait les décideurs, l'augmentation des licences Microsoft 365 rééquilibre le calcul économique et accélère les arbitrages en faveur de solutions souveraines.
-- Réussir une migration nécessite un écosystème d'intégrateurs formés et une volonté politique traduite en actes d'achat.
+- Sans volonté politique et intégrateurs formés, le projet s'enlise.
   La compatibilité technique ne suffit pas : sans une décision forte portée par la direction et un réseau de partenaires compétents, les projets s'enlisent malgré la maturité de la solution.
 
 ## Technologies
