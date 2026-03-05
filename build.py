@@ -6,15 +6,19 @@ BASE   = os.path.dirname(os.path.abspath(__file__))
 AVATAR = "https://avatars.githubusercontent.com/u/238774673"
 
 DISCLAIMER = (
-    '<div class="ai-disclaimer">'
+    '<div class="ai-disclaimer" id="disclaimer">'
     '⚠️ Contenu généré automatiquement par IA à partir des transcriptions audio — '
     'peut contenir des erreurs ou imprécisions. Vérifiez les informations importantes.'
+    '<button class="disclaimer-close" onclick="document.getElementById(\'disclaimer\').style.display=\'none\'" title="Fermer">✕</button>'
     '</div>'
 )
 DISCLAIMER_CSS = (
     '.ai-disclaimer { position:fixed; bottom:0; left:0; right:0; z-index:9999; '
     'background:#7c3aed; color:#fff; font-size:11px; text-align:center; '
-    'padding:6px 16px; letter-spacing:.2px; opacity:.92; }'
+    'padding:6px 40px 6px 16px; letter-spacing:.2px; opacity:.92; }'
+    '.disclaimer-close { position:absolute; right:10px; top:50%; transform:translateY(-50%); '
+    'background:none; border:none; color:#fff; font-size:14px; cursor:pointer; opacity:.7; line-height:1; padding:2px 4px; }'
+    '.disclaimer-close:hover { opacity:1; }'
 )
 
 SLUGS = [
