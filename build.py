@@ -520,6 +520,7 @@ def load_slides():
             "tech_items":      parse_tech_items(sections.get("Technologies", "")),
             "personal_notes":  entry.get("personal_notes", "").strip(),
             "attended":        entry.get("attended", False),
+            "esn_highlight":   entry.get("esn_highlight", False),
             "theme":           theme,
             "theme_color":     color,
             "duration":        DURATIONS.get(slug, "?"),
@@ -946,7 +947,7 @@ def version_c(slides, all_talks=None):
                   "num": "01", "sub": f"sélection de {len(main_slides)} talks parmi les {total_attended} assistés"}
     sec_ext    = {"type": "section",  "id": "_sec_ext",   "theme_color": "#7f8c8d",
                   "label": "Mentions rapides",
-                  "num": "02", "sub": f"{len(extra_slides)} talks manqués · auraient mérité le détour"}
+                  "num": "02", "sub": f"{len(extra_slides)} talks à surveiller · utiles pour vos clients"}
     sec_excl   = {"type": "section",  "id": "_sec_excl",  "theme_color": "#484f58",
                   "label": "Autres talks vus",
                   "num": "03", "sub": f"{len(excluded)} talks vus, non présentés"}
@@ -955,8 +956,9 @@ def version_c(slides, all_talks=None):
     rate       = {"type": "rate",     "id": "_rate",      "theme_color": "#e67e22",
                   "missed": missed}
     end        = {"type": "end",      "id": "_end",       "theme_color": "#3d7fff"}
+    synth      = {"type": "synth",    "id": "_synth",     "theme_color": "#3d7fff"}
 
-    all_items = [intro, sec_main] + main_slides + [sec_ext] + extra_slides + [sec_excl, excl_slide, rate, end]
+    all_items = [intro, sec_main] + main_slides + [sec_ext] + extra_slides + [sec_excl, excl_slide, rate, synth, end]
     total = len(all_items)
 
     css = THEME_VARS + """
@@ -976,6 +978,7 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
 .theme-badge { display:inline-block; padding:4px 14px; border-radius:20px; font-size:11px;
                font-weight:700; text-transform:uppercase; letter-spacing:.8px; color:#fff; }
 .slide-counter { font-size:13px; color:var(--t5); font-family:'JetBrains Mono',monospace; }
+.esn-badge-c { display:inline-block; padding:4px 12px; border-radius:20px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.8px; background:#f1c40f; color:#5a3e00; }
 
 .slide-title { font-size:clamp(1.55rem,3.2vw,2.6rem); font-weight:700; color:var(--t1);
                line-height:1.25; margin-bottom:12px; }
@@ -1077,6 +1080,16 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
 .intro-stats { display:flex; gap:40px; }
 .isn { font-size:clamp(2.8rem,5.5vw,4.5rem); font-weight:800; color:var(--t1); line-height:1; }
 .isl { font-size:13px; text-transform:uppercase; letter-spacing:.8px; color:var(--t4); margin-top:4px; }
+.intro-thesis { border-left:3px solid var(--tc,var(--acc)); padding:12px 20px; background:var(--bg2); border-radius:0 8px 8px 0; font-size:15px; color:var(--t2); font-style:italic; line-height:1.7; }
+/* Synthèse */
+.slide-synth .synth-body { display:flex; flex-direction:column; gap:24px; flex:1; justify-content:center; }
+.synth-title  { font-size:clamp(2rem,4vw,3rem); font-weight:800; color:var(--t1); line-height:1.2; }
+.synth-cards  { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.synth-card   { background:var(--bg2); border-radius:10px; padding:20px 22px; border-top:3px solid var(--tc,var(--acc)); display:flex; flex-direction:column; gap:10px; }
+.synth-card-num  { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--tc,var(--acc)); }
+.synth-card-head { font-size:16px; font-weight:700; color:var(--t1); line-height:1.3; }
+.synth-card-body { font-size:14px; color:var(--t3); line-height:1.6; }
+.synth-date   { font-size:13px; color:var(--t4); background:var(--bg2); display:inline-block; padding:3px 10px; border-radius:20px; margin-top:4px; font-family:'JetBrains Mono',monospace; }
 /* Section divider */
 .slide-section .section-body { display:flex; flex-direction:column; align-items:center; justify-content:center; flex:1; text-align:center; gap:16px; }
 .section-num   { font-size:clamp(7rem,16vw,13rem); font-weight:900; color:var(--brd); line-height:1; font-family:'JetBrains Mono',monospace; }
@@ -1225,6 +1238,7 @@ updateNavLayout();
           <p>Développeur dans une ESN, je suis venu en éclaireur : identifier les technologies et tendances open source pertinentes pour nos clients et notre offre de service.</p>
         </div>
       </div>
+      <div class="intro-thesis">En 2026, la fin du support Windows\u00a010, le CRA en vigueur et les hausses tarifaires Microsoft ouvrent une fenêtre d'opportunité rare pour l'open source\u00a0— et pour les ESN capables d'en faire une offre concrète.</div>
       <div class="intro-stats">
         <div><div class="isn">{n_talks}</div><div class="isl">talks</div></div>
         <div><div class="isn">{n_workshops}</div><div class="isl">ateliers</div></div>
@@ -1355,10 +1369,11 @@ updateNavLayout();
         if company_html:
             speaker_line += sep + company_html
 
+        esn_badge = '<span class="esn-badge-c" title="À retenir pour une ESN">★ ESN</span>' if s.get("esn_highlight") else ""
         return f"""<div class="slide" style="--tc:{s['theme_color']}">
   <div class="slide-scroll">
     <div class="slide-top">
-      <span class="theme-badge" style="background:{s['theme_color']}">{_html.escape(s['theme'])}</span>
+      <span style="display:flex;gap:8px;align-items:center"><span class="theme-badge" style="background:{s['theme_color']}">{_html.escape(s['theme'])}</span>{esn_badge}</span>
       <span class="slide-counter">{i+1} / {total}</span>
     </div>
     <div class="slide-title">{_html.escape(s['title'])}</div>
@@ -1372,6 +1387,39 @@ updateNavLayout();
     </div>
   </div>
   {right_html}
+</div>"""
+
+    def make_synth_html(i):
+        return f"""<div class="slide slide-synth" style="--tc:#3d7fff">
+  <div class="slide-scroll">
+    <div class="slide-top">
+      <span class="theme-badge" style="background:#3d7fff">Synthèse</span>
+      <span class="slide-counter">{i+1} / {total}</span>
+    </div>
+    <div class="synth-body">
+      <div class="synth-title">Ce que je ramène au bureau</div>
+      <div class="synth-cards">
+        <div class="synth-card">
+          <div class="synth-card-num">Action 1</div>
+          <div class="synth-card-head">Migrations bureautiques = carnet d'adresses ouvert</div>
+          <div class="synth-card-body">La fin des licences perpétuelles Microsoft pousse les collectivités à chercher des intégrateurs. LibreOffice, Open-Xchange et Zimbra sont matures — les clients qui hésitent ont besoin d'un accompagnement, pas d'un outil.</div>
+          <span class="synth-date">Déclencheur actif depuis 2024</span>
+        </div>
+        <div class="synth-card">
+          <div class="synth-card-num">Action 2</div>
+          <div class="synth-card-head">Tchap collectivités : 30\u202f000 entités sans messagerie souveraine</div>
+          <div class="synth-card-body">Matrix/Element + ProConnect couvre un vide réel. Opportunité de conseil et de déploiement pour les ESN accompagnant les collectivités — avant que le marché soit adressé par les grands comptes.</div>
+          <span class="synth-date">Projet en cours, ADULLACT / Arawa</span>
+        </div>
+        <div class="synth-card">
+          <div class="synth-card-num">Action 3</div>
+          <div class="synth-card-head">CRA : tout logiciel intégrant du libre devra justifier ses dépendances</div>
+          <div class="synth-card-body">Le Cyber Resilience Act impose une traçabilité de la chaîne logicielle (SBOM, correctifs, divulgation). Les ESN qui livrent ou maintiennent des produits sont directement concernées — besoin d'audit et de conseil dès maintenant.</div>
+          <span class="synth-date">Obligations clés : septembre 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>"""
 
     def make_end_html(i):
@@ -1394,6 +1442,7 @@ updateNavLayout();
         if t == "section":  return make_section_html(i, item)
         if t == "excluded": return make_excluded_html(i, item)
         if t == "rate":     return make_rate_html(i, item)
+        if t == "synth":    return make_synth_html(i)
         if t == "end":      return make_end_html(i)
         return make_talk_html(i, item)
 
