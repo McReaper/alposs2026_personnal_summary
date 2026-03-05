@@ -88,7 +88,7 @@
       "personal_notes": "Très politique, parfois cash — énergie communicative. Le pacte et le militantisme c'est leur truc. Ce qui m'intéresse vraiment : la mention du CRA, qui recoupe le talk précédent et confirme que c'est le vrai sujet réglementaire à surveiller.",
       "description": "Une présentation de Bookynette (APRIL)",
       "official_link": "https://pretalx.com/alposs-2026/talk/XAYMJN/",
-      "in_diapo": true,
+      "in_diapo": false,
       "esn_highlight": false
     },
     {
@@ -280,8 +280,8 @@
       "personal_notes": "Vu à moitié seulement (parti mi-chemin). Le tooling Python open source présenté (Scikit-learn, Shapash, TSlearn) pourra servir si je me lance dans le machine learning open source.",
       "description": "Une présentation de Laurent Patoux (INRIA)",
       "official_link": "https://pretalx.com/alposs-2026/talk/7SEHMK/",
-      "in_diapo": false,
-      "esn_highlight": false
+      "in_diapo": true,
+      "esn_highlight": true
     },
     {
       "title": "AlpOSS 2026 - Partagez votre RAG sans partager vos données : l'IA mutualisée et souveraine",

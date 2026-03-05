@@ -10,10 +10,14 @@ L'INRIA (Institut national de recherche en sciences et technologies du numériqu
 L'INRIA finance un écosystème de bibliothèques Python open source pour l'IA, en s'appuyant sur le modèle Scikit-learn — né à Grenoble — pour reproduire son succès mondial sur d'autres outils. L'objectif est de réduire la dépendance aux géants cloud américains, avec une société commerciale prévue pour prendre le relais après les cinq ans de financement.
 
 ## Points marquants
-- Scikit-learn, né à l'INRIA, est standard mondial ML.
-- Shapash, créé par la MAIF, explique les décisions d'IA.
-- P16 cible l'indépendance face aux fournisseurs cloud américains.
-- Pôle emploi intègre déjà ces bibliothèques en production.
+- Scikit-learn, né à l'INRIA, est le standard mondial du machine learning.
+  Présent dans la quasi-totalité des pipelines data science, il prouve qu'un projet académique open source peut devenir une infrastructure mondiale. P16 s'appuie sur ce modèle pour reproduire ce succès sur d'autres outils.
+- France 2030 finance 5 ans de montée en maturité industrielle de bibliothèques Python IA.
+  Le programme sélectionne des projets issus des labs académiques, les accompagne vers la production et facilite leur adoption par des entreprises partenaires (Capgemini, MAIF, Pôle Emploi).
+- L'objectif : une alternative souveraine aux stacks IA des géants américains.
+  OpenAI, AWS SageMaker, Google Vertex AI dominent le marché. P16 construit des briques open source équivalentes, déployables on-premise ou en cloud souverain, sans dépendance contractuelle ni transfert de données.
+- Une société commerciale (Probable) prendra le relais après le financement public.
+  Le modèle évite le double écueil : ne pas abandonner le logiciel à l'issue du financement, et ne pas privatiser ce qui a été construit avec des fonds publics. Le code reste entièrement libre.
 
 ## Technologies
 - **Scikit-learn** — Bibliothèque Python de référence mondiale pour le machine learning, standard de facto dans les pipelines data science et MLOps. Née à l'INRIA, utilisée par des millions de projets dans le monde.
