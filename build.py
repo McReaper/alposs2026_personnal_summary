@@ -563,7 +563,9 @@ def version_a(talks):
 
     css = THEME_VARS + DETAIL_CSS + """
 * { box-sizing:border-box; margin:0; padding:0; }
-body { font-family:'Inter',system-ui,sans-serif; display:flex; height:100vh; overflow:hidden; background:var(--bg1); }
+body { font-family:'Inter',system-ui,sans-serif; display:flex; flex-direction:column; height:100vh; overflow:hidden; background:var(--bg1); }
+.layout { display:flex; flex:1; min-height:0; overflow:hidden; }
+.ai-disclaimer { position:relative !important; flex-shrink:0; }
 
 .sb { width:300px; min-width:300px; background:var(--sb); display:flex; flex-direction:column; height:100vh;
       transition:width .25s, min-width .25s; overflow:hidden; }
@@ -610,7 +612,8 @@ body { font-family:'Inter',system-ui,sans-serif; display:flex; height:100vh; ove
 .esn-star { color:#f1c40f; font-size:11px; flex-shrink:0; }
 .ct .note-pin { width:100%; max-width:780px; margin:0 auto; border-radius:0;
                 border:none; border-top:1px solid var(--brd); box-shadow:none;
-                padding:12px 48px 40px; background:var(--bg2); }
+                padding:12px 48px; background:var(--bg2);
+                max-height:160px; overflow-y:auto; }
 """
 
     js = """
@@ -677,6 +680,7 @@ selectTalk(_initHash && TALKS.find(t => t.id === _initHash) ? _initHash : TALKS[
 </head>
 <body>
 {TOGGLE_BTN}
+<div class="layout">
 <aside class="sb" id="sb">
   <div class="sbh">
     <img src="{AVATAR}" alt="Victor" />
@@ -707,6 +711,7 @@ selectTalk(_initHash && TALKS.find(t => t.id === _initHash) ? _initHash : TALKS[
   </div>
   <div id="note-pin" class="note-pin"><div class="note-pin-lbl">Mes notes</div><div class="note-pin-txt"></div></div>
 </main>
+</div>
 <script>
 {data_js(talks)}
 {RENDER_JS}
