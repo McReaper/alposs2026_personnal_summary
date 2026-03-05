@@ -1,7 +1,7 @@
 # Table ronde : migrations vers l'open source
 
 ## Intervenant
-Marie-Jo Kopp Castinel · OpenGo / Damien Accorsi · Algoo / Baptiste Danielewicz · Ville de Claix / Nicolas Benoît · CGT Isère
+Marie-Jo Kopp Castinel, Damien Accorsi, Baptiste Danielewicz, Nicolas Benoît · OpenGo / Algoo / Ville de Claix / CGT Isère
 
 ## Société
 OpenGo est une société spécialisée dans l'accompagnement de migrations bureautiques (LibreOffice, Zimbra) pour les collectivités territoriales et administrations depuis l'époque d'OpenOffice 2. Algoo (Moirans, Isère) est l'éditeur de Tracim, plateforme collaborative open source, et accompagne les migrations Linux pour PME et organisations. La Ville de Claix et la CGT Isère sont deux clients ayant conduit des migrations complètes vers l'open source avec ces prestataires. OpenGo accompagne notamment le Conseil Départemental de l'Aude dans une migration LibreOffice/Zimbra concernant 2 800 utilisateurs.

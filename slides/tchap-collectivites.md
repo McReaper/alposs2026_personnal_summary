@@ -1,7 +1,7 @@
 # Vers une messagerie instantanée libre, décentralisée et souveraine : quel Tchap pour les collectivités ?
 
 ## Intervenant
-Matthieu Faure · ADULLACT / Erik Da Silva · Arawa / Philippe Le Brouster · Ville d'Échirolles / Stéphane Vangheluwe · SITIV
+Matthieu Faure, Erik Da Silva, Philippe Le Brouster, Stéphane Vangheluwe · ADULLACT / Arawa / Ville d'Échirolles / SITIV
 
 ## Société
 L'ADULLACT est l'association nationale des développeurs et utilisateurs de logiciels libres pour les administrations et collectivités territoriales, active depuis plus de 20 ans. Arawa est un intégrateur de solutions libres (Nextcloud, Matrix/Element, BigBlueButton) spécialisé dans les collectivités. Le SITIV est un OPSN (Opérateur Public de Services Numériques) membre de Déclic, fédération regroupant 80 OPSN sur le territoire français. Ce projet réunit ces acteurs pour déployer une messagerie instantanée souveraine couvrant les 30 000 collectivités françaises exclues du périmètre de Tchap État.
