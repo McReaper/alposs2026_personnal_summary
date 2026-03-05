@@ -211,3 +211,6 @@ transcriptions/
 
 ### Personal notes ###
 *.tmp
+
+### Generated output ###
+site/
