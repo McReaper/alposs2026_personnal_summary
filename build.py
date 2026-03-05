@@ -1242,7 +1242,7 @@ updateNavLayout();
       <div class="intro-stats">
         <div><div class="isn">{n_talks}</div><div class="isl">talks</div></div>
         <div><div class="isn">{n_workshops}</div><div class="isl">ateliers</div></div>
-        <div><div class="isn">{n_main}</div><div class="isl">assistés</div></div>
+        <div><div class="isn">{total_attended}</div><div class="isl">assistés</div></div>
         <div><div class="isn">{n_extra}</div><div class="isl">mentions</div></div>
       </div>
     </div>
@@ -1369,11 +1369,10 @@ updateNavLayout();
         if company_html:
             speaker_line += sep + company_html
 
-        esn_badge = '<span class="esn-badge-c" title="À retenir pour une ESN">★ ESN</span>' if s.get("esn_highlight") else ""
         return f"""<div class="slide" style="--tc:{s['theme_color']}">
   <div class="slide-scroll">
     <div class="slide-top">
-      <span style="display:flex;gap:8px;align-items:center"><span class="theme-badge" style="background:{s['theme_color']}">{_html.escape(s['theme'])}</span>{esn_badge}</span>
+      <span class="theme-badge" style="background:{s['theme_color']}">{_html.escape(s['theme'])}</span>
       <span class="slide-counter">{i+1} / {total}</span>
     </div>
     <div class="slide-title">{_html.escape(s['title'])}</div>
