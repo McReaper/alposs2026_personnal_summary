@@ -7,7 +7,7 @@ Josquin Louvier · Champollion Avocats (Grenoble)
 Champollion Avocats est un cabinet grenoblois spécialisé en droit du numérique et propriété intellectuelle. Il intervient en conseil et en contentieux pour des acteurs de l'open source, des éditeurs logiciels et des entreprises du numérique. Josquin Louvier accompagne notamment des éditeurs open source dans la structuration de leur modèle de licence et dans la défense de leurs droits en justice. Il intervient régulièrement dans les événements de l'écosystème libre pour vulgariser les enjeux juridiques des licences open source auprès d'un public technique.
 
 ## Résumé
-Josquin Louvier passe en revue les quatre décisions publiées des tribunaux français sur les licences open source depuis 2007. La Cour de cassation a tranché : violer une licence open source constitue bien de la contrefaçon, pas un simple manquement contractuel, ce qui ouvre l'accès à des recours bien plus puissants. Orange a été condamné à près d'un million d'euros pour violation de la GPL — la plus forte condamnation pour contrefaçon de logiciel jamais prononcée en France. Les tribunaux sont désormais, selon l'orateur, un outil de promotion du logiciel libre.
+La Cour de cassation a tranché : violer une licence open source est de la contrefaçon, pas un manquement contractuel — ce qui ouvre saisie-contrefaçon et mesures provisoires. Orange a été condamné à près d'un million d'euros pour violation de la GPL, record français en matière de contrefaçon logicielle.
 
 ## Points marquants
 - Cinq décisions de tribunaux français en 40 ans sur les licences open source.

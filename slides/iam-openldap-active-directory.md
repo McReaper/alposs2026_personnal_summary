@@ -7,7 +7,7 @@ Clément Oudot · Worteks
 Worteks est une société de services spécialisée dans l'intégration et le support de solutions open source d'infrastructure, notamment IAM (Identity and Access Management). Elle accompagne entreprises et collectivités dans la sortie des solutions propriétaires (VMware, Office 365, Okta, Entra ID) au profit de l'open source. Worteks est l'un des principaux contributeurs et mainteneurs de LemonLDAP::NG, le portail SSO open source français de référence, ainsi que de la suite LDAP Toolbox (LSC, Service Desk, White Pages, Self Service Password). Elle opère des annuaires allant de quelques entrées à plusieurs centaines de millions.
 
 ## Résumé
-Clément Oudot présente un tour d'horizon pragmatique des outils IAM open source pour gérer des annuaires OpenLDAP et Active Directory. La suite LDAP Toolbox couvre tous les besoins : SSO, synchronisation d'identités, gestion autonome des mots de passe, support niveau 1. Une stratégie de migration progressive permet de rendre Active Directory dépendant d'OpenLDAP comme source de vérité, sans big bang. La ville d'Échirolles, hôte de l'événement, utilise elle-même ces outils et en a cofinancé le développement.
+LDAP Toolbox est une suite open source de gestion des identités (authentification unique, synchronisation, réinitialisation de mot de passe) comme alternative libre à Okta ou Microsoft Entra. La migration peut être progressive : les comptes sont synchronisés depuis un annuaire open source vers l'Active Directory existant, sans coupure brutale.
 
 ## Points marquants
 - Active Directory encode ses dates en intervalles de 100 nanosecondes depuis 1601.

@@ -7,7 +7,7 @@ Arthur Vuillard · LeBureau.coop
 LeBureau.coop est une coopérative spécialisée dans la vente de noms de domaine avec l'ambition de devenir bureau d'enregistrement accrédité — un modèle alternatif rare dans un secteur dominé par des acteurs commerciaux. Arthur Vuillard en est le gérant, également à la tête de l'Agebank (DuPython, formation et services Python). Militant du logiciel libre et de l'économie sociale et solidaire, il développe le logiciel de gestion de domaines de la coopérative en Python/Django sous licence AGPL, garantissant la continuité de service même si la structure disparaissait.
 
 ## Résumé
-Arthur Vuillard décrit comment les bureaux d'enregistrement de noms de domaine pratiquent l'enfermement par des API propriétaires et des interfaces dégradées, illustrant le concept d'enshittification (mérdification). Deux bibliothèques Python — Lexicon et OctoDNS — permettent de gérer le DNS indépendamment du fournisseur. L'absence de standard ouvert côté titulaire/bureau d'enregistrement reste un angle mort que la communauté open source n'a pas encore comblé. Choisir des coopératives plutôt que des fonds d'investissement est présenté comme la meilleure défense.
+Les registrars pratiquent l'enfermement via des API propriétaires et des interfaces dégradées ; Lexicon et OctoDNS permettent de gérer le DNS indépendamment du fournisseur. Il n'existe pas de standard ouvert côté titulaire — angle mort que la communauté n'a pas encore comblé.
 
 ## Points marquants
 - Prix d'un domaine multiplié par 2 après rachat par un fonds.

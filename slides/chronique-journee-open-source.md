@@ -7,7 +7,7 @@ Jérémy Tuloup · QuantStack
 QuantStack est un studio open source parisien spécialisé dans l'écosystème scientifique et data, principalement autour de Jupyter. La société emploie des ingénieurs qui sont simultanément des mainteneurs actifs de projets open source majeurs (JupyterLab, JupyterLite, Voilà, xeus). Ce modèle de "studio open source" où le travail de maintenance communautaire est directement le produit livré est rare et constitue un exemple de business model durable autour de l'open source. QuantStack intervient pour des clients institutionnels et industriels nécessitant des environnements de calcul scientifique reproductibles et auditables.
 
 ## Résumé
-Jérémy Tuloup retrace une journée type de mainteneur open source : CI cassée sans raison apparente, dépilage de notifications GitHub, réunions sans consensus, gestion des releases avec leurs tokens, secrets et changelogs. Les attaques de supply chain sur NPM sont devenues un risque opérationnel réel, forçant des patches en urgence. En 2026, le flux de PRs générées par IA déplace le bottleneck de la production de code vers la review humaine, dont la qualité est très inégale. Le facteur humain — désaccords, abandons, perte de financement — reste plus difficile à gérer que le technique.
+Un mainteneur open source expose sa réalité quotidienne : intégration continue cassée, attaque sur la chaîne de dépendances NPM, releases bloquées par une erreur de configuration. En 2026, les IA génératives déplacent le goulot d'étranglement de la production de code vers la relecture humaine, dont la qualité devient le vrai problème.
 
 ## Points marquants
 - En 2026, les LLM déplacent le goulot d'étranglement de la production vers la review.

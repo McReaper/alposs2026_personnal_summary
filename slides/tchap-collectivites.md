@@ -7,7 +7,7 @@ Matthieu Faure · ADULLACT / Erik Da Silva · Arawa / Philippe Le Brouster · Vi
 L'ADULLACT est l'association nationale des développeurs et utilisateurs de logiciels libres pour les administrations et collectivités territoriales, active depuis plus de 20 ans. Arawa est un intégrateur de solutions libres (Nextcloud, Matrix/Element, BigBlueButton) spécialisé dans les collectivités. Le SITIV est un OPSN (Opérateur Public de Services Numériques) membre de Déclic, fédération regroupant 80 OPSN sur le territoire français. Ce projet réunit ces acteurs pour déployer une messagerie instantanée souveraine couvrant les 30 000 collectivités françaises exclues du périmètre de Tchap État.
 
 ## Résumé
-Tchap, la messagerie de l'État basée sur Matrix/Element, ne couvre pas les collectivités territoriales. Ce projet porté par l'ADULLACT, Arawa et la fédération Déclic vise à déployer une infrastructure Matrix fédérée, une instance par collectivité, pour permettre des échanges chiffrés de bout en bout entre agents publics locaux. Le réseau sera fermé aux seules collectivités membres, avec des passerelles envisagées vers Tchap État. L'identité des agents sera labellisée via ProConnect pour éviter toute dépendance à Microsoft ou Google.
+Les 30 000 collectivités françaises sont exclues de Tchap (la messagerie sécurisée de l'État) et recourent à WhatsApp ou Teams faute d'alternative. Ce projet déploie une messagerie chiffrée de bout en bout pour agents publics locaux, une instance par collectivité, avec authentification via le système d'identité national ProConnect.
 
 ## Points marquants
 - Tchap couvre uniquement l'administration centrale de l'État, pas les collectivités.

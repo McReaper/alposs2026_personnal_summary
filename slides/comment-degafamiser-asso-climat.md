@@ -7,7 +7,7 @@ Gauthier Fanucci · Alternatiba
 Alternatiba est un mouvement citoyen français pour le climat et la justice sociale, structuré en une centaine de groupes locaux. L'association est connue pour ses villages des alternatives, ses tours à vélo et ses marches pour le climat. Elle fonctionne essentiellement sur des ressources bénévoles et des subventions associatives, avec une infrastructure numérique gérée par deux responsables IT bénévoles. Son engagement militant la pousse à privilégier les logiciels libres pour la gestion de ses données, notamment celles de ses militants.
 
 ## Résumé
-Alternatiba a migré sa gestion des données militantes de Google Sheets vers Baserow et N8N, déployés en propre grâce au mécénat de compétences de la coopérative Télescope. Le critère de sélection des hébergeurs est pragmatique : pouvoir "aller boire un coup" avec eux — Framasoft oui, Google non. La migration des mails d'OVH vers Grésille est faite ; celle de Google Drive vers Nextcloud est en cours. Une campagne est lancée pour transformer la fin du support Windows 10 en levier de promotion du logiciel libre.
+Alternatiba sort des GAFAM par étapes : mails migrés sur Grésille, données militantes sur Baserow + N8N auto-hébergés, Drive vers Nextcloud en cours. Le mécénat de compétences (coopérative Télescope) est le modèle qui rend ces migrations accessibles à une asso bénévole.
 
 ## Points marquants
 - Alternatiba utilise encore Google Drive en 2026.

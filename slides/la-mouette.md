@@ -7,7 +7,7 @@ Régis Perdreau · La Mouette
 La Mouette est une association francophone dédiée à la promotion de la bureautique libre, active depuis 2010 autour de LibreOffice, Collabora Online et du format ODF. Elle regroupe des particuliers, des professionnels et des prestataires qui partagent leurs retours d'expérience sur les alternatives libres aux suites bureautiques propriétaires. L'association propose aux adhérents un espace de stockage en ligne pour tester Collabora Online sans frais, et intervient régulièrement dans des événements de la communauté du logiciel libre (AlpOSS, JDLL à Lyon).
 
 ## Résumé
-Régis Perdreau présente La Mouette, association francophone pour la bureautique libre, et ses projets pour 2026. Malgré l'essor du cloud, la bureautique desktop reste nécessaire pour les documents complexes que les navigateurs gèrent mal. Deux chantiers sont prioritaires : créer une distribution LibreOffice francophone et centraliser la documentation sur l'écosystème ODF. L'association identifie aussi le manque de templates de qualité comme frein persistant à l'adoption en entreprise.
+La Mouette fédère les acteurs de la bureautique libre autour de LibreOffice et du format ODF (l'alternative ouverte à .docx), avec deux chantiers en cours : une distribution francophone et une centralisation de la documentation. Le manque de modèles de documents professionnels reste le principal frein à l'adoption en entreprise.
 
 ## Points marquants
 - LibreOffice desktop reste pertinent malgré le tout-cloud.

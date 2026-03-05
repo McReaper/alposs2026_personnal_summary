@@ -7,7 +7,7 @@ Guillaume Allègre · Wikimédia France / OpenStreetMap
 Guillaume Allègre est informaticien professionnel qui contribue bénévolement à l'écosystème des communs numériques : Wikipédia, Wikimedia Commons, Wikidata et OpenStreetMap. Libriste convaincu, il s'investit à la fois sur les aspects communautaires et techniques de ces projets. Il intervient à AlpOSS à titre personnel, en tant que militant et contributeur, et anime également un atelier sur les coulisses de Wikipédia lors de l'événement.
 
 ## Résumé
-Guillaume Allègre présente les rouages techniques de quatre projets libres complémentaires : Wikipédia (MediaWiki), Wikimedia Commons (médias et cartes GeoJSON), Wikidata (base sémantique interrogeable en SPARQL) et OpenStreetMap (PostgreSQL/PostGIS, API Overpass). Il montre comment ces projets s'articulent pour afficher des cartes dynamiques directement dans Wikipédia, à partir de données OSM. En 2026, Wikimania et State of the Map se tiennent tous les deux à Paris — une coïncidence rarissime pour la communauté des communs numériques.
+Wikipédia, Wikidata, Wikimedia Commons et OpenStreetMap sont quatre communs numériques distincts — données encyclopédiques, sémantiques, médias et cartographiques — mais techniquement interconnectés. Cette articulation permet d'afficher des cartes dynamiques OpenStreetMap directement dans les articles Wikipédia.
 
 ## Points marquants
 - Wikimania et State of the Map 2026 tous les deux à Paris.

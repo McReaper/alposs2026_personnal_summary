@@ -7,7 +7,7 @@ Bertrand Chartier et Marius Monnier · Académie de Grenoble / Lycée Marie Curi
 Bertrand Chartier est chargé de mission à la délégation académique au numérique (DAN) de l'académie de Grenoble, promoteur de la démarche NIRD au niveau académique. Marius Monnier est enseignant NSI (Numérique et Sciences Informatiques) au lycée Marie Curie d'Échirolles, où il a déployé une salle Linux Debian intégrée au réseau du lycée via SSO LDAP. Tous deux contribuent bénévolement à la distribution NIRD, hébergée sur la Forge des communs numériques éducatifs (forge.apps.education.fr).
 
 ## Résumé
-NIRD (Numérique Inclusif, Responsable et Durable) est une démarche nationale qui déploie Linux dans les lycées sur du matériel reconditionné, redistribué aux familles et collectivités. Le lycée Marie Curie a déployé Debian en salle entière, avec un démarrage en 20 secondes contre 1 min 40 s pour Ubuntu. Plus de 15 établissements de l'académie de Grenoble ont rejoint la démarche. La distribution NIRD est en bêta et cherche des contributeurs extérieurs à l'Éducation nationale.
+NIRD déploie Linux dans les lycées sur matériel reconditionné redistribué aux familles, avec authentification centralisée intégrée au réseau pédagogique existant. La distribution est en bêta et cherche des contributeurs extérieurs à l'Éducation nationale.
 
 ## Points marquants
 - Windows 11 a poussé les lycées vers Linux, timing idéal.

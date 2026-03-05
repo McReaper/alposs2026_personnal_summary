@@ -7,7 +7,7 @@ Fayçal Braiki, Christophe Ninucci, Yoann Dupont, Baptiste Danielewicz, Nicolas 
 Le SITPI (Syndicat Intercommunal des Technologies et des Plateformes d'Information) est une structure de mutualisation des systèmes d'information regroupant dix communes de l'agglomération grenobloise, représentant environ 140 000 habitants. Il pilote la stratégie de souveraineté numérique du syndicat et conduit les projets de migration vers des solutions libres. La DINUM (Direction Interministérielle du Numérique) développe et publie sous GPLv3 l'outillage DevOps (OpenTofu, Ansible) pour faciliter le déploiement d'OpenXchange dans les administrations françaises. Alma est un prestataire spécialisé dans l'accompagnement des collectivités pour la migration vers OpenXchange, l'un des premiers acteurs à proposer ce service en France.
 
 ## Résumé
-Le SITPI présente le retour d'expérience de la migration de la ville de Claix (200 comptes) depuis Microsoft Exchange vers OpenXchange. La démarche a impliqué les utilisateurs finaux dès le benchmark, ce qui a été présenté comme le facteur clé de succès. La migration mobile a mobilisé un écosystème 100 % libre (F-Droid, DAVx5, K-9 Mail). La DINUM publie l'outillage DevOps sous GPLv3 pour que d'autres collectivités puissent répliquer le déploiement.
+Le SITPI a migré 200 comptes de Microsoft Exchange vers OpenXchange en impliquant les agents dès le benchmark — facteur clé du succès. La DINUM publie l'outillage DevOps (OpenTofu + Ansible) sous GPLv3 pour que d'autres collectivités puissent répliquer le déploiement.
 
 ## Points marquants
 - Les utilisateurs finaux ont plébiscité OpenXchange, pas les DSI.

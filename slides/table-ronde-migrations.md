@@ -7,7 +7,7 @@ Marie-Jo Kopp Castinel · OpenGo / Damien Accorsi · Algoo / Baptiste Danielewic
 OpenGo est une société spécialisée dans l'accompagnement de migrations bureautiques (LibreOffice, Zimbra) pour les collectivités territoriales et administrations depuis l'époque d'OpenOffice 2. Algoo (Moirans, Isère) est l'éditeur de Tracim, plateforme collaborative open source, et accompagne les migrations Linux pour PME et organisations. La Ville de Claix et la CGT Isère sont deux clients ayant conduit des migrations complètes vers l'open source avec ces prestataires. OpenGo accompagne notamment le Conseil Départemental de l'Aude dans une migration LibreOffice/Zimbra concernant 2 800 utilisateurs.
 
 ## Résumé
-Quatre acteurs — un syndicat, deux ESN libres et une collectivité — partagent leurs retours d'expérience concrets sur des migrations réussies vers l'open source. La CGT Isère a basculé sous Linux, Thunderbird et Tracim en six mois ; la Ville de Claix a migré sa messagerie Exchange vers Open-Xchange en impliquant vingt utilisateurs pilotes dès la phase de conception. La fin du modèle de licence perpétuelle Microsoft est citée comme déclencheur principal de plusieurs migrations. Le triptyque "direction + DSI + volonté politique" est présenté comme condition sine qua non de tout projet réussi.
+La fin des licences perpétuelles Microsoft est le déclencheur commun des migrations présentées : CGT Isère (Linux + Tracim), Ville de Claix (Open-Xchange), Département de l'Aude (LibreOffice, 2 800 utilisateurs). Le facteur clé de réussite est l'implication des utilisateurs dès le benchmark, pas la DSI seule.
 
 ## Points marquants
 - La fin des licences perpétuelles Microsoft est le déclencheur principal des migrations.

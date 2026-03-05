@@ -7,7 +7,7 @@ Bérengère Batiot · CoopCircuits
 CoopCircuits est une SCIC (Société Coopérative d'Intérêt Collectif) française dont l'objet est de déployer et opérer des outils numériques libres au service des circuits courts alimentaires. Elle est l'instance française d'Open Food Network, réseau international présent sur quatre continents. La coopérative défend un modèle de développement collaboratif et de gouvernance partagée entre producteurs, consommateurs et acteurs de l'ESS. Elle adhère à la PTILL (Pour un Hébergement Libre et Localisé) et travaille en partenariat avec d'autres SCIC comme Tibia pour outiller les tiers-lieux et les collectivités.
 
 ## Résumé
-CoopCircuits déploie Open Food Network (OFN), logiciel libre né en Australie en 2012, pour permettre à des producteurs, AMAP et collectivités de gérer leur distribution en circuits courts. La plateforme propose une API ouverte et la communauté OFN travaille à l'interopérabilité avec des concurrents directs pour que les producteurs gèrent leurs stocks une seule fois sur plusieurs canaux. CoopCircuits porte aussi un projet de "sécurité sociale de l'alimentation" — une caisse commune pour financer l'accès à une alimentation de qualité — développé avec Tibia, une SCIC outillant les tiers-lieux.
+CoopCircuits déploie Open Food Network, logiciel libre présent sur 4 continents, pour aider producteurs, AMAP et collectivités à gérer leur distribution en circuits courts. Son API ouverte vise l'interopérabilité avec d'autres plateformes pour qu'un producteur gère ses stocks une seule fois, quel que soit le canal de vente.
 
 ## Points marquants
 - OFN né en 2012 en Australie, présent sur quatre continents.

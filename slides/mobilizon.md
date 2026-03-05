@@ -7,7 +7,7 @@ Alexandra Cadet · Kaihuri
 Kaihuri est une structure impliquée dans l'écosystème du logiciel libre, qui accompagne les organisations souhaitant déployer des alternatives open source aux plateformes centralisées. Elle contribue notamment à la promotion et au déploiement de Mobilizon, la plateforme décentralisée de gestion d'événements développée par Framasoft. Kaihuri aide les communautés, associations et collectivités à mettre en place leurs propres instances et à adopter le Fediverse comme infrastructure de communication souveraine.
 
 ## Résumé
-Mobilizon est une alternative open source et décentralisée à Facebook Events, développée par Framasoft et financée par le fonds européen NGI. Chaque organisation peut héberger sa propre instance ou rejoindre une instance thématique existante, et les événements publiés sont interopérables avec le Fediverse (Mastodon, etc.) via ActivityPub. Un plugin WordPress permet d'afficher automatiquement les événements d'un groupe Mobilizon sur un site tiers, sans intervention manuelle. L'outil cible associations, collectivités et universités souhaitant garder la maîtrise de leurs données d'agenda.
+Mobilizon (Framasoft) est une alternative libre à Facebook Events : chaque organisation héberge sa propre instance, et les événements sont visibles sur Mastodon et le reste du réseau social fédéré. Un plugin WordPress permet d'afficher automatiquement les événements d'un groupe Mobilizon sur un site tiers.
 
 ## Points marquants
 - Mobilizon reprend les groupes/événements de Facebook, pas les profils.

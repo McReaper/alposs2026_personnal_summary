@@ -7,7 +7,7 @@ Michaël Scherer · Red Hat
 Red Hat est l'un des principaux éditeurs mondiaux de logiciels open source, éditeur de RHEL, Fedora, CentOS Stream et OpenShift. Filiale d'IBM depuis 2019, Red Hat dispose d'un Open Source Program Office (OSPO) dédié à la gestion des relations avec les communautés open source, les fondations et les événements. La société fixe les standards de packaging RPM et de support long terme pour les distributions Linux d'entreprise, et contribue massivement à des projets comme le noyau Linux, Kubernetes et Ansible. C'est un acteur incontournable pour toute ESN intervenant sur des environnements d'infrastructure Linux ou cloud-native.
 
 ## Résumé
-Choisir un logiciel libre ne se limite pas à vérifier sa licence : il faut analyser qui le développe (une seule entreprise, un consortium, un individu), comment il est financé, et sa robustesse opérationnelle à long terme. Minio, très populaire comme stockage objet compatible S3, a archivé sa version libre la semaine même de la conférence — illustration directe du risque de bascule propriétaire. Les CLA méritent une attention particulière : certains captent les droits des contributeurs sans contrepartie, d'autres (FSF) les redistribuent équitablement. En 2026, la question de savoir si une pull request est générée par IA pèse déjà sur la charge de review des mainteneurs.
+La licence ne suffit pas : il faut évaluer le modèle de gouvernance, le financement et les CLA avant d'intégrer un composant open source. Minio a archivé sa version libre la semaine de la conférence — cas d'école du risque de bascule propriétaire à anticiper en architecture.
 
 ## Points marquants
 - Minio, stockage objet compatible S3, a archivé sa version libre.
