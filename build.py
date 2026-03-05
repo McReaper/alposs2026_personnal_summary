@@ -968,9 +968,9 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
 
 /* ── Slides ─────────────────────────────────────────────────────────────── */
 .slide { position:absolute; inset:0; display:flex; flex-direction:column;
-         padding:44px 72px 88px; opacity:0; transition:opacity .3s; pointer-events:none;
-         overflow-y:auto; }
+         opacity:0; transition:opacity .3s; pointer-events:none; overflow:hidden; }
 .slide.active { opacity:1; pointer-events:all; }
+.slide-scroll { flex:1; overflow-y:auto; padding:44px 72px var(--nav-h-pad,88px); display:flex; flex-direction:column; }
 
 .slide-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; }
 .theme-badge { display:inline-block; padding:4px 14px; border-radius:20px; font-size:11px;
@@ -1009,9 +1009,10 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
         font-size:12px; color:var(--t3); cursor:pointer; transition:all .15s; font-family:inherit; }
 .chip:hover { border-color:var(--tc,var(--acc)); color:var(--tc,var(--acc)); }
 
-/* ── Right column (overlay, hors flux flex) ─────────────────────────────── */
-.slide-right { position:absolute; right:72px; bottom:88px; width:200px; display:flex;
-               flex-direction:column; align-items:center; gap:20px; z-index:10; }
+/* ── Right column (fixed, toujours au-dessus de la nav) ─────────────────── */
+.slide-right { position:fixed; right:72px; bottom:0; width:200px; display:flex;
+               flex-direction:column; align-items:center; gap:20px; z-index:10;
+               transition:bottom .25s; }
 .slide-avatar { width:96px; height:96px; border-radius:50%;
                 border:3px solid var(--tc,var(--acc)); opacity:.9; }
 .thought-bubble { width:96px; height:96px; color:var(--t5); opacity:.45; }
@@ -1047,13 +1048,22 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
                   font-size:16px; margin:-4px -4px 0 8px; line-height:1; }
 
 /* ── Controls ───────────────────────────────────────────────────────────── */
-.controls { position:fixed; bottom:0; left:0; right:0; background:var(--bg2); border-top:1px solid var(--brd2); }
+.controls { position:fixed; bottom:0; left:0; right:0; background:var(--bg2); border-top:1px solid var(--brd2);
+            transition:transform .25s; z-index:40; }
+.controls.collapsed { transform:translateY(100%); }
+.ctrl-toggle { position:fixed; left:50%; transform:translateX(-50%); bottom:0;
+               width:64px; height:22px; background:var(--bg2); border:1px solid var(--brd2);
+               border-bottom:none; border-radius:10px 10px 0 0; cursor:pointer;
+               color:var(--t4); font-size:13px; z-index:50; display:flex; align-items:center;
+               justify-content:center; transition:bottom .25s, background .15s; padding:0; }
+.ctrl-toggle:hover { background:var(--bg3); color:var(--t2); }
 .progress-bar { height:3px; background:var(--acc); transition:width .3s; }
 .ctrl-inner { display:flex; align-items:center; justify-content:space-between; padding:10px 72px; }
 .ctrl-btn { background:none; border:1px solid var(--brd); color:var(--t3); padding:6px 18px;
-            border-radius:6px; cursor:pointer; font-family:inherit; font-size:13px; transition:all .15s; }
+            border-radius:6px; cursor:pointer; font-family:inherit; font-size:13px; transition:all .15s; flex-shrink:0; }
 .ctrl-btn:hover { background:var(--bg3); color:var(--t1); }
-.ctrl-hint { font-size:12px; color:var(--t6); }
+.ctrl-hint { font-size:12px; color:var(--t6); flex:1; min-width:0; text-align:center;
+             overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding:0 12px; }
 
 /* ── Structural slides ──────────────────────────────────────────── */
 /* Intro */
@@ -1159,6 +1169,32 @@ document.addEventListener('click', e => {{
 }});
 
 showSlide(0);
+
+// ── Nav toggle + counter-zoom + slide-right positioning ───────────────────
+function updateNavLayout() {{
+  const ctrl = document.getElementById('ctrl-bar');
+  const tab  = document.getElementById('ctrl-toggle-btn');
+  const collapsed = ctrl.classList.contains('collapsed');
+  const navH = collapsed ? 0 : ctrl.offsetHeight;
+  const zoom = window.outerWidth / window.innerWidth || 1;
+  const scale = Math.max(0.3, Math.min(3, 1 / zoom));
+  document.documentElement.style.setProperty('--nav-h-pad', (navH + 20) + 'px');
+  tab.style.bottom = navH + 'px';
+  document.querySelectorAll('.slide-right').forEach(el => {{
+    el.style.bottom = (navH + 16) + 'px';
+    el.style.zoom = scale;
+  }});
+}}
+
+function toggleNav() {{
+  const ctrl = document.getElementById('ctrl-bar');
+  const collapsed = ctrl.classList.toggle('collapsed');
+  document.getElementById('ctrl-toggle-btn').textContent = collapsed ? '▲' : '▼';
+  updateNavLayout();
+}}
+
+window.addEventListener('resize', updateNavLayout);
+updateNavLayout();
 """ + TOGGLE_JS
 
     def make_intro_html(i):
@@ -1166,44 +1202,48 @@ showSlide(0);
         n_talks = len(SLUGS)
         n_workshops = len(WORKSHOP_SLUGS)
         return f"""<div class="slide slide-intro" style="--tc:#3d7fff">
-  <div class="slide-top">
-    <span class="theme-badge" style="background:#3d7fff">Introduction</span>
-    <span class="slide-counter">{i+1} / {total}</span>
-  </div>
-  <div class="intro-body">
-    <div>
-      <div class="intro-title">AlpOSS 2026</div>
-      <div class="intro-date">Alpine Open Source Summit · Grenoble · 17 février 2026</div>
+  <div class="slide-scroll">
+    <div class="slide-top">
+      <span class="theme-badge" style="background:#3d7fff">Introduction</span>
+      <span class="slide-counter">{i+1} / {total}</span>
     </div>
-    <div class="intro-cols">
-      <div class="intro-col">
-        <div class="intro-col-title">L'événement</div>
-        <p>AlpOSS est une journée de conférences et ateliers autour du logiciel libre, organisée à Grenoble. En 2026 : {n_talks} talks, {n_workshops} ateliers, une seule journée.</p>
+    <div class="intro-body">
+      <div>
+        <div class="intro-title">AlpOSS 2026</div>
+        <div class="intro-date">Alpine Open Source Summit · Grenoble · 17 février 2026</div>
       </div>
-      <div class="intro-col">
-        <div class="intro-col-title">Pourquoi j'y étais</div>
-        <p>Développeur dans une ESN, je suis venu en éclaireur : identifier les technologies et tendances open source pertinentes pour nos clients et notre offre de service.</p>
+      <div class="intro-cols">
+        <div class="intro-col">
+          <div class="intro-col-title">L'événement</div>
+          <p>AlpOSS est une journée de conférences et ateliers autour du logiciel libre, organisée à Grenoble. En 2026 : {n_talks} talks, {n_workshops} ateliers, une seule journée.</p>
+        </div>
+        <div class="intro-col">
+          <div class="intro-col-title">Pourquoi j'y étais</div>
+          <p>Développeur dans une ESN, je suis venu en éclaireur : identifier les technologies et tendances open source pertinentes pour nos clients et notre offre de service.</p>
+        </div>
       </div>
-    </div>
-    <div class="intro-stats">
-      <div><div class="isn">{n_talks}</div><div class="isl">talks</div></div>
-      <div><div class="isn">{n_workshops}</div><div class="isl">ateliers</div></div>
-      <div><div class="isn">{n_main}</div><div class="isl">assistés</div></div>
-      <div><div class="isn">{n_extra}</div><div class="isl">mentions</div></div>
+      <div class="intro-stats">
+        <div><div class="isn">{n_talks}</div><div class="isl">talks</div></div>
+        <div><div class="isn">{n_workshops}</div><div class="isl">ateliers</div></div>
+        <div><div class="isn">{n_main}</div><div class="isl">assistés</div></div>
+        <div><div class="isn">{n_extra}</div><div class="isl">mentions</div></div>
+      </div>
     </div>
   </div>
 </div>"""
 
     def make_section_html(i, item):
         return f"""<div class="slide slide-section" style="--tc:{item['theme_color']}">
-  <div class="slide-top">
-    <span></span>
-    <span class="slide-counter">{i+1} / {total}</span>
-  </div>
-  <div class="section-body">
-    <div class="section-num">{item['num']}</div>
-    <div class="section-label">{_html.escape(item['label'])}</div>
-    <div class="section-sub">{_html.escape(item['sub'])}</div>
+  <div class="slide-scroll">
+    <div class="slide-top">
+      <span></span>
+      <span class="slide-counter">{i+1} / {total}</span>
+    </div>
+    <div class="section-body">
+      <div class="section-num">{item['num']}</div>
+      <div class="section-label">{_html.escape(item['label'])}</div>
+      <div class="section-sub">{_html.escape(item['sub'])}</div>
+    </div>
   </div>
 </div>"""
 
@@ -1219,11 +1259,13 @@ showSlide(0);
             for t in item.get("items", [])
         )
         return f"""<div class="slide slide-excluded" style="--tc:#484f58">
-  <div class="slide-top">
-    <span class="theme-badge" style="background:#484f58">Autres talks vus</span>
-    <span class="slide-counter">{i+1} / {total}</span>
+  <div class="slide-scroll">
+    <div class="slide-top">
+      <span class="theme-badge" style="background:#484f58">Autres talks vus</span>
+      <span class="slide-counter">{i+1} / {total}</span>
+    </div>
+    <div class="excl-grid">{rows}</div>
   </div>
-  <div class="excl-grid">{rows}</div>
 </div>"""
 
     def make_rate_html(i, item):
@@ -1237,14 +1279,16 @@ showSlide(0);
         )
         grid = f'<div class="rate-grid">{items_html}</div>' if items_html else ""
         return f"""<div class="slide slide-rate" style="--tc:#e67e22">
-  <div class="slide-top">
-    <span class="theme-badge" style="background:#e67e22">Non couverts</span>
-    <span class="slide-counter">{i+1} / {total}</span>
-  </div>
-  <div class="rate-body">
-    <div class="rate-title">Le reste du programme</div>
-    <div class="rate-intro">Talks que je n'ai ni assisté, ni retenus — présentés ici pour avoir une vue complète de la journée.</div>
-    {grid}
+  <div class="slide-scroll">
+    <div class="slide-top">
+      <span class="theme-badge" style="background:#e67e22">Non couverts</span>
+      <span class="slide-counter">{i+1} / {total}</span>
+    </div>
+    <div class="rate-body">
+      <div class="rate-title">Le reste du programme</div>
+      <div class="rate-intro">Talks que je n'ai ni assisté, ni retenus — présentés ici pour avoir une vue complète de la journée.</div>
+      {grid}
+    </div>
   </div>
 </div>"""
 
@@ -1305,33 +1349,37 @@ showSlide(0);
             speaker_line += sep + company_html
 
         return f"""<div class="slide" style="--tc:{s['theme_color']}">
-  <div class="slide-top">
-    <span class="theme-badge" style="background:{s['theme_color']}">{_html.escape(s['theme'])}</span>
-    <span class="slide-counter">{i+1} / {total}</span>
-  </div>
-  <div class="slide-title">{_html.escape(s['title'])}</div>
-  <div class="slide-speaker">{speaker_line}</div>
-  <div class="slide-body">
-    <div class="slide-left">
-      <div class="slide-resume">{resume}</div>
-      <div class="slide-bullets"><ul>{bullets_html}</ul></div>
-      <div class="slide-chips">{chips_html}</div>
+  <div class="slide-scroll">
+    <div class="slide-top">
+      <span class="theme-badge" style="background:{s['theme_color']}">{_html.escape(s['theme'])}</span>
+      <span class="slide-counter">{i+1} / {total}</span>
     </div>
-    {right_html}
+    <div class="slide-title">{_html.escape(s['title'])}</div>
+    <div class="slide-speaker">{speaker_line}</div>
+    <div class="slide-body">
+      <div class="slide-left">
+        <div class="slide-resume">{resume}</div>
+        <div class="slide-bullets"><ul>{bullets_html}</ul></div>
+        <div class="slide-chips">{chips_html}</div>
+      </div>
+    </div>
   </div>
+  {right_html}
 </div>"""
 
     def make_end_html(i):
         return f"""<div class="slide slide-end" style="--tc:#3d7fff">
-  <div class="slide-top">
-    <span class="theme-badge" style="background:#3d7fff">Fin</span>
-    <span class="slide-counter">{i+1} / {total}</span>
-  </div>
-  <div class="end-body">
-    <div class="end-title">Merci !</div>
-    <div class="end-sub">AlpOSS 2026 · 17 février 2026 · Grenoble</div>
-    <div class="end-note">Le rapport de mission complet est disponible en ligne :</div>
-    <a class="end-link" href="https://mcreaper.github.io/alposs2026_personnal_summary/" target="_blank" rel="noopener">mcreaper.github.io/alposs2026_personnal_summary</a>
+  <div class="slide-scroll">
+    <div class="slide-top">
+      <span class="theme-badge" style="background:#3d7fff">Fin</span>
+      <span class="slide-counter">{i+1} / {total}</span>
+    </div>
+    <div class="end-body">
+      <div class="end-title">Merci !</div>
+      <div class="end-sub">AlpOSS 2026 · 17 février 2026 · Grenoble</div>
+      <div class="end-note">Le rapport de mission complet est disponible en ligne :</div>
+      <a class="end-link" href="https://mcreaper.github.io/alposs2026_personnal_summary/" target="_blank" rel="noopener">mcreaper.github.io/alposs2026_personnal_summary</a>
+    </div>
   </div>
 </div>"""
 
@@ -1364,7 +1412,7 @@ showSlide(0);
   <button class="tip-close" onclick="hideTip()">✕</button>
   <div class="tip-body"></div>
 </div>
-<div class="controls">
+<div class="controls" id="ctrl-bar">
   <div class="progress-bar" style="width:0%"></div>
   <div class="ctrl-inner">
     <button class="ctrl-btn" id="ctrl-prev" onclick="showSlide(cur-1)">← Précédent</button>
@@ -1372,6 +1420,7 @@ showSlide(0);
     <button class="ctrl-btn" id="ctrl-next" onclick="showSlide(cur+1)">Suivant →</button>
   </div>
 </div>
+<button class="ctrl-toggle" id="ctrl-toggle-btn" onclick="toggleNav()" title="Afficher/masquer la barre">▼</button>
 <script>
 {js}
 </script>
