@@ -22,9 +22,9 @@ Le SITPI a migré 200 comptes de Microsoft Exchange vers OpenXchange en impliqua
   Interrogée sur un déploiement à l'échelle du système éducatif belge (150 000 enseignants, 1,5 million d'élèves), la DINUM indique qu'elle n'est pas encore assez mature pour des infrastructures à plusieurs millions d'utilisateurs.
 
 ## Technologies
-- **OpenXchange** — Suite de messagerie et collaboration open source d'origine allemande ; alternative souveraine on-premise à Microsoft Exchange/Outlook ; interface webmail sans client lourd ; pertinent pour les ESN travaillant avec les collectivités ou le secteur public.
-- **OpenTofu** — Fork libre de Terraform (Infrastructure as Code) utilisé par la DINUM pour le provisioning multi-provider ; incontournable pour toute ESN pratiquant le DevOps ou la gestion d'infrastructures cloud/hybrides.
-- **Ansible** — Outil d'automatisation de configuration de référence ; utilisé pour le déploiement, la configuration et la MCO de la plateforme OpenXchange ; standard de facto pour les ESN exploitant des infras Linux.
+- **OpenXchange** — Suite de messagerie et collaboration open source d'origine allemande ; alternative souveraine on-premise à Microsoft Exchange/Outlook ; interface webmail sans client lourd ; pertinent pour Kaizen travaillant avec les collectivités ou le secteur public.
+- **OpenTofu** — Fork libre de Terraform (Infrastructure as Code) utilisé par la DINUM pour le provisioning multi-provider ; incontournable pour Kaizen pratiquant le DevOps ou la gestion d'infrastructures cloud/hybrides.
+- **Ansible** — Outil d'automatisation de configuration de référence ; utilisé pour le déploiement, la configuration et la MCO de la plateforme OpenXchange ; standard de facto pour Kaizen exploitant des infras Linux.
 - **CalDAV / CardDAV** — Protocoles standardisés de synchronisation de calendriers et contacts ; clé de voûte de l'interopérabilité entre Exchange et OpenXchange pour la migration des données.
 - **DAVx5** — Client de synchronisation CalDAV/CardDAV pour Android ; intégration mobile essentielle dans un écosystème sans Google ; couplé à F-Droid et K-9 Mail pour une flotte souveraine.
 - **Carbonio** — Fork de Zimbra basé sur des formats ouverts (Zextras) ; utilisé comme pivot de migration pour les événements de calendrier entre Exchange et OpenXchange.

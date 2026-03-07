@@ -4,7 +4,7 @@
 Benjamin Bellamy · Linagora
 
 ## Société
-Linagora est une ESN française spécialisée en logiciels libres pour entreprises et administrations. Connue pour TWake (messagerie collaborative open source) et son engagement pour la souveraineté numérique. Intervient sur des projets RAG/IA on-premise pour DSI publiques et privées.
+Linagora est une société de services spécialisée en logiciels libres pour entreprises et administrations. Connue pour TWake (messagerie collaborative open source) et son engagement pour la souveraineté numérique. Intervient sur des projets RAG/IA on-premise pour DSI publiques et privées.
 
 ## Résumé
 OpenRAG permet à plusieurs organisations de partager un LLM commun sans jamais exposer leurs données entre elles. L'API 100 % compatible OpenAI s'intègre dans les stacks existants, mais industrialiser dépasse largement le POC en demi-journée.

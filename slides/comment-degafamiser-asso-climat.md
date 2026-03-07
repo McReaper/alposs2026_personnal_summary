@@ -16,7 +16,7 @@ Alternatiba sort des GAFAM par étapes : mails migrés sur Grésille, données m
 - Fin Windows 10 utilisée comme levier grand public vers le libre.
 
 ## Technologies
-- **Baserow** — Base de données no-code open source, alternative à Airtable et Google Sheets. Hébergeable en propre, adapté aux structures qui veulent maîtriser leurs données sans compétences SQL avancées. Pertinent pour les ESN proposant des solutions souveraines aux associations et PME.
+- **Baserow** — Base de données no-code open source, alternative à Airtable et Google Sheets. Hébergeable en propre, adapté aux structures qui veulent maîtriser leurs données sans compétences SQL avancées. Pertinent pour Kaizen proposant des solutions souveraines aux associations et PME.
 - **N8N** — Outil d'automatisation de workflows open source, concurrent de Zapier et Make. Auto-hébergeable, il permet des intégrations API et des automatisations métier sans dépendance SaaS. Très utilisé dans des contextes d'intégration légère ou de RPA.
 - **Nextcloud** — Suite collaborative open source (stockage, agenda, documents). Standard de fait pour la souveraineté des données en entreprise et collectivités. Forte demande en déploiement et maintien en condition opérationnelle.
 - **Framasoft / les Chatons** — Réseau d'hébergeurs éthiques proposant des alternatives libres aux GAFAM. Cadre de référence pour identifier des partenaires d'hébergement conformes RGPD et à valeurs compatibles.

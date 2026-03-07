@@ -19,11 +19,11 @@ iTop est une plateforme ITSM/CMDB open source (AGPL) qui remplace Excel et les t
 - Cyberattaques sur collectivités : la CMDB devient critique.
   Sans inventaire centralisé du système d'information (CMDB), les collectivités touchées par un incident cyber peinent à identifier les actifs compromis et à coordonner la réponse — iTop intègre cette brique nativement.
 - Combodo grenoblois : proximité directe avec l'écosystème AlpOSS.
-  La société a été fondée par les créateurs du projet iTop et concentre son activité sur le secteur public et les collectivités territoriales, ce qui facilite les collaborations locales avec des ESN de la région.
+  La société a été fondée par les créateurs du projet iTop et concentre son activité sur le secteur public et les collectivités territoriales, ce qui facilite les collaborations locales avec de Kaizen de la région.
 
 ## Technologies
-- **iTop** — solution ITSM & CMDB open source (AGPL) développée par Combodo. Gère incidents, demandes, changements et inventaire du SI dans une seule interface web. Pertinent pour toute ESN intervenant dans le secteur public ou souhaitant proposer une alternative à ServiceNow ou GLPI.
+- **iTop** — solution ITSM & CMDB open source (AGPL) développée par Combodo. Gère incidents, demandes, changements et inventaire du SI dans une seule interface web. Pertinent pour Kaizen, intervenant dans le secteur public ou souhaitant proposer une alternative à ServiceNow ou GLPI.
 - **iTop Hub** — marketplace communautaire d'extensions et modules pour iTop. Permet d'enrichir la solution sans développement lourd, avec des connecteurs et automatisations prêts à l'emploi.
 - **CMDB** — Configuration Management Database : inventaire centralisé du système d'information (matériels, logiciels, dépendances). Pilier de toute démarche ITSM sérieuse, notamment pour la gestion de crise cyber.
-- **ITIL** — référentiel de bonnes pratiques ITSM sur lequel iTop est nativement aligné. Référence incontournable pour les DSI publiques et les ESN qui les accompagnent.
+- **ITIL** — référentiel de bonnes pratiques ITSM sur lequel iTop est nativement aligné. Référence incontournable pour les DSI publiques et Kaizen qui les accompagnent.
 - **PHP / MySQL** — stack technique d'iTop, open source et éprouvée. Facilite l'auto-hébergement sur infrastructure maîtrisée, sans licence propriétaire.

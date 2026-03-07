@@ -16,9 +16,9 @@ NIRD déploie Linux dans les lycées sur matériel reconditionné redistribué a
 - La cyberattaque au lycée Carnot a déclenché la création de NIRD.
 
 ## Technologies
-- **Distribution NIRD** — Surcouche Linux Mint/Debian en cours de développement (v0.1-0.2, bêta), conçue pour le déploiement live offline en environnement éducatif ; hébergée sur la Forge des communs numériques éducatifs ; à surveiller pour les ESN intéressées par les communs numériques et les marchés Éducation.
-- **FOG Project** — Logiciel open source de déploiement d'images disque par le réseau (clone réseau) ; utilisé par Atos pour déployer les images Linux dans les lycées régionaux ; outil de référence pour les ESN en charge de déploiements massifs de postes de travail.
+- **Distribution NIRD** — Surcouche Linux Mint/Debian en cours de développement (v0.1-0.2, bêta), conçue pour le déploiement live offline en environnement éducatif ; hébergée sur la Forge des communs numériques éducatifs ; à surveiller pour Kaizen, intéressé par les communs numériques et les marchés Éducation.
+- **FOG Project** — Logiciel open source de déploiement d'images disque par le réseau (clone réseau) ; utilisé par Atos pour déployer les images Linux dans les lycées régionaux ; outil de référence pour Kaizen en charge de déploiements massifs de postes de travail.
 - **Primetux** — Distribution Linux légère conçue pour les écoles primaires, fonctionnant offline avec des logiciels pédagogiques préinstallés ; pertinente pour les missions d'équipement de collectivités ou d'associations en matériel reconditionné.
 - **Debian / Ubuntu** — Distributions Linux déployées en environnement scolaire ; retour d'expérience direct sur la gestion de parcs Linux en établissements publics ; Debian privilégiée ici pour ses performances au démarrage.
-- **LDAP / SSO** — Intégration annuaire et authentification unique pour les stations Linux, compatibles avec l'infrastructure existante du lycée ; compétence clé pour les ESN intégrant des postes Linux dans des parcs mixtes.
+- **LDAP / SSO** — Intégration annuaire et authentification unique pour les stations Linux, compatibles avec l'infrastructure existante du lycée ; compétence clé pour Kaizen intégrant des postes Linux dans des parcs mixtes.
 - **Forge des communs numériques éducatifs** — Instance GitLab hébergée par l'État (forge.apps.education.fr) pour les projets numériques éducatifs ; exemple d'infrastructure souveraine d'hébergement de code public.

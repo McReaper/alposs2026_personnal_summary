@@ -16,7 +16,7 @@ Mobilizon (Framasoft) est une alternative libre à Facebook Events : chaque orga
 - Les événements open data peuvent alimenter une instance Mobilizon.
 
 ## Technologies
-- **Mobilizon** — Plateforme libre décentralisée de gestion d'événements et de groupes (AGPLv3). Auto-hébergeable, développée par Framasoft, financée par le programme européen NGI. Pertinent pour les ESN accompagnant des associations, collectivités ou établissements souhaitant maîtriser leurs données d'agenda.
+- **Mobilizon** — Plateforme libre décentralisée de gestion d'événements et de groupes (AGPLv3). Auto-hébergeable, développée par Framasoft, financée par le programme européen NGI. Pertinent pour Kaizen accompagnant des associations, collectivités ou établissements souhaitant maîtriser leurs données d'agenda.
 - **ActivityPub / Fediverse** — Protocole fédéré de communication (standard W3C). Permet à Mobilizon d'interopérer nativement avec Mastodon et l'ensemble du réseau social décentralisé. Enjeu de souveraineté numérique croissant dans le secteur public européen.
 - **Flux ICS (iCalendar)** — Format standard d'échange de données de calendrier, exposé nativement par chaque page Mobilizon. Permet la synchronisation avec tout client agenda (Thunderbird, Nextcloud Calendar, Google Calendar, etc.).
 - **Plugin WordPress / Mobilizon** — Extension permettant l'affichage dynamique et automatique des événements d'un groupe Mobilizon sur un site WordPress, sans synchronisation manuelle ni développement spécifique.

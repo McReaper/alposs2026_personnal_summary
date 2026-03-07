@@ -20,6 +20,6 @@ XWiki SAS tient 20 ans sans capital-risque : support + dev spécifique suffisent
   XWiki cumule une base de code étendue et une communauté de contributeurs à renouveler — un défi organisationnel aussi important que le défi technique.
 
 ## Technologies
-- **XWiki** — Wiki open source structuré et extensible (licence LGPL), utilisable comme base de connaissance, intranet ou portail collaboratif d'entreprise. Alternative open source à Confluence, avec une API riche et un système de macros. Pertinent pour les ESN cherchant une solution de gestion documentaire souveraine.
-- **openDesk** — Suite collaborative open source européenne portée par le gouvernement allemand, alternative souveraine à Microsoft 365 et Google Workspace. Regroupe plusieurs briques open source dont XWiki. Opportunité de marché pour les ESN travaillant avec des acteurs publics européens.
+- **XWiki** — Wiki open source structuré et extensible (licence LGPL), utilisable comme base de connaissance, intranet ou portail collaboratif d'entreprise. Alternative open source à Confluence, avec une API riche et un système de macros. Pertinent pour Kaizen cherchant une solution de gestion documentaire souveraine.
+- **openDesk** — Suite collaborative open source européenne portée par le gouvernement allemand, alternative souveraine à Microsoft 365 et Google Workspace. Regroupe plusieurs briques open source dont XWiki. Opportunité de marché pour Kaizen travaillant avec des acteurs publics européens.
 - **Forgejo** — Forge logicielle open source (alternative auto-hébergeable à GitHub/GitLab). Utilisée par l'intervenant pour ses projets personnels, représentative de l'engagement dans les pratiques du logiciel libre au quotidien.

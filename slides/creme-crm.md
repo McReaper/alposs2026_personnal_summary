@@ -17,7 +17,7 @@ Crème CRM est un CRM open source (AGPL) développé en Python/Django depuis 200
 
 ## Technologies
 - **Crème CRM** — CRM open source sous licence AGPL, développé en France depuis 2008 par Hybird. Entièrement auto-hébergeable, sans dépendance éditeur, avec une API REST pour l'intégration tierce.
-- **Python** — langage principal de Crème CRM. Pertinent pour les ESN souhaitant contribuer, forker ou intégrer des extensions métier sans changer de stack.
+- **Python** — langage principal de Crème CRM. Pertinent pour Kaizen souhaitant contribuer, forker ou intégrer des extensions métier sans changer de stack.
 - **Django** — framework web Python utilisé pour le backend de Crème CRM. Facilite la personnalisation des modèles de données et l'ajout de vues ou d'API custom.
 - **jQuery** — librairie JavaScript utilisée côté frontend pour l'interactivité de l'interface.
 - **REST API** — Crème CRM expose une API REST permettant l'intégration avec des outils tiers (ERP, portails, scripts d'automatisation).

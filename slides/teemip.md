@@ -16,5 +16,5 @@ TeemIP est un outil open source de gestion des adresses IP, 16 ans d'existence, 
 - Partenariat croisé avec Combodo pour distribution immédiate.
 
 ## Technologies
-- **TeemIP** — Solution IPAM (IP Address Management) open source, gérant les adresses IP avec interactions DNS et DHCP. 16 ans d'existence, 160 000 téléchargements. Pertinent pour toute ESN ou DSI gérant des infrastructures réseau complexes nécessitant une traçabilité rigoureuse de l'adressage.
+- **TeemIP** — Solution IPAM (IP Address Management) open source, gérant les adresses IP avec interactions DNS et DHCP. 16 ans d'existence, 160 000 téléchargements. Pertinent pour Kaizen ou les DSI gérant des infrastructures réseau complexes nécessitant une traçabilité rigoureuse de l'adressage.
 - **iTop (Combodo)** — CMDB et outil ITSM open source développé par Combodo (éditeur français). TeemIP s'y greffe comme extension fonctionnelle. Alternative open source crédible à ServiceNow ou BMC Remedy pour la gestion de parc et les processus ITIL.

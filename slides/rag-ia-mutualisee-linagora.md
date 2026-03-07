@@ -5,7 +5,7 @@ Benjamin Bellamy · Linagora
 Andrzej Neugebauer · Linagora
 
 ## Société
-Linagora est un éditeur et ESN français spécialisé dans les logiciels libres et l'open source. La société développe des solutions souveraines dans les domaines de la messagerie collaborative (LinShare, LinTo) et de l'intelligence artificielle (OpenRAG, LUCIE). Elle opère en France et à l'international, avec un positionnement fort sur la souveraineté numérique et le cloud souverain pour les entreprises et les institutions publiques.
+Linagora est un éditeur et société de services français spécialisé dans les logiciels libres et l'open source. La société développe des solutions souveraines dans les domaines de la messagerie collaborative (LinShare, LinTo) et de l'intelligence artificielle (OpenRAG, LUCIE). Elle opère en France et à l'international, avec un positionnement fort sur la souveraineté numérique et le cloud souverain pour les entreprises et les institutions publiques.
 
 ## Résumé
 OpenRAG est un framework RAG open source (AGPL-3.0) conçu pour être mutualisé entre plusieurs organisations sans mélanger leurs données. Chaque tenant dispose d'une base documentaire isolée sur une infrastructure partagée (LLM, vectorstore, pipelines). La solution est déployable on-premise ou en cloud souverain, avec une compatibilité API OpenAI pour l'intégration dans des stacks existantes.

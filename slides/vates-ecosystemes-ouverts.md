@@ -23,6 +23,6 @@ Le rachat de VMware par Broadcom et ses hausses tarifaires ont déclenché une v
 
 ## Technologies
 - **XCP-ng** — Plateforme de virtualisation open source (GPL) basée sur Xen, développée par Vates (Grenoble) et incubée au sein du Xen Project (Linux Foundation). Alternative souveraine directe à VMware ESXi et Microsoft Hyper-V pour les infrastructures on-premise et hybrides.
-- **Xen Orchestra** — Interface web d'orchestration et de gestion pour XCP-ng et XenServer (AGPLv3). Gestion centralisée des VMs, sauvegardes et haute disponibilité. Alternative open source à vCenter pour les ESN gérant des parcs de virtualisation multi-clients.
+- **Xen Orchestra** — Interface web d'orchestration et de gestion pour XCP-ng et XenServer (AGPLv3). Gestion centralisée des VMs, sauvegardes et haute disponibilité. Alternative open source à vCenter pour Kaizen gérant des parcs de virtualisation multi-clients.
 - **Xen Hypervisor** — Hyperviseur de type 1 historique open source, incubé à la Linux Foundation. Base technique de XCP-ng et architecture de référence pour comprendre les plateformes de virtualisation souveraines.
-- **Hexatrust** — Groupement français d'entreprises de cybersécurité et de cloud de confiance. Vates y est membre pour porter la souveraineté numérique à l'échelle européenne. Référence utile pour les ESN positionnées sur les marchés publics et la confiance numérique.
+- **Hexatrust** — Groupement français d'entreprises de cybersécurité et de cloud de confiance. Vates y est membre pour porter la souveraineté numérique à l'échelle européenne. Référence utile pour Kaizen, positionnée sur les marchés publics et la confiance numérique.
