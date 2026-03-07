@@ -6,5 +6,5 @@ pages:
   artifacts:
     paths:
       - public
-  only:
-    - kaizen-solutions
+  rules:
+    - if: $CI_COMMIT_BRANCH
