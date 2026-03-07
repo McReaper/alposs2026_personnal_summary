@@ -1,17 +1,17 @@
-# AlpOSS 2026 — Personal Summary
+# AlpOSS 2026 — Rapport de mission Kaizen
 
-Personal summary, notes, and opinions about the [AlpOSS 2026](https://alposs.fr/) conference, which took place in Échirolles on February 17th, 2026.
+Résumé, notes et points de vue sur la conférence [AlpOSS 2026](https://alposs.fr/), qui s'est tenue à Échirolles le 17 février 2026. Produit par Victor Malod pour [Kaizen Solutions](https://kaizen-solutions.net/).
 
-**Live site → [mcreaper.github.io/alposs2026_personnal_summary](https://mcreaper.github.io/alposs2026_personnal_summary/)**
+**Site en ligne → [victormalod.pages.forge.kaizen-solutions.net/alposs2026_personnal_summary](https://victormalod.pages.forge.kaizen-solutions.net/alposs2026_personnal_summary/)**
 
-> ⚠️ All content in `summaries/` and `slides/` was generated automatically by AI from audio transcriptions. It may contain errors or inaccuracies — always verify important information against the [official replays](https://video.echirolles.fr/w/p/7CPFbyKwNmwZBVbnMo2rmk).
+> ⚠️ Le contenu de `summaries/` et `slides/` a été généré automatiquement par IA à partir de transcriptions audio. Il peut contenir des erreurs — vérifiez toujours les informations importantes contre les [replays officiels](https://video.echirolles.fr/w/p/7CPFbyKwNmwZBVbnMo2rmk).
 
 ## What's in this repo
 
 | Path | Description |
 |---|---|
 | `build.py` | Static site generator — produces 3 HTML views from the data |
-| `talks.json` | Talk metadata: attendance, personal notes, ESN relevance flags |
+| `talks.json` | Talk metadata: attendance, personal notes, relevance flags |
 | `summaries/` | Full AI-generated summaries per talk (from audio transcriptions) |
 | `slides/` | Condensed slide content per talk (used by the diaporama view) |
 | `site/` | Generated HTML output (not committed — run `build.py` to generate) |
@@ -44,7 +44,7 @@ Each talk entry carries:
 | `attended` | bool | Whether I was physically present |
 | `personal_notes` | string | My personal take on the talk |
 | `in_diapo` | bool | Whether the talk appears in the slideshow (site C) |
-| `esn_highlight` | bool | Whether I consider this talk relevant for an ESN audience |
+| `esn_highlight` | bool | Whether I consider this talk relevant for Kaizen's clients and activity |
 
 ## License
 
