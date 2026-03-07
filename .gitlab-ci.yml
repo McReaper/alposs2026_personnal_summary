@@ -1,0 +1,10 @@
+pages:
+  image: python:3.12-slim
+  script:
+    - python build.py
+    - cp -r site/ public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - kaizen-solutions
