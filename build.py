@@ -1024,7 +1024,7 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
 .note-bubble { font-family:'Caveat',cursive; font-size:17px; font-weight:500;
                background:var(--bg3); border:1px solid var(--brd); border-radius:12px;
                padding:14px 16px 14px 16px; line-height:1.55; color:var(--t2);
-               width:200px; text-align:left; position:relative; }
+               text-align:left; position:relative; }
 .note-close { position:absolute; top:6px; right:8px; background:none; border:none;
               color:var(--t5); font-size:14px; cursor:pointer; line-height:1; padding:2px 4px;
               opacity:.6; }
@@ -1186,19 +1186,16 @@ document.addEventListener('click', e => {{
 
 showSlide(0);
 
-// ── Nav toggle + counter-zoom + slide-right positioning ───────────────────
+// ── Nav toggle + slide-right positioning ──────────────────────────────────
 function updateNavLayout() {{
   const ctrl = document.getElementById('ctrl-bar');
   const tab  = document.getElementById('ctrl-toggle-btn');
   const collapsed = ctrl.classList.contains('collapsed');
   const navH = collapsed ? 0 : ctrl.offsetHeight;
-  const zoom = window.outerWidth / window.innerWidth || 1;
-  const scale = Math.max(0.3, Math.min(3, 1 / zoom));
   document.documentElement.style.setProperty('--nav-h-pad', (navH + 20) + 'px');
   tab.style.bottom = navH + 'px';
   document.querySelectorAll('.slide-right').forEach(el => {{
     el.style.bottom = (navH + 16) + 'px';
-    el.style.zoom = scale;
   }});
 }}
 
