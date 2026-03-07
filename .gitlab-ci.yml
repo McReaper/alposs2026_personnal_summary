@@ -1,0 +1,10 @@
+pages:
+  image: python:3.12-slim
+  script:
+    - python build.py
+    - mv site public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH
