@@ -563,7 +563,7 @@ def version_a(talks):
     items = ""
     for i, t in enumerate(talks):
         av   = f'<img src="{AVATAR}" class="mini-av" />' if t["attended"] else ""
-        star = '<span class="esn-star" title="À retenir">★</span>' if t["esn_highlight"] else ""
+        star = '<span class="esn-star" title="À retenir pour Kaizen">★</span>' if t["esn_highlight"] else ""
         active = " active" if i == 0 else ""
         search_data = f"{t['title']} {t['speakers']}".lower().replace('"', '&quot;')
         items += f"""<li class="ti{active}" data-id="{t['id']}" data-theme="{t['theme']}" data-search="{search_data}" onclick="selectTalk('{t['id']}')">
@@ -853,7 +853,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
     cards = ""
     for t in talks:
         av   = f'<img src="{AVATAR}" class="mini-av" title="Présent" />' if t["attended"] else ""
-        esn  = '<span class="esn-badge" title="À retenir">★</span>' if t["esn_highlight"] else ""
+        esn  = '<span class="esn-badge" title="À retenir pour Kaizen">★</span>' if t["esn_highlight"] else ""
         search_data = f"{t['title']} {t['speakers']}".lower().replace('"', '&quot;')
         cards += f"""<div class="card" data-id="{t['id']}" data-theme="{t['theme']}" data-search="{search_data}" style="--tc:{t['theme_color']}" onclick="openCard('{t['id']}')">
   {esn}
@@ -1254,10 +1254,10 @@ updateNavLayout();
         </div>
         <div class="intro-col">
           <div class="intro-col-title">Pourquoi j'y étais</div>
-          <p>Développeur dans une ESN, je suis venu en éclaireur : identifier les technologies et tendances open source pertinentes pour nos clients et notre offre de service.</p>
+          <p>Développeur chez Kaizen, je suis venu en éclaireur : identifier les technologies et tendances open source pertinentes pour nos clients et notre offre de service.</p>
         </div>
       </div>
-      <div class="intro-thesis">En 2026, la fin du support Windows\u00a010, le CRA en vigueur et les hausses tarifaires Microsoft ouvrent une fenêtre d'opportunité rare pour l'open source\u00a0— et pour une ESN capable d'en faire une offre concrète.</div>
+      <div class="intro-thesis">En 2026, la fin du support Windows\u00a010, le CRA en vigueur et les hausses tarifaires Microsoft ouvrent une fenêtre d'opportunité rare pour l'open source\u00a0— et pour Kaizen, capable d'en faire une offre concrète.</div>
       <div class="intro-stats">
         <div><div class="isn">{n_talks}</div><div class="isl">talks</div></div>
         <div><div class="isn">{n_workshops}</div><div class="isl">ateliers</div></div>
@@ -1420,13 +1420,13 @@ updateNavLayout();
         <div class="synth-card">
           <div class="synth-card-num">Action 1</div>
           <div class="synth-card-head">CRA : traçabilité obligatoire de la chaîne logicielle</div>
-          <div class="synth-card-body">Le Cyber Resilience Act impose SBOM, correctifs et divulgation des failles pour tout produit intégrant de l'open source. Une ESN qui intervient sur les systèmes de ses clients est directement concernée — besoin d'audit et de conseil dès maintenant.</div>
+          <div class="synth-card-body">Le Cyber Resilience Act impose SBOM, correctifs et divulgation des failles pour tout produit intégrant de l'open source. Kaizen, qui intervient sur les systèmes de ses clients, est directement concernée — besoin d'audit et de conseil dès maintenant.</div>
           <span class="synth-date">Première échéance : septembre 2026</span>
         </div>
         <div class="synth-card">
           <div class="synth-card-num">Action 2</div>
           <div class="synth-card-head">XCP-ng : la vague VMware est là</div>
-          <div class="synth-card-body">Le rachat de VMware par Broadcom et ses hausses tarifaires massives poussent les organisations vers XCP-ng. Alternative souveraine mature, déployée en datacenter critique — un déclencheur externe fort et documenté pour une ESN.</div>
+          <div class="synth-card-body">Le rachat de VMware par Broadcom et ses hausses tarifaires massives poussent les organisations vers XCP-ng. Alternative souveraine mature, déployée en datacenter critique — un déclencheur externe fort et documenté pour Kaizen.</div>
           <span class="synth-date">Déclencheur : rachat Broadcom 2023-2024</span>
         </div>
         <div class="synth-card">

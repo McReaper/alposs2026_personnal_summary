@@ -19,7 +19,7 @@ iTop est un logiciel open source qui permet à une équipe informatique de gére
 - Auto-hébergé, souverain, sans abonnement.
   iTop se déploie sur l'infrastructure de l'entité, les données ne quittent pas le SI. Pas d'abonnement SaaS, pas de vendor lock-in — à l'opposé de ServiceNow, qui facture par utilisateur et héberge les données aux États-Unis.
 - Fait à Grenoble.
-  Combodo a été fondée par les créateurs du projet iTop et concentre son activité sur le secteur public et les collectivités — proximité directe avec l'écosystème AlpOSS et les clients potentiels d'une ESN.
+  Combodo a été fondée par les créateurs du projet iTop et concentre son activité sur le secteur public et les collectivités — proximité directe avec l'écosystème AlpOSS et les clients potentiels de Kaizen.
 
 ## Technologies
 - **iTop** — Logiciel web open source (AGPL) qui centralise la gestion informatique d'une organisation : tickets d'incidents et de demandes, inventaire du parc matériel et logiciel, procédures de changement. Alternative open source à ServiceNow ou Jira Service Management. Auto-hébergeable, sans abonnement.
