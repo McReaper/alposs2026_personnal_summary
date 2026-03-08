@@ -4,28 +4,29 @@
 Arthur Meyer · Agora Calycé
 
 ## Société
-Agora Calycé est un hébergeur français indépendant spécialisé dans les environnements cloud complexes (IaaS, PaaS), disposant de quatre datacenters en France. La société a développé Agorakube, une distribution Kubernetes certifiée CNCF entièrement open source, positionnée comme alternative aux distributions propriétaires (Rancher, OpenShift). Elle participe activement à la communauté CNCF mondiale, notamment via sa présence à KubeCon North America 2025 à Atlanta. Son CTO Arthur Meyer cumule expertise réseau, stockage, orchestration de conteneurs et développement cloud-native.
+Agora Calycé (groupe E'nergys) est un hébergeur français indépendant spécialisé dans les environnements cloud complexes (IaaS, PaaS). Face au rachat de VMware par Broadcom en 2023, la société a lancé le projet Superphénix — une plateforme cloud complète construite sur Kubernetes et des outils 100 % open source, mise en production en janvier 2026 par une équipe de 4 personnes. Superphénix (SPX) sera publié en open source d'ici 2027.
 
 ## Résumé
-Agora Calycé a fait de Kubernetes la fondation complète de son hébergement — pas juste un orchestrateur d'applis, mais le socle provisionnement, réseau, stockage et multi-tenant. Leur distribution Agorakube est certifiée CNCF et entièrement open source.
+En réponse au rachat de VMware par Broadcom, Agora Calycé a construit en 2 ans une plateforme cloud complète (IaaS + Kubernetes as a Service) en s'appuyant exclusivement sur Kubernetes et l'écosystème open source — KubeVirt pour la virtualisation, Kube-OVN pour le réseau, Rook/Ceph pour le stockage, Argo et Helm pour l'automatisation. Superphénix est en production depuis janvier 2026.
 
 ## Points marquants
-- K8s comme fondation hébergeur, pas comme outil applicatif.
-  Kubernetes est utilisé ici comme fondation complète — provisionnement, réseaux, stockage, monitoring, multi-tenant — ce qui va bien au-delà de l'usage standard d'orchestration d'applications, encore peu répandu chez les hébergeurs européens.
-- Agorakube : distribution K8s certifiée CNCF, 100 % open source.
-  Développée par Agora Calycé, elle constitue une alternative auditable aux distributions propriétaires comme Red Hat OpenShift ou SUSE Rancher, avec une certification CNCF qui atteste de la conformité aux standards de l'industrie.
-- Multi-tenant K8s : isolation clients, quotas, sécurité réseau.
-  Isoler les clients, gérer les quotas de ressources et sécuriser les flux réseau entre tenants nécessite une maîtrise avancée des primitives Kubernetes et de la stack réseau (Cilium/eBPF).
-- Stockage distribué souverain : Longhorn et Rook-Ceph.
-  Longhorn et Rook-Ceph permettent de gérer des volumes persistants sur l'infrastructure propre de l'hébergeur, condition nécessaire pour proposer une offre souveraine indépendante des hyperscalers AWS, Azure et GCP.
-- KubeCon Atlanta 2025 : Agora Calycé dans la communauté CNCF mondiale.
-  Cette présence dans l'événement majeur de la communauté CNCF mondiale place l'hébergeur français dans le circuit des contributeurs actifs de l'écosystème Kubernetes.
+- Le rachat Broadcom/VMware comme déclencheur.
+  En novembre 2023, le rachat de VMware par Broadcom a conduit Agora Calycé à lancer le projet Superphénix en janvier 2024 : construire une alternative souveraine complète, sans dépendance éditeur, en 2 ans avec une équipe de 4 personnes.
+- Kubernetes comme fondation d'un hébergeur complet, pas juste un orchestrateur.
+  Kubernetes sert ici de socle pour la virtualisation (VMs), le stockage distribué, le réseau multi-tenant et la facturation — bien au-delà de son usage applicatif habituel. Choix retenu face à OpenStack, Proxmox et Nutanix pour son extensibilité et son écosystème 100 % open source.
+- KubeVirt transforme Kubernetes en hyperviseur.
+  KubeVirt permet de gérer des VMs comme des ressources Kubernetes natives, aux côtés des conteneurs — sans changer d'outil ni de paradigme opérationnel.
+- 2 ans de développement, des dizaines de contributions open source.
+  Superphénix n'est pas un assemblage clé-en-main : 2 ans de développement, des contributions actives aux projets upstream et une maintenance continue — avec une équipe de 4 personnes.
+- SPX open sourcé d'ici 2027.
+  La plateforme Superphénix sera publiée en open source d'ici 2027 — un engagement de contribution à l'écosystème dont elle est entièrement issue.
 
 ## Technologies
-- **Kubernetes** — Orchestrateur de conteneurs open source (CNCF), socle de toute l'infrastructure d'Agora Calycé. Utilisé ici non comme outil applicatif mais comme fondation d'un hébergeur complet : provisionnement, réseaux, stockage, monitoring, multi-tenant. Maîtrise indispensable pour tout consultant cloud-native.
-- **Agorakube** — Distribution Kubernetes certifiée CNCF développée par Agora Calycé, entièrement open source. Alternative aux distributions propriétaires (Red Hat OpenShift, SUSE Rancher). Pertinent pour les ESN cherchant une base K8s souveraine et auditable pour leurs clients.
-- **Helm** — Gestionnaire de packages Kubernetes (charts). Standard de facto pour le déploiement d'applications sur K8s ; incontournable pour tout projet cloud-native en ESN.
-- **GitOps (ArgoCD / Flux)** — Pratique d'infrastructure as code pilotée par Git : l'état du cluster est défini dans des dépôts Git et réconcilié en continu. Apporte traçabilité, rollback et auditabilité — particulièrement pertinent pour les contextes réglementés.
-- **Cilium** — Plugin réseau CNI open source pour Kubernetes, basé sur eBPF. Offre des capacités avancées de sécurité réseau, d'observabilité et de performance. Standard montant pour les clusters K8s en production.
-- **Longhorn / Rook-Ceph** — Solutions de stockage distribué open source pour Kubernetes. Permettent de gérer des volumes persistants sans dépendre d'un cloud provider propriétaire — clé pour un hébergeur souverain.
-- **CNCF (Cloud Native Computing Foundation)** — Fondation open source Linux hébergeant Kubernetes et l'ensemble de l'écosystème cloud-native (Prometheus, Envoy, Cilium, Helm…). La certification CNCF d'Agorakube atteste de la conformité aux standards de l'industrie.
+- **Kubernetes** — Orchestrateur de conteneurs open source (CNCF), fondation complète de Superphénix : virtualisation, réseau, stockage, automatisation. Retenu pour son extensibilité maximale et son écosystème 100 % open source, face à OpenStack, Proxmox et Nutanix.
+- **KubeVirt** — Extension Kubernetes permettant de gérer des machines virtuelles comme des ressources K8s natives. Socle de la couche hyperviseur de Superphénix.
+- **Kube-OVN** — Plugin réseau SDN (Software-Defined Networking) pour Kubernetes, basé sur OVN (Open Virtual Network). Gère l'isolation multi-tenant via un réseau overlay GENEVE, avec NAT gateway par tenant.
+- **Rook / Ceph** — Rook est un opérateur Kubernetes qui pilote Ceph, système de stockage distribué open source. Ensemble, ils fournissent le stockage bloc et objet souverain de Superphénix sur des nœuds de stockage dédiés.
+- **Argo (ArgoCD)** — Outil GitOps pour Kubernetes : l'état de la plateforme est défini dans Git et réconcilié en continu. Utilisé pour l'automatisation et le self-service de Superphénix.
+- **Helm** — Gestionnaire de packages Kubernetes (charts). Assure l'extensibilité de la plateforme : chaque service supplémentaire (GitLab, Harbor, DBaaS…) s'ajoute comme un chart Helm.
+- **Talos Linux** — Distribution Linux minimaliste et immuable, conçue spécifiquement pour faire tourner Kubernetes. Utilisée sur les nœuds de virtualisation et de stockage de Superphénix.
+- **Superphénix (SPX)** — Plateforme cloud complète développée par Agora Calycé : IaaS (VMs, disques, réseau), Kubernetes as a Service, console web et GitOps. Open sourcé d'ici 2027.

@@ -13,7 +13,7 @@ L'INRIA finance un écosystème de bibliothèques Python open source pour l'IA, 
 - Scikit-learn, né à l'INRIA, est le standard mondial du machine learning.
   Présent dans la quasi-totalité des pipelines data science, il prouve qu'un projet académique open source peut devenir une infrastructure mondiale. P16 s'appuie sur ce modèle pour reproduire ce succès sur d'autres outils.
 - France 2030 finance 5 ans de montée en maturité industrielle de bibliothèques Python IA.
-  Le programme sélectionne des projets issus des labs académiques, les accompagne vers la production et facilite leur adoption par des entreprises partenaires (Capgemini, MAIF, Pôle Emploi).
+  Le programme sélectionne des projets issus des labs académiques, les accompagne vers la production et facilite leur adoption par des entreprises partenaires (Capgemini, MAIF). Un cas d'usage est en cours avec Pôle Emploi.
 - L'objectif : une alternative souveraine aux stacks IA des géants américains.
   OpenAI, AWS SageMaker, Google Vertex AI dominent le marché. P16 construit des briques open source équivalentes, déployables on-premise ou en cloud souverain, sans dépendance contractuelle ni transfert de données.
 - Une société commerciale (Probable) prendra le relais après le financement public.

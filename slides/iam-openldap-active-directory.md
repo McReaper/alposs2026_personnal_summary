@@ -16,8 +16,6 @@ LDAP Toolbox est une suite open source de gestion des identités (authentificati
   Via LSC (LDAP Synchronization Connector), les changements sont poussés de OpenLDAP vers l'AD automatiquement. L'AD reste en place pour les outils Microsoft, mais n'est plus la source primaire des identités pour les applications tierces.
 - Un client a découvert 2 000 comptes expirés dans son AD grâce à Service Desk.
   L'outil LDAP Toolbox Service Desk affiche un tableau de bord des comptes expirés, bloqués ou orphelins, sans accès direct au serveur Windows. Cette hygiène de gestion des identités est directement liée à la surface d'attaque SSI.
-- Les tribunaux font respecter les licences open source : Orange condamné à 1 M€.
-  Ce cas de jurisprudence illustre que les licences open source sont juridiquement opposables et que leur non-respect expose à des condamnations significatives. L'open source n'est pas du domaine public.
 - La ville d'Échirolles utilise LDAP Service Desk et a cofinancé son développement.
   La collectivité hôte d'AlpOSS est elle-même cliente et contributrice financière de la suite LDAP Toolbox de Worteks — un exemple concret de collectivité locale qui finance l'open source qu'elle utilise.
 

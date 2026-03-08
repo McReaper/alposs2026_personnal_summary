@@ -15,7 +15,7 @@ Les 30 000 collectivités françaises sont exclues de Tchap (la messagerie sécu
 - Matrix est la seule messagerie combinant réseau distribué, E2EE, multiplateforme et logiciel libre.
   Le chiffrement de bout en bout signifie que même les administrateurs de l'instance ne peuvent pas lire les contenus — contrairement à Teams ou Exchange où l'administrateur a accès à tout. La nature open source permet de vérifier que les processus de chiffrement sont bien respectés.
 - Tchap État a forké Element et Synapse, se coupant de l'écosystème Matrix.
-  Ce fork a été réalisé pour des raisons de sécurité permettant de gérer des niveaux de communication élevés côté État. Le projet des collectivités cherche à éviter cette erreur et reste au plus proche des packagings existants.
+  Ce fork a été réalisé pour des raisons de sécurité côté État, rendant la fédération ouverte impossible à court terme. Le projet des collectivités cherche à éviter cette erreur et reste au plus proche des packagings existants.
 - Le réseau sera fermé aux collectivités membres, avec des passerelles envisagées vers Tchap État.
   La fermeture est nécessaire pour établir la confiance : on ne peut pas laisser n'importe qui rejoindre le réseau. Des discussions sont en cours avec la DINUM pour créer des passerelles, avec pour objectif à terme de "faire de Tchap le Tchap de la fonction publique."
 - L'identité des agents sera labellisée via ProConnect, sans dépendance à Microsoft ou Google.

@@ -1,10 +1,10 @@
 # Partagez votre RAG sans partager vos données : l'IA mutualisée et souveraine
 
 ## Intervenant
-Benjamin Bellamy · Linagora
+Benjamin Bellamy & Andrzej Neugebauer · Linagora
 
 ## Société
-Linagora est une ESN française spécialisée en logiciels libres pour entreprises et administrations. Connue pour TWake (messagerie collaborative open source) et son engagement pour la souveraineté numérique. Intervient sur des projets RAG/IA on-premise pour DSI publiques et privées.
+Linagora est une société de services spécialisée en logiciels libres pour entreprises et administrations. Connue pour TWake (messagerie collaborative open source) et son engagement pour la souveraineté numérique. Intervient sur des projets RAG/IA on-premise pour DSI publiques et privées.
 
 ## Résumé
 OpenRAG permet à plusieurs organisations de partager un LLM commun sans jamais exposer leurs données entre elles. L'API 100 % compatible OpenAI s'intègre dans les stacks existants, mais industrialiser dépasse largement le POC en demi-journée.
@@ -22,8 +22,8 @@ OpenRAG permet à plusieurs organisations de partager un LLM commun sans jamais 
   Linagora identifie cinq défis majeurs pour industrialiser : partitionnement étanche, indexation scalable (Milvus + Ray), qualité de pipeline (MQR, contextualisation), intégration avec monitoring, et pipeline d'évaluation semi-automatique en production.
 
 ## Technologies
-- **OpenRAG** — Framework RAG open source (AGPL-3.0), multi-tenant, agnostique LLM. Déployable on-premise ou cloud souverain. Alternative directe à Azure OpenAI Service et AWS Bedrock.
+- **OpenRAG** — Framework RAG open source, multi-tenant, agnostique LLM. Déployable on-premise ou cloud souverain. Alternative directe à Azure OpenAI Service et AWS Bedrock.
 - **Milvus** — Base de données vectorielle open source, hautement scalable. Alternative souveraine à Pinecone ou Weaviate Cloud.
 - **Ray** — Framework Python de calcul distribué pour scaler les pipelines ML/IA intensifs.
 - **API OpenAI (standard)** — Format d'interopérabilité devenu standard de facto ; la compatibilité d'OpenRAG évite toute refonte des outils existants.
-- **LLM open weight** — Modèles dont les poids sont publiés (Llama, Mistral) ; permettent un déploiement on-premise sans envoyer de données à des tiers.
+- **LLM open weight** — Modèles dont les poids sont publiés ; permettent un déploiement on-premise sans envoyer de données à des tiers.

@@ -10,7 +10,7 @@ LeBureau.coop est une coopérative spécialisée dans la vente de noms de domain
 Les registrars pratiquent l'enfermement via des API propriétaires et des interfaces dégradées ; Lexicon et OctoDNS permettent de gérer le DNS indépendamment du fournisseur. Il n'existe pas de standard ouvert côté titulaire — angle mort que la communauté n'a pas encore comblé.
 
 ## Points marquants
-- Prix d'un domaine multiplié par 2 après rachat par un fonds.
+- Prix d'un domaine plus que doublé après rachat par un fonds.
 - L'enshittification : bon marché, capture, captivité, hausse des prix.
 - Absence de standard ouvert côté titulaire : angle mort réglementaire.
 - Logiciel AGPL = continuité de service si la coopérative disparaît.

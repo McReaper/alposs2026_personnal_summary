@@ -11,7 +11,7 @@ La fin des licences perpétuelles Microsoft est le déclencheur commun des migra
 
 ## Points marquants
 - La fin des licences perpétuelles Microsoft est le déclencheur principal des migrations.
-  La Ville de Claix, le Conseil Départemental de l'Aude et la Ville de Grenoble citent toutes la bascule de Microsoft vers l'abonnement comme le facteur financier décisif. Pierre Miriot (adjoint numérique Grenoble) évoque la "rapacité des GAFAM" comme argument politique permettant désormais de convaincre les élus.
+  La Ville de Claix et le Conseil Départemental de l'Aude citent la bascule de Microsoft vers l'abonnement comme le facteur financier décisif. Pierre Miriot (adjoint numérique Grenoble) évoque de son côté la "rapacité des GAFAM" comme argument politique permettant désormais de convaincre les élus.
 - Impliquer les utilisateurs dès la phase de benchmark est le facteur clé de réussite.
   La Ville de Claix a constitué un groupe de vingt agents représentatifs de tous les services pour formaliser les besoins et évaluer les solutions. Ces référents ont ensuite porté le message auprès de leurs collègues — "le projet n'appartient pas à la DSI, il appartient aux utilisateurs."
 - Le triptyque direction, DSI et volonté politique est une condition sine qua non.

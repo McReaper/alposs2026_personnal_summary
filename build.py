@@ -39,8 +39,8 @@ SLUGS = [
     # ── Lightning talks (15 min) ───────────────────────────────────────────────
     "alternc-souverainete-donnees",    "vates-ecosystemes-ouverts",
     "postgresql-kubernetes-cloudnativepg", "migrer-messagerie-freins",
-    "rag-ia-mutualisee-linagora",      "linux-mac-support-materiel",
-    "xwiki-20-ans",                    "files2anywhere-nextcloud-pastell",
+    "linux-mac-support-materiel",      "xwiki-20-ans",
+    "files2anywhere-nextcloud-pastell",
     "anct-suite-territoriale",         "lasuite-coop",
     "creme-crm",                       "itop-gestion-services-it",
     "hebergeur-kubernetes",
@@ -141,17 +141,21 @@ THEMES = {
 THEME_VARS = """
 :root {
   --bg1:#0d1117; --bg2:#161b22; --bg3:#21262d;
-  --sb:#1a2332; --sb-brd:#263347; --sb-hov:#233045; --sb-act:#1e3a5f; --acc:#3d7fff;
+  --sb:#0f1d1a; --sb-brd:#1a3530; --sb-hov:#162e29; --sb-act:#1a3a35; --acc:#3cd8ad;
   --t1:#e6edf3; --t2:#b0bac6; --t2h:#c9d1d9; --t3:#8b949e; --t4:#7a8fa3; --t5:#6b7a8d; --t6:#484f58;
   --brd:#30363d; --brd2:#21262d;
-  --link:#58a6ff; --code:#79c0ff; --code-bg:#161b22;
+  --link:#3cd8ad; --code:#19efef; --code-bg:#161b22;
+  --kzs-c1:#19efef; --kzs-c2:#3cd8ad;
+  --kzs-grad:linear-gradient(135deg,#19efef 0%,#3cd8ad 100%);
 }
 [data-theme="light"] {
   --bg1:#ffffff; --bg2:#f6f8fa; --bg3:#eaeef2;
-  --sb:#e8ecf1; --sb-brd:#c6cdd5; --sb-hov:#dde3ea; --sb-act:#cad6e8; --acc:#0969da;
+  --sb:#edfaf6; --sb-brd:#b8e8d8; --sb-hov:#d9f5ec; --sb-act:#c0eddf; --acc:#12a18b;
   --t1:#1f2328; --t2:#656d76; --t2h:#424a53; --t3:#57606a; --t4:#57606a; --t5:#6e7781; --t6:#818b98;
   --brd:#d0d7de; --brd2:#eaeef2;
-  --link:#0969da; --code:#0550ae; --code-bg:#eaeef2;
+  --link:#12a18b; --code:#0a7a6a; --code-bg:#eaeef2;
+  --kzs-c1:#19efef; --kzs-c2:#3cd8ad;
+  --kzs-grad:linear-gradient(135deg,#19efef 0%,#3cd8ad 100%);
 }
 .tt-btn {
   position:fixed; top:14px; right:16px; background:var(--bg2); border:1px solid var(--brd);
@@ -177,9 +181,15 @@ document.getElementById('tt').textContent =
 
 # CSS for the structured detail view (shared between A and B)
 DETAIL_CSS = """
-.dv-header { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 2px solid var(--brd); }
-.dv-badge { display:inline-block; padding:3px 10px; border-radius:12px; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.6px; color:#fff; margin-bottom:10px; }
-.dv-title { font-size:1.85rem; color:var(--t1); line-height:1.3; font-weight:700; margin-bottom:10px; }
+.dv-header { margin-bottom: 24px; padding:20px 24px; border-radius:10px; background:var(--kzs-grad); }
+.dv-badge { display:inline-block; padding:3px 10px; border-radius:12px; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.6px; color:#fff; margin-bottom:10px; opacity:.85; }
+.dv-title { font-size:1.85rem; color:#0d1a17; line-height:1.3; font-weight:700; margin-bottom:10px; }
+.dv-meta { color:#1a3530; }
+.dv-att { font-size:13px; color:#1a3530; }
+.dv-dur { font-size:12px; color:#1a3530; font-family:'JetBrains Mono',monospace; background:rgba(13,26,23,.15); padding:2px 8px; border-radius:4px; }
+.dv-src { font-size:12px; color:#0d1a17; text-decoration:none; font-weight:600; }
+.dv-src:hover { text-decoration:underline; }
+.dv-spk { font-size:14px; color:#1a3530; line-height:1.55; margin-top:10px; }
 .dv-meta { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
 .dv-att { font-size:13px; color:var(--t2); }
 .dv-dur { font-size:12px; color:var(--t3); font-family:'JetBrains Mono',monospace; background:var(--bg2); padding:2px 8px; border-radius:4px; }
@@ -528,7 +538,7 @@ def load_slides():
         })
 
     if missing:
-        print(f"  ⚠️  Slides manquants (ignorés) : {', '.join(missing)}")
+        print(f"  /!\\  Slides manquants (ignores) : {', '.join(missing)}")
     print(f"Loaded {len(result)} slides.")
     return result
 
@@ -553,7 +563,7 @@ def version_a(talks):
     items = ""
     for i, t in enumerate(talks):
         av   = f'<img src="{AVATAR}" class="mini-av" />' if t["attended"] else ""
-        star = '<span class="esn-star" title="À retenir pour une ESN">★</span>' if t["esn_highlight"] else ""
+        star = '<span class="esn-star" title="À retenir">★</span>' if t["esn_highlight"] else ""
         active = " active" if i == 0 else ""
         search_data = f"{t['title']} {t['speakers']}".lower().replace('"', '&quot;')
         items += f"""<li class="ti{active}" data-id="{t['id']}" data-theme="{t['theme']}" data-search="{search_data}" onclick="selectTalk('{t['id']}')">
@@ -578,10 +588,14 @@ body { font-family:'Inter',system-ui,sans-serif; display:flex; flex-direction:co
              display:flex; align-items:center; justify-content:center;
              transition:left .25s, background .15s; padding:0; box-shadow:3px 0 8px rgba(0,0,0,.15); }
 .sb-toggle:hover { background:var(--sb-hov); color:var(--t2); }
-.sbh { padding:20px; border-bottom:1px solid var(--sb-brd); }
-.sbh img { width:44px; height:44px; border-radius:50%; border:2px solid var(--acc); margin-bottom:10px; display:block; }
-.sbh h1 { color:var(--t1); font-size:16px; font-weight:700; }
-.sbh .sub { color:var(--t4); font-size:12px; margin-top:2px; }
+.sbh { padding:20px; border-bottom:1px solid var(--sb-brd); background:var(--kzs-grad); }
+.sbh img { width:44px; height:44px; border-radius:50%; border:2px solid rgba(255,255,255,.5); margin-bottom:10px; display:block; }
+.sbh h1 { color:#0d1a17; font-size:16px; font-weight:700; }
+.sbh .sub { color:#1a3530; font-size:12px; margin-top:2px; }
+.sbh .stat .n { color:#0d1a17; }
+.sbh .stat .l { color:#1a3530; }
+.sbh .hdr-link { color:#0d1a17; border-color:rgba(13,26,23,.3); }
+.sbh .hdr-link:hover { border-color:#0d1a17; color:#0d1a17; }
 .stats { display:flex; gap:18px; margin-top:12px; }
 .stat .n { color:var(--t1); font-size:22px; font-weight:700; line-height:1; }
 .stat .l { color:var(--t4); font-size:10px; text-transform:uppercase; letter-spacing:.5px; }
@@ -612,9 +626,11 @@ body { font-family:'Inter',system-ui,sans-serif; display:flex; flex-direction:co
 .ct-inner-wrap { max-width:780px; margin:0 auto; padding:40px 48px 80px; }
 .esn-star { color:#f1c40f; font-size:11px; flex-shrink:0; }
 .ct .note-pin { width:100%; max-width:780px; margin:0 auto; border-radius:0;
-                border:none; border-top:1px solid var(--brd); box-shadow:none;
-                padding:12px 48px; background:var(--bg2);
-                max-height:160px; overflow-y:auto; }
+                border:none; border-top:1px solid rgba(255,255,255,.15); box-shadow:none;
+                padding:12px 48px; background:var(--kzs-grad);
+                max-height:160px; overflow-y:auto; color:#0d1a17; }
+.ct .note-pin-lbl { color:#1a3530; }
+.ct .note-pin .note-pin-txt { color:#0d1a17; }
 """
 
     js = """
@@ -741,12 +757,12 @@ def version_b(talks):
 * { box-sizing:border-box; margin:0; padding:0; }
 body { font-family:'Inter',system-ui,sans-serif; background:var(--bg1); min-height:100vh; }
 
-header { background:var(--bg2); color:var(--t1); padding:28px 40px; border-bottom:1px solid var(--brd); }
-header h1 { font-size:1.6rem; font-weight:700; }
-header .sub { color:var(--t3); font-size:14px; margin-top:4px; }
+header { background:var(--kzs-grad); color:#0d1a17; padding:28px 40px; }
+header h1 { font-size:1.6rem; font-weight:700; color:#0d1a17; }
+header .sub { color:#1a3530; font-size:14px; margin-top:4px; }
 header .stats { display:flex; gap:32px; margin-top:16px; }
-.stat .n { font-size:28px; font-weight:700; line-height:1; color:var(--t1); }
-.stat .l { color:var(--t3); font-size:11px; text-transform:uppercase; letter-spacing:.5px; }
+.stat .n { font-size:28px; font-weight:700; line-height:1; color:#0d1a17; }
+.stat .l { color:#1a3530; font-size:11px; text-transform:uppercase; letter-spacing:.5px; }
 
 .filters { padding:16px 40px; background:var(--bg2); border-bottom:1px solid var(--brd); display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
 .filters span { color:var(--t3); font-size:13px; margin-right:4px; }
@@ -780,8 +796,10 @@ header .stats { display:flex; gap:32px; margin-top:16px; }
 .modal-bg.open { display:flex; }
 .modal { background:var(--bg2); border:1px solid var(--brd); border-radius:12px; width:min(760px,92vw); max-height:85vh; display:flex; flex-direction:column; padding:0; position:relative; }
 #modal-content { flex:1; overflow-y:auto; min-height:0; padding:36px 40px 24px; }
-.modal .note-pin { width:100%; border-radius:0 0 12px 12px; border:none; border-top:1px solid var(--brd);
-                   box-shadow:none; padding:12px 40px; background:var(--bg3); margin:0; }
+.modal .note-pin { width:100%; border-radius:0 0 12px 12px; border:none; border-top:1px solid rgba(255,255,255,.2);
+                   box-shadow:none; padding:12px 40px; background:var(--kzs-grad); margin:0; color:#0d1a17; }
+.modal .note-pin-lbl { color:#1a3530; }
+.modal .note-pin .note-pin-txt { color:#0d1a17; }
 #modal-content::-webkit-scrollbar { width:5px; }
 .modal::-webkit-scrollbar-thumb { background:var(--brd); border-radius:3px; }
 .modal-close { position:absolute; top:16px; right:20px; background:none; border:none; font-size:22px; cursor:pointer; color:var(--t3); }
@@ -835,7 +853,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
     cards = ""
     for t in talks:
         av   = f'<img src="{AVATAR}" class="mini-av" title="Présent" />' if t["attended"] else ""
-        esn  = '<span class="esn-badge" title="À retenir pour une ESN">★</span>' if t["esn_highlight"] else ""
+        esn  = '<span class="esn-badge" title="À retenir">★</span>' if t["esn_highlight"] else ""
         search_data = f"{t['title']} {t['speakers']}".lower().replace('"', '&quot;')
         cards += f"""<div class="card" data-id="{t['id']}" data-theme="{t['theme']}" data-search="{search_data}" style="--tc:{t['theme_color']}" onclick="openCard('{t['id']}')">
   {esn}
@@ -941,13 +959,13 @@ def version_c(slides, all_talks=None):
     total_attended = sum(1 for t in (all_talks or []) if t.get("attended") and t.get("kind") != "atelier")
 
     # Structural slides injected between talk groups
-    intro      = {"type": "intro",    "id": "_intro",     "theme_color": "#3d7fff"}
-    sec_main   = {"type": "section",  "id": "_sec_main",  "theme_color": "#3d7fff",
+    intro      = {"type": "intro",    "id": "_intro",     "theme_color": "#3cd8ad"}
+    sec_main   = {"type": "section",  "id": "_sec_main",  "theme_color": "#3cd8ad",
                   "label": "Partie principale",
                   "num": "01", "sub": f"sélection de {len(main_slides)} talks parmi les {total_attended} assistés"}
     sec_ext    = {"type": "section",  "id": "_sec_ext",   "theme_color": "#7f8c8d",
                   "label": "Mentions rapides",
-                  "num": "02", "sub": f"{len(extra_slides)} talks à surveiller · utiles pour vos clients"}
+                  "num": "02", "sub": f"{len(extra_slides)} talks interessants · auxquels je n'ai pas pu assister"}
     sec_excl   = {"type": "section",  "id": "_sec_excl",  "theme_color": "#484f58",
                   "label": "Autres talks vus",
                   "num": "03", "sub": f"{len(excluded)} talks vus, non présentés"}
@@ -955,8 +973,8 @@ def version_c(slides, all_talks=None):
                   "items": excluded}
     rate       = {"type": "rate",     "id": "_rate",      "theme_color": "#e67e22",
                   "missed": missed}
-    end        = {"type": "end",      "id": "_end",       "theme_color": "#3d7fff"}
-    synth      = {"type": "synth",    "id": "_synth",     "theme_color": "#3d7fff"}
+    end        = {"type": "end",      "id": "_end",       "theme_color": "#3cd8ad"}
+    synth      = {"type": "synth",    "id": "_synth",     "theme_color": "#3cd8ad"}
 
     all_items = [intro, sec_main] + main_slides + [sec_ext] + extra_slides + [sec_excl, excl_slide, rate, synth, end]
     total = len(all_items)
@@ -1051,8 +1069,8 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
                   font-size:16px; margin:-4px -4px 0 8px; line-height:1; }
 
 /* ── Controls ───────────────────────────────────────────────────────────── */
-.controls { position:fixed; bottom:0; left:0; right:0; background:var(--bg2); border-top:1px solid var(--brd2);
-            transition:transform .25s; z-index:40; }
+.controls { position:fixed; bottom:0; left:0; right:0; background:var(--bg2); border-top:2px solid transparent;
+            border-image:var(--kzs-grad) 1; transition:transform .25s; z-index:40; }
 .controls.collapsed { transform:translateY(100%); }
 .ctrl-toggle { position:fixed; left:50%; transform:translateX(-50%); bottom:0;
                width:64px; height:22px; background:var(--bg2); border:1px solid var(--brd2);
@@ -1060,7 +1078,7 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
                color:var(--t4); font-size:13px; z-index:50; display:flex; align-items:center;
                justify-content:center; transition:bottom .25s, background .15s; padding:0; }
 .ctrl-toggle:hover { background:var(--bg3); color:var(--t2); }
-.progress-bar { height:3px; background:var(--acc); transition:width .3s; }
+.progress-bar { height:3px; background:var(--kzs-grad); transition:width .3s; }
 .ctrl-inner { display:flex; align-items:center; justify-content:space-between; padding:10px 72px; }
 .ctrl-btn { background:none; border:1px solid var(--brd); color:var(--t3); padding:6px 18px;
             border-radius:6px; cursor:pointer; font-family:inherit; font-size:13px; transition:all .15s; flex-shrink:0; }
@@ -1071,7 +1089,8 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
 /* ── Structural slides ──────────────────────────────────────────── */
 /* Intro */
 .slide-intro .intro-body { display:flex; flex-direction:column; gap:32px; flex:1; justify-content:center; }
-.intro-title { font-size:clamp(4rem,8vw,7rem); font-weight:900; color:var(--t1); line-height:1.1; }
+.intro-title { font-size:clamp(4rem,8vw,7rem); font-weight:900; line-height:1.1;
+               background:var(--kzs-grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .intro-date  { font-size:20px; color:var(--t4); margin-top:6px; }
 .intro-cols  { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
 .intro-col   { background:var(--bg2); border-radius:10px; padding:18px 22px; border-top:3px solid var(--tc,var(--acc)); }
@@ -1083,7 +1102,8 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
 .intro-thesis { border-left:3px solid var(--tc,var(--acc)); padding:12px 20px; background:var(--bg2); border-radius:0 8px 8px 0; font-size:15px; color:var(--t2); font-style:italic; line-height:1.7; }
 /* Synthèse */
 .slide-synth .synth-body { display:flex; flex-direction:column; gap:24px; flex:1; justify-content:center; }
-.synth-title  { font-size:clamp(2rem,4vw,3rem); font-weight:800; color:var(--t1); line-height:1.2; }
+.synth-title  { font-size:clamp(2rem,4vw,3rem); font-weight:800; line-height:1.2;
+                background:var(--kzs-grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .synth-cards  { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
 .synth-card   { background:var(--bg2); border-radius:10px; padding:20px 22px; border-top:3px solid var(--tc,var(--acc)); display:flex; flex-direction:column; gap:10px; }
 .synth-card-num  { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--tc,var(--acc)); }
@@ -1092,7 +1112,8 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
 .synth-date   { font-size:13px; color:var(--t4); background:var(--bg2); display:inline-block; padding:3px 10px; border-radius:20px; margin-top:4px; font-family:'JetBrains Mono',monospace; }
 /* Section divider */
 .slide-section .section-body { display:flex; flex-direction:column; align-items:center; justify-content:center; flex:1; text-align:center; gap:16px; }
-.section-num   { font-size:clamp(7rem,16vw,13rem); font-weight:900; color:var(--brd); line-height:1; font-family:'JetBrains Mono',monospace; }
+.section-num   { font-size:clamp(7rem,16vw,13rem); font-weight:900; line-height:1; font-family:'JetBrains Mono',monospace;
+                 background:var(--kzs-grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .section-label { font-size:clamp(3rem,6vw,5rem); font-weight:700; color:var(--t1); }
 .section-sub   { font-size:20px; color:var(--t4); }
 /* Excluded listing */
@@ -1116,7 +1137,8 @@ body { font-family:'Space Grotesk',system-ui,sans-serif; background:var(--bg1); 
 /* ── Slide de fin ─────────────────────────────────────────────────────────── */
 .slide-end .end-body { display:flex; flex-direction:column; justify-content:center; align-items:center;
                         flex:1; gap:18px; text-align:center; }
-.end-title { font-size:clamp(3rem,6vw,5rem); font-weight:700; color:var(--t1); }
+.end-title { font-size:clamp(3rem,6vw,5rem); font-weight:700;
+             background:var(--kzs-grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .end-sub { font-size:15px; color:var(--t4); letter-spacing:.4px; }
 .end-note { font-size:14px; color:var(--t3); margin-top:12px; }
 .end-link { font-size:clamp(13px,1.6vw,17px); color:var(--link); text-decoration:none;
@@ -1214,16 +1236,16 @@ updateNavLayout();
         n_main, n_extra = len(main_slides), len(extra_slides)
         n_talks = len(SLUGS)
         n_workshops = len(WORKSHOP_SLUGS)
-        return f"""<div class="slide slide-intro" style="--tc:#3d7fff">
+        return f"""<div class="slide slide-intro" style="--tc:#3cd8ad">
   <div class="slide-scroll">
     <div class="slide-top">
-      <span class="theme-badge" style="background:#3d7fff">Introduction</span>
+      <span class="theme-badge" style="background:#3cd8ad">Introduction</span>
       <span class="slide-counter">{i+1} / {total}</span>
     </div>
     <div class="intro-body">
       <div>
         <div class="intro-title">AlpOSS 2026</div>
-        <div class="intro-date">Alpine Open Source Summit · Grenoble · 17 février 2026</div>
+        <div class="intro-date">Alpes Open Source Software · Grenoble · 17 février 2026</div>
       </div>
       <div class="intro-cols">
         <div class="intro-col">
@@ -1235,7 +1257,7 @@ updateNavLayout();
           <p>Développeur dans une ESN, je suis venu en éclaireur : identifier les technologies et tendances open source pertinentes pour nos clients et notre offre de service.</p>
         </div>
       </div>
-      <div class="intro-thesis">En 2026, la fin du support Windows\u00a010, le CRA en vigueur et les hausses tarifaires Microsoft ouvrent une fenêtre d'opportunité rare pour l'open source\u00a0— et pour les ESN capables d'en faire une offre concrète.</div>
+      <div class="intro-thesis">En 2026, la fin du support Windows\u00a010, le CRA en vigueur et les hausses tarifaires Microsoft ouvrent une fenêtre d'opportunité rare pour l'open source\u00a0— et pour une ESN capable d'en faire une offre concrète.</div>
       <div class="intro-stats">
         <div><div class="isn">{n_talks}</div><div class="isl">talks</div></div>
         <div><div class="isn">{n_workshops}</div><div class="isl">ateliers</div></div>
@@ -1386,10 +1408,10 @@ updateNavLayout();
 </div>"""
 
     def make_synth_html(i):
-        return f"""<div class="slide slide-synth" style="--tc:#3d7fff">
+        return f"""<div class="slide slide-synth" style="--tc:#3cd8ad">
   <div class="slide-scroll">
     <div class="slide-top">
-      <span class="theme-badge" style="background:#3d7fff">Synthèse</span>
+      <span class="theme-badge" style="background:#3cd8ad">Synthèse</span>
       <span class="slide-counter">{i+1} / {total}</span>
     </div>
     <div class="synth-body">
@@ -1397,21 +1419,21 @@ updateNavLayout();
       <div class="synth-cards">
         <div class="synth-card">
           <div class="synth-card-num">Action 1</div>
-          <div class="synth-card-head">Migrations bureautiques = carnet d'adresses ouvert</div>
-          <div class="synth-card-body">La fin des licences perpétuelles Microsoft pousse les collectivités à chercher des intégrateurs. LibreOffice, Open-Xchange et Zimbra sont matures — les clients qui hésitent ont besoin d'un accompagnement, pas d'un outil.</div>
-          <span class="synth-date">Déclencheur actif depuis 2024</span>
+          <div class="synth-card-head">CRA : traçabilité obligatoire de la chaîne logicielle</div>
+          <div class="synth-card-body">Le Cyber Resilience Act impose SBOM, correctifs et divulgation des failles pour tout produit intégrant de l'open source. Une ESN qui intervient sur les systèmes de ses clients est directement concernée — besoin d'audit et de conseil dès maintenant.</div>
+          <span class="synth-date">Première échéance : septembre 2026</span>
         </div>
         <div class="synth-card">
           <div class="synth-card-num">Action 2</div>
-          <div class="synth-card-head">Tchap collectivités : 30\u202f000 entités sans messagerie souveraine</div>
-          <div class="synth-card-body">Matrix/Element + ProConnect couvre un vide réel. Opportunité de conseil et de déploiement pour les ESN accompagnant les collectivités — avant que le marché soit adressé par les grands comptes.</div>
-          <span class="synth-date">Projet en cours, ADULLACT / Arawa</span>
+          <div class="synth-card-head">XCP-ng : la vague VMware est là</div>
+          <div class="synth-card-body">Le rachat de VMware par Broadcom et ses hausses tarifaires massives poussent les organisations vers XCP-ng. Alternative souveraine mature, déployée en datacenter critique — un déclencheur externe fort et documenté pour une ESN.</div>
+          <span class="synth-date">Déclencheur : rachat Broadcom 2023-2024</span>
         </div>
         <div class="synth-card">
           <div class="synth-card-num">Action 3</div>
-          <div class="synth-card-head">CRA : tout logiciel intégrant du libre devra justifier ses dépendances</div>
-          <div class="synth-card-body">Le Cyber Resilience Act impose une traçabilité de la chaîne logicielle (SBOM, correctifs, divulgation). Les ESN qui livrent ou maintiennent des produits sont directement concernées — besoin d'audit et de conseil dès maintenant.</div>
-          <span class="synth-date">Obligations clés : septembre 2026</span>
+          <div class="synth-card-head">IAM open source : sortir d'Okta et Microsoft Entra</div>
+          <div class="synth-card-body">LemonLDAP::NG + LSC couvrent SSO, synchronisation et réinitialisation de mot de passe — stack complète en alternative à Okta ou Entra ID, déployable progressivement sans big bang ni coupure.</div>
+          <span class="synth-date">Worteks — stack mature, collectivités et entreprises</span>
         </div>
       </div>
     </div>
@@ -1419,10 +1441,10 @@ updateNavLayout();
 </div>"""
 
     def make_end_html(i):
-        return f"""<div class="slide slide-end" style="--tc:#3d7fff">
+        return f"""<div class="slide slide-end" style="--tc:#3cd8ad">
   <div class="slide-scroll">
     <div class="slide-top">
-      <span class="theme-badge" style="background:#3d7fff">Fin</span>
+      <span class="theme-badge" style="background:#3cd8ad">Fin</span>
       <span class="slide-counter">{i+1} / {total}</span>
     </div>
     <div class="end-body">
@@ -1525,7 +1547,7 @@ def main():
 <body>
   <div style="text-align:center">
     <h1>AlpOSS 2026</h1>
-    <p>Alpine Open Source Summit · Grenoble · 17 février 2026</p>
+    <p>Alpes Open Source Software · Grenoble · 17 février 2026</p>
   </div>
   <div class="cards">
     <a class="card" href="a/">
